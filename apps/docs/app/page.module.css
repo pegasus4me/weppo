@@ -1,0 +1,231 @@
+.page {
+  min-height: 100svh;
+  padding: 3.5rem 1.25rem 4rem;
+  background:
+    radial-gradient(circle at top right, rgba(255, 164, 76, 0.18), transparent 28%),
+    linear-gradient(180deg, #fbf6ef 0%, #f4efe6 42%, #eef2f6 100%);
+}
+
+.hero,
+.referenceGrid,
+.commandSection,
+.noteSection {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.heroCopy,
+.heroPanel,
+.referenceCard,
+.commandCard,
+.noteCard {
+  border: 1px solid rgba(19, 31, 51, 0.08);
+  border-radius: 1.6rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 38px rgba(45, 57, 84, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.heroCopy {
+  display: grid;
+  gap: 1.15rem;
+  padding: 1.6rem;
+}
+
+.kicker,
+.sectionLabel {
+  width: fit-content;
+  border-radius: 999px;
+  border: 1px solid rgba(19, 31, 51, 0.12);
+  background: rgba(246, 242, 236, 0.92);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #5d472e;
+}
+
+.heroCopy h1 {
+  max-width: 14ch;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  color: #162033;
+}
+
+.lead {
+  max-width: 58ch;
+  color: #536178;
+  font-size: 1.02rem;
+  line-height: 1.78;
+}
+
+.heroPanel {
+  display: grid;
+  gap: 1rem;
+  padding: 1.4rem;
+}
+
+.heroPanelHeader {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.heroPanelHeader span {
+  font-size: 0.85rem;
+  color: #63728b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.heroPanelHeader strong {
+  font-size: 1.65rem;
+  letter-spacing: -0.05em;
+  color: #152133;
+}
+
+.heroActions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0 1.2rem;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.primaryButton {
+  color: #fffaf4;
+  background: linear-gradient(135deg, #8b4a18 0%, #c56a2d 100%);
+}
+
+.secondaryButton {
+  color: #243754;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(36, 55, 84, 0.12);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.referenceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.referenceCard,
+.commandCard {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1.25rem;
+}
+
+.referenceCard :global(.ui-card-eyebrow),
+.commandCard :global(.ui-card-eyebrow) {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8c5d2f;
+}
+
+.referenceCard :global(.ui-card-title),
+.commandCard :global(.ui-card-title) {
+  font-size: 1.28rem;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: #162033;
+}
+
+.referenceCard :global(.ui-card-body),
+.commandCard :global(.ui-card-body) {
+  color: #57667d;
+  line-height: 1.7;
+}
+
+.commandSection {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.75rem;
+}
+
+.sectionHeading {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.sectionHeading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: #162033;
+}
+
+.commandList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.noteSection {
+  margin-top: 2rem;
+}
+
+.noteCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.3rem 1.4rem;
+}
+
+.noteCard p {
+  color: #516178;
+  line-height: 1.75;
+}
+
+.inlineCode {
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.18rem 0.45rem;
+  color: #8b4a18;
+}
+
+@media (max-width: 920px) {
+  .hero,
+  .referenceGrid,
+  .commandList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1rem 1rem 3rem;
+  }
+
+  .heroCopy h1 {
+    font-size: 2.8rem;
+  }
+}

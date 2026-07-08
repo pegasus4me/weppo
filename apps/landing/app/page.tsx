@@ -1,34 +1,54 @@
-import { ApplyPilotDialog } from "@/app/components/apply-pilot-dialog";
 import { Header } from "@/app/components/header";
 
-const growthPressures = [
-  {
-    title: "More clients",
-    body: "creates more repeated questions and more context switching.",
-  },
-  {
-    title: "More students",
-    body: "adds more support overhead between sessions and launches.",
-  },
-  {
-    title: "More subscribers",
-    body: "creates more pressure to stay available all the time.",
-  },
+const discoveryCallUrl = "https://cal.com/safoan/30min";
+
+const knowledgeSources = [
+  "Slack messages",
+  "Old support tickets",
+  "Internal docs",
+  "Notion or Confluence",
+  "CRM notes",
+  "Product and Engineering conversations",
+  "Senior teammates' experience",
 ];
 
-const outcomePoints = [
-  {
-    title: "Ask questions in context",
-    body: "Your audience can get support between touchpoints instead of waiting on you manually.",
-  },
-  {
-    title: "Get clear next steps",
-    body: "They move from consuming your ideas to actually applying your method.",
-  },
-  {
-    title: "Know when to escalate",
-    body: "The copilot helps with implementation and surfaces when deeper coaching is needed.",
-  },
+const symptoms = [
+  "Reps keep asking seniors or managers the same questions",
+  "Internal docs are outdated or hard to trust",
+  "New reps take too long to ramp up",
+  "Escalations to Product or Engineering feel messy",
+  "Different reps handle similar cases differently",
+  "Important context gets buried in Slack or old tickets",
+  "Support, CS, Product, and Engineering are not always aligned on what to do",
+];
+
+const workflowSteps = [
+  "What the issue is",
+  "What context matters",
+  "What steps to follow",
+  "When to escalate",
+  "Who should be involved",
+  "What a good resolution looks like",
+];
+
+const useCases = [
+  "Billing disputes",
+  "Refund requests",
+  "Cancellation flows",
+  "Technical escalations",
+  "Onboarding blockers",
+  "Enterprise customer issues",
+  "Product-related questions",
+  "CS to Support handoffs",
+  "Support to Engineering escalations",
+];
+
+const teamSignals = [
+  "Customer cases are becoming more complex",
+  "The team is scaling beyond a few senior people",
+  "Processes are changing faster than documentation",
+  "Too much operational knowledge lives in people's heads",
+  "Support, CS, Product, and Engineering need better alignment",
 ];
 
 export default function Home() {
@@ -36,120 +56,200 @@ export default function Home() {
     <main className="mx-auto min-h-screen bg-background">
       <Header />
 
-      <section className="container relative mx-auto mb-4 mt-4 flex max-w-6xl justify-center overflow-hidden rounded-[2rem] bg-secondary px-4 pb-24 pt-20 text-center md:px-6 md:pt-28">
-        <div className="relative z-10 flex max-w-4xl flex-col items-center">
-          <h1 className="max-w-4xl font-crimson-text text-5xl font-semibold leading-[0.95] text-text md:text-7xl">
-            Your expertise, available to{" "}
-            <span className="">every client at once</span>
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg text-text md:text-xl">
-            Weppo turns your scattered content, frameworks, and resources into a
-            unified AI copilot that helps your clients, students, or paid
-            subscribers apply your ideas while you focus on what matters.
-          </p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:items-center">
-            <ApplyPilotDialog />
+      <section className="container relative mx-auto border-r border-l border-[#FFFB2A]/40 border-dotted flex max-w-7xl px-4 pb-20 pt-16 md:px-6 md:pb-28 md:pt-24">
+        <div className="max-w-5xl">
+          <h2 className="mt-8 max-w-5xl  text-4xl font-light font-urbanist  text-text md:text-7xl">
+            Help your support reps handle complex customer cases like your best
+            seniors.
+          </h2>
+          <div className="mt-8 grid max-w-5xl gap-5 text-lg leading-8 text-muted-foreground md:grid-cols-[1.2fr_1fr] md:text-xl">
+            <p>
+              Weppo helps B2B SaaS support and customer success teams turn
+              scattered internal knowledge into clear workflows for handling
+              complex customer cases.
+            </p>
+          </div>
+          <div className="mt-10">
+            <a
+              className="inline-flex rounded-full bg-secondary px-4 py-2 text-xl font-light text-[#FFFB2A] hover:opacity-70 md:text-base"
+              href={discoveryCallUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Book a 20-minute discovery call
+            </a>
           </div>
         </div>
       </section>
 
       <section
+        className="container mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24"
         id="problem"
-        className="container mx-auto max-w-6xl px-4 pb-6 md:px-6"
       >
-        <div className="rounded-[2rem] px-6 py-16 md:px-12 md:py-20">
-          <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-            <h2 className="mt-4 max-w-3xl font-crimson-text text-4xl font-semibold leading-[0.98] text-foreground md:text-6xl">
-              Your audience does not just need more content.
+        <div className="grid gap-10  md:items-start">
+          <div>
+            <p className="font-urbanist text-lg font-light text-[#FFFB2A]">
+              The problem
+            </p>
+            <h2 className="mt-4 font-urbanist text-4xl font-light leading-tight text-foreground md:text-6xl">
+              Support and CS teams already have the knowledge they need.
             </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">
-              They need help applying your ideas to their situation. Today, that
-              support happens manually through DMs, email, office hours,
-              comments, or 1:1 coaching.
+            <p className="mt-6 text-xl leading-8 text-muted-foreground">
+              It is just scattered.
             </p>
           </div>
 
-          <div className="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-3">
-            {growthPressures.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-[1.75rem] bg-background px-6 py-7 text-left"
-              >
-                <p className="text-sm font-light text-center text-muted-foreground">
-                  {item.title}
-                </p>
-                <p className="mt-4 font-crimson-text text-center text-2xl leading-tight text-foreground">
-                  {item.body}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mx-auto mt-12 max-w-4xl text-center">
-            <p className="font-crimson-text text-3xl leading-tight text-foreground md:text-4xl">
-              More demand should create leverage,{" "}
-              <span className="bg-red-100">not more manual support.</span>
+          <div>
+            <p className="text-lg leading-8 text-muted-foreground">
+              The real process for handling complex cases often lives across
+              too many places at once.
+            </p>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              {knowledgeSources.map((source) => (
+                <div
+                  className="rounded-[1.5rem] bg-secondary px-5 py-4 text-base text-secondary-foreground"
+                  key={source}
+                >
+                  {source}
+                </div>
+              ))}
+            </div>
+            <p className="mt-8 text-lg leading-8 text-muted-foreground">
+              As a result, reps lose time, managers get interrupted, and
+              decisions become inconsistent from one customer case to another.
             </p>
           </div>
         </div>
       </section>
 
       <section
-        id="outcome"
-        className="container mx-auto max-w-6xl px-4 pb-28 md:px-6"
+        className="container mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24"
+        id="symptoms"
       >
-        <div className="rounded-[2rem]  px-6 py-16 md:px-12 md:py-20">
-          <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-            <h2 className="mt-4 max-w-3xl font-crimson-text text-4xl font-semibold leading-[0.98] text-foreground md:text-6xl">
-              A guided implementation layer{" "}
-              <span className="">between touchpoints</span>
+        <div className="max-w-3xl">
+          <p className="font-urbanist text-sm font-light text-[#FFFB2A]">
+            Common symptoms
+          </p>
+          <h2 className="mt-4 font-urbanist text-4xl font-light leading-tight text-foreground md:text-6xl">
+            Your team may be facing this if
+          </h2>
+        </div>
+
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
+          {symptoms.map((symptom) => (
+            <div
+              className="rounded-[1.5rem] border border-white/10 bg-secondary px-6 py-5 text-lg leading-7 text-secondary-foreground"
+              key={symptom}
+            >
+              {symptom}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section
+        className="container mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24"
+        id="workflow"
+      >
+        <div className="grid gap-10 md:grid-cols-[1fr_1fr] md:items-start">
+          <div>
+            <p className="font-urbanist text-sm font-light text-[#FFFB2A]">
+              What Weppo does
+            </p>
+            <h2 className="mt-4 font-urbanist text-4xl font-light leading-tight text-foreground md:text-6xl">
+              Weppo transforms scattered internal knowledge into clear,
+              reusable workflows.
             </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">
-              Weppo gives your audience a branded AI copilot coach so they can
-              move forward between touchpoints instead of waiting for your next
-              reply.
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">
+              Instead of forcing reps to search through docs, Slack, or old
+              tickets, Weppo helps them understand what to do next.
             </p>
           </div>
 
-          <div className="mx-auto mt-14 grid max-w-5xl gap-4 md:grid-cols-3">
-            {outcomePoints.map((item) => (
+          <div className="grid gap-3">
+            {workflowSteps.map((step) => (
               <div
-                key={item.title}
-                className="rounded-[1.75rem] bg-background px-6 py-7 text-left"
+                className="rounded-[1.5rem] bg-secondary px-6 py-5 font-urbanist text-2xl leading-tight text-secondary-foreground"
+                key={step}
               >
-                <p className="text-sm font-light text-center text-muted-foreground">
-                  {item.title}
-                </p>
-                <p className="mt-4 font-crimson-text text-center text-2xl leading-tight text-foreground ">
-                  {item.body}
-                </p>
+                {step}
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div
-            id="apply"
-            className="mx-auto mt-12 flex max-w-4xl flex-col items-center rounded-[1.75rem] bg-background px-6 py-12 text-center md:px-12"
-          >
-            <p className="mt-4 max-w-2xl font-crimson-text text-3xl leading-tight text-foreground md:text-4xl">
-              Give every client answers, next steps, and implementation support
-              with an AI copilot trained on your method.
+      <section
+        className="container mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24"
+        id="use-cases"
+      >
+        <div className="max-w-3xl">
+          <p className="font-urbanist text-sm font-light text-[#FFFB2A]">
+            Use cases
+          </p>
+          <h2 className="mt-4 font-urbanist text-4xl font-light leading-tight text-foreground md:text-6xl">
+            Built for complex customer situations.
+          </h2>
+        </div>
+        <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {useCases.map((useCase) => (
+            <div
+              className="rounded-[1.5rem] bg-secondary px-5 py-4 text-base text-secondary-foreground"
+              key={useCase}
+            >
+              {useCase}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="container mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
+        <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
+          <div>
+            <p className="font-urbanist text-sm font-light text-[#FFFB2A]">
+              Built for B2B SaaS teams
             </p>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-muted-foreground md:text-lg">
-              We are opening a small early pilot for experts who want their
-              audience to get answers, next steps, and implementation help
-              without waiting for another DM, email, or office hour.
+            <h2 className="mt-4 font-urbanist text-4xl font-light leading-tight text-foreground md:text-6xl">
+              Designed for growing Support and Customer Success teams.
+            </h2>
+          </div>
+          <div>
+            <p className="text-lg leading-8 text-muted-foreground">
+              Especially teams where:
             </p>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-col sm:items-center">
-              <ApplyPilotDialog />
-              <small className="text-sm text-muted-foreground">
-                Limited early spots for independent experts with proven
-                material.
-              </small>
+            <div className="mt-8 grid gap-4">
+              {teamSignals.map((signal) => (
+                <div
+                  className="rounded-[1.5rem] border border-white/10 bg-secondary px-6 py-5 text-lg leading-7 text-secondary-foreground"
+                  key={signal}
+                >
+                  {signal}
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
+
+      <section className="container mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
+        <div className="max-w-4xl">
+          <p className="font-urbanist text-sm font-light text-[#FFFB2A]">
+            Why now
+          </p>
+          <h2 className="mt-4 font-urbanist text-4xl font-light leading-tight text-foreground md:text-6xl">
+            As support and CS teams scale, tribal knowledge becomes expensive.
+          </h2>
+          <p className="mt-8 text-lg leading-8 text-muted-foreground md:text-xl">
+            Every repeated question, unclear escalation, and inconsistent
+            decision slows the team down.
+          </p>
+          <p className="mt-6 text-lg leading-8 text-muted-foreground md:text-xl">
+            Weppo helps companies turn internal know-how into workflows that
+            humans can use today, and future AI agents can use tomorrow.
+          </p>
+        </div>
+      </section>
+
     </main>
   );
 }

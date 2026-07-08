@@ -1,35 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Figtree, Raleway, Crimson_Text } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 
-import { cn } from "@/lib/utils";
 import { siteDescription, siteTitle, siteUrl } from "./seo";
 
-const figtree = Figtree({
+const urbanist = Urbanist({
   subsets: ["latin"],
-  variable: "--font-figtree",
-});
-
-const raleway = Raleway({
-  subsets: ["latin"],
-  variable: "--font-raleway-variable",
-});
-
-const crimson_text = Crimson_Text({
-  subsets: ["latin"],
-  variable: "--font-crimson-text-variable",
-  weight: ["400", "600", "700"],
-});
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+  variable: "--font-urbanist-variable",
 });
 
 export const metadata: Metadata = {
@@ -41,13 +18,13 @@ export const metadata: Metadata = {
   },
   description: siteDescription,
   keywords: [
-    "AI copilot",
-    "expert business",
-    "client support",
-    "online education",
-    "coaching software",
-    "audience support",
-    "knowledge assistant",
+    "B2B SaaS support",
+    "customer success",
+    "support operations",
+    "CS operations",
+    "support escalation workflows",
+    "internal knowledge workflows",
+    "customer support knowledge base",
   ],
   authors: [{ name: "Weppo" }],
   creator: "Weppo",
@@ -99,18 +76,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={cn(
-        "font-sans",
-        figtree.variable,
-        raleway.variable,
-        crimson_text.variable,
-      )}
-    >
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+    <html lang="en" className={urbanist.variable}>
+      <body>{children}</body>
     </html>
   );
 }

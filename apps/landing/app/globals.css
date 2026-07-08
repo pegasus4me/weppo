@@ -6,22 +6,22 @@
 
 :root {
   --color-primary: #FF009D;
-  --color-surface: #f4f4f4;
-  --color-text: #262626;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --color-surface: #1f1f1f;
+  --color-text: #f4f4f4;
+  --background: #141414;
+  --foreground: #f4f4f4;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: #FF009D;
   --primary-foreground: #262626;
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --secondary: #1f1f1f;
+  --secondary-foreground: #f4f4f4;
+  --muted: #1f1f1f;
+  --muted-foreground: #a8a8a8;
+  --accent: #1f1f1f;
+  --accent-foreground: #f4f4f4;
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
@@ -43,10 +43,7 @@
 }
 
 @theme inline {
-  --font-heading: var(--font-raleway-variable);
-  --font-raleway: var(--font-raleway-variable);
-  --font-sans: var(--font-figtree);
-  --font-crimson-text: var(--font-crimson-text-variable);
+  --font-sans: var(--font-urbanist-variable);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -150,12 +147,12 @@
     @apply bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    @apply bg-background font-sans;
   }
 }
 
 @layer utilities {
-  .font-crimson-text {
-    font-family: var(--font-crimson-text-variable), serif;
+  .font-urbanist {
+    font-family: var(--font-urbanist-variable), sans-serif;
   }
 }

@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 
-type PilotApplicationRequest = {
+type DiscoveryCallRequest = {
   name?: unknown;
   email?: unknown;
-  audienceSize?: unknown;
+  teamContext?: unknown;
 };
 
 function asRequiredString(value: unknown) {
@@ -22,10 +22,10 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: PilotApplicationRequest;
+  let body: DiscoveryCallRequest;
 
   try {
-    body = (await request.json()) as PilotApplicationRequest;
+    body = (await request.json()) as DiscoveryCallRequest;
   } catch {
     return NextResponse.json(
       { error: "Invalid request body." },
@@ -35,11 +35,11 @@ export async function POST(request: Request) {
 
   const name = asRequiredString(body.name);
   const email = asRequiredString(body.email);
-  const audienceSize = asRequiredString(body.audienceSize);
+  const teamContext = asRequiredString(body.teamContext);
 
-  if (!name || !email || !audienceSize) {
+  if (!name || !email || !teamContext) {
     return NextResponse.json(
-      { error: "Name, email, and audience size are required." },
+      { error: "Name, email, and team context are required." },
       { status: 400 },
     );
   }
@@ -52,7 +52,7 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       embeds: [
         {
-          title: "New early pilot application",
+          title: "New discovery call request",
           color: 13089535,
           fields: [
             {
@@ -66,8 +66,8 @@ export async function POST(request: Request) {
               inline: true,
             },
             {
-              name: "Audience size",
-              value: audienceSize,
+              name: "Team context",
+              value: teamContext,
               inline: false,
             },
           ],
@@ -79,7 +79,7 @@ export async function POST(request: Request) {
 
   if (!discordResponse.ok) {
     return NextResponse.json(
-      { error: "Discord rejected the application notification." },
+      { error: "Discord rejected the discovery call notification." },
       { status: 502 },
     );
   }

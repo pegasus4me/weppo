@@ -3,7 +3,6 @@
 import { useEffect, useState, type FormEvent } from "react";
 
 import { cn } from "@/lib/utils";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 type ApplyPilotDialogProps = {
   className?: string;
@@ -13,7 +12,7 @@ type ApplyPilotDialogProps = {
 
 export function ApplyPilotDialog({
   className,
-  label = "Apply for early pilot",
+  label = "Book a 20-minute discovery call",
   variant = "shimmer",
 }: ApplyPilotDialogProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +22,7 @@ export function ApplyPilotDialog({
   const [formData, setFormData] = useState({
     email: "",
     name: "",
-    audienceSize: "",
+    teamContext: "",
   });
 
   useEffect(() => {
@@ -69,7 +68,7 @@ export function ApplyPilotDialog({
       });
 
       if (!response.ok) {
-        throw new Error("Application could not be submitted.");
+        throw new Error("Discovery call request could not be submitted.");
       }
 
       setIsSubmitted(true);
@@ -84,7 +83,7 @@ export function ApplyPilotDialog({
     variant === "header" ? (
       <button
         className={cn(
-          "rounded-full bg-secondary px-4 py-2 text-lg text-black transition-opacity hover:opacity-70",
+          "rounded-full bg-text px-4 py-2 text-lg text-secondary-foreground transition-opacity hover:opacity-70",
           className,
         )}
         onClick={() => setIsOpen(true)}
@@ -93,15 +92,14 @@ export function ApplyPilotDialog({
         {label}
       </button>
     ) : (
-      <ShimmerButton
-        background="var(--primary)"
-        className={cn("px-8 py-3 text-sm font-semibold text-white", className)}
+      <button
+                   className="rounded-full bg-secondary px-4 py-2 text-xl font-base text-[#FFFB2A] hover:opacity-70 md:text-lg"
+
         onClick={() => setIsOpen(true)}
-        shimmerColor="var(--color-text)"
         type="button"
       >
         {label}
-      </ShimmerButton>
+      </button>
     );
 
   return (
@@ -123,10 +121,10 @@ export function ApplyPilotDialog({
             <div className="relative">
               <div className="mx-auto max-w-md text-center">
                 <h3
-                  className="font-crimson-text text-3xl leading-tight text-foreground"
+                  className="font-urbanist text-3xl leading-tight text-foreground"
                   id="apply-pilot-title"
                 >
-                  Tell us a bit about you.
+                  Book a discovery call.
                 </h3>
               </div>
               <button
@@ -141,15 +139,15 @@ export function ApplyPilotDialog({
 
             {isSubmitted ? (
               <div className="mt-8">
-                <p className="font-crimson-text text-2xl text-foreground">
+                <p className="font-urbanist text-2xl text-foreground">
                   Thanks, {formData.name || "there"}.
                 </p>
                 <p className="mt-3 text-base text-center leading-8 text-muted-foreground">
-                  We have your details and will personally reach out at{" "}
-                  {formData.email} for the pilot stage.
+                  We have your details and will reach out at {formData.email}{" "}
+                  to find a time.
                 </p>
                 <button
-                  className="mt-8 rounded-full bg-primary text-white px-6 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-80"
+                  className="mt-8 rounded-full bg-primary text-white px-6 py-4 text-sm font-light text-primary-foreground transition-opacity hover:opacity-80"
                   onClick={closeDialog}
                   type="button"
                 >
@@ -198,36 +196,44 @@ export function ApplyPilotDialog({
 
                 <label className="block text-left">
                   <span className="mb-2 block text-sm font-medium text-foreground">
-                    How many clients, students, or members do you support today?
+                    What best describes your team today?
                   </span>
                   <select
                     className="w-full rounded-[1.25rem] bg-secondary px-5 py-4 text-base text-foreground outline-none ring-0"
                     onChange={(event) =>
                       setFormData((current) => ({
                         ...current,
-                        audienceSize: event.target.value,
+                        teamContext: event.target.value,
                       }))
                     }
                     required
-                    value={formData.audienceSize}
+                    value={formData.teamContext}
                   >
                     <option value="" disabled>
-                      Select a range
+                      Select one
                     </option>
-                    <option value="1-10">1-10</option>
-                    <option value="11-50">11-50</option>
-                    <option value="51-200">51-200</option>
-                    <option value="201+">201+</option>
+                    <option value="Scaling support team">
+                      Scaling support team
+                    </option>
+                    <option value="Growing customer success team">
+                      Growing customer success team
+                    </option>
+                    <option value="Support or CS operations">
+                      Support or CS operations
+                    </option>
+                    <option value="Product or engineering escalations">
+                      Product or engineering escalations
+                    </option>
                   </select>
                 </label>
 
                 <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center">
                   <button
-                    className="w-full rounded-full bg-primary text-white px-6 py-4 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-60"
+                    className="w-full rounded-full bg-text text-[#FFFB2A] px-6 py-4 text-sm font-light transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-60"
                     disabled={isSubmitting}
                     type="submit"
                   >
-                    {isSubmitting ? "Submitting..." : "Submit application"}
+                    {isSubmitting ? "Submitting..." : "Request discovery call"}
                   </button>
                 </div>
                 {submitError ? (

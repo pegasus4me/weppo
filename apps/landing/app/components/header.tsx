@@ -4,10 +4,32 @@ import Image from "next/image";
 
 const discoveryCallUrl = "https://cal.com/safoan/30min";
 
+function HeaderPixelCorner({ side }: { side: "left" | "right" }) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={`pointer-events-none absolute top-0 z-20 h-auto w-36 text-[#FFFB2A] md:w-52 ${
+        side === "left" ? "left-0" : "right-0 scale-x-[-1]"
+      }`}
+      fill="none"
+      viewBox="0 0 180 126"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M45 84H0V126H45V84Z" fill="currentColor" />
+      <path d="M90 42H45V84H90V42Z" fill="currentColor" />
+      <path d="M135 0H90V42H135V0Z" fill="currentColor" />
+      <path d="M180 42H135V84H180V42Z" fill="currentColor" />
+    </svg>
+  );
+}
+
 export function Header() {
   return (
-    <header className="mt-5">
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 md:px-6">
+    <header className="relative z-30 overflow-visible">
+      <HeaderPixelCorner side="left" />
+      <HeaderPixelCorner side="right" />
+
+      <div className="relative z-30 mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 md:px-6">
         <Link href="/">
           <Image
             src={logo}

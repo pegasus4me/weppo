@@ -5,7 +5,7 @@ export default function Home() {
         <p className="text-sm font-medium uppercase text-muted-foreground">
           Weppo app
         </p>
-        <h1 className="mt-4 font-crimson-text text-5xl font-semibold leading-none text-foreground md:text-6xl">
+        <h1 className="mt-4 font-crimson-text text-5xl font-light leading-none text-foreground md:text-6xl">
           App workspace coming soon.
         </h1>
         <p className="mt-5 text-lg leading-8 text-muted-foreground">

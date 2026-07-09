@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Figtree, Raleway, Crimson_Text } from "next/font/google";
+import { Figtree, Raleway, Urbanist, Crimson_Text } from "next/font/google";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -13,6 +13,10 @@ const raleway = Raleway({
   variable: "--font-raleway-variable",
 });
 
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  variable: "--font-urbanist-variable",
+});
 const crimson_text = Crimson_Text({
   subsets: ["latin"],
   variable: "--font-crimson-text-variable",
@@ -42,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`font-sans ${figtree.variable} ${raleway.variable} ${crimson_text.variable}`}
+      className={`font-sans ${figtree.variable} ${raleway.variable} ${crimson_text.variable} ${urbanist.variable}`}
     >
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}

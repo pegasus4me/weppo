@@ -1,0 +1,12 @@
+{
+  "name": "reddit-scraper",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "reddit": "tsx reddit.ts"
+  },
+  "dependencies": {
+    "tsx": "^4.19.2"
+  }
+}

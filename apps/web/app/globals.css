@@ -135,4 +135,7 @@
   .font-crimson-text {
     font-family: var(--font-crimson-text-variable), serif;
   }
+  .font-urbanist {
+    font-family: var(--font-urbanist-variable), sans-serif;
+  }
 }

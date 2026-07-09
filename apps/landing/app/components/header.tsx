@@ -8,7 +8,7 @@ function HeaderPixelCorner({ side }: { side: "left" | "right" }) {
   return (
     <svg
       aria-hidden="true"
-      className={`pointer-events-none absolute top-0 z-20 h-auto w-36 text-[#FFFB2A] md:w-52 ${
+      className={`pointer-events-none absolute top-0 z-20 h-auto w-36 text-[#333333] md:w-52 ${
         side === "left" ? "left-0" : "right-0 scale-x-[-1]"
       }`}
       fill="none"

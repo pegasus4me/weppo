@@ -76,7 +76,7 @@ export default function Home() {
 
           <div className="relative -mx-5 mt-12 overflow-hidden border-b border-border/25 sm:-mx-8 sm:mt-16 lg:-mx-12">
             <div
-              className="absolute inset-0 bg-cover bg-center opacity-85"
+              className="absolute inset-0 bg-cover bg-center animate-[hero-gradient-drift_14s_ease-in-out_infinite]"
               style={{ backgroundImage: "url('/hero-ffflux.svg')" }}
             />
             <div className="relative z-10 px-4 py-6 sm:px-8 sm:py-10 lg:px-12 lg:py-12">

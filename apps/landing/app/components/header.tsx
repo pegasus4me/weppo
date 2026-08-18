@@ -1,69 +1,48 @@
-import Link from "next/link";
-import logo from "@/public/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const discoveryCallUrl = "https://cal.com/safoan/30min";
 
-function HeaderPixelCorner({ side }: { side: "left" | "right" }) {
-  return (
-    <svg
-      aria-hidden="true"
-      className={`pointer-events-none absolute top-0 z-20 h-auto w-36 text-[#333333] md:w-52 ${
-        side === "left" ? "left-0" : "right-0 scale-x-[-1]"
-      }`}
-      fill="none"
-      viewBox="0 0 180 126"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M45 84H0V126H45V84Z" fill="currentColor" />
-      <path d="M90 42H45V84H90V42Z" fill="currentColor" />
-      <path d="M135 0H90V42H135V0Z" fill="currentColor" />
-      <path d="M180 42H135V84H180V42Z" fill="currentColor" />
-    </svg>
-  );
-}
-
 export function Header() {
   return (
-    <header className="relative z-30 overflow-visible">
-      <HeaderPixelCorner side="left" />
-      <HeaderPixelCorner side="right" />
+    <header className="relative z-20 w-full border-b border-[#9e9e9e]/25 bg-white/80 backdrop-blur-3xl">
+      {/* Top Banner with yellow-to-teal gradient */}
+      <div className="border-b border-[#9e9e9e]/25 border-t-2 border-[#faec1b] bg-gradient-to-r from-[hsl(55,94%,54%)]/75 to-[hsl(167,72%,60%)]/75">
+        <div className="mx-auto flex h-10 w-full max-w-[1440px] items-center justify-center gap-2 border-x border-[#9e9e9e]/25 px-5 text-sm text-[#5d5d5d] sm:px-8 lg:px-12">
+          <span className="font-medium text-[#292929]">New</span>
+          <span>Weppo is opening private beta.</span>
+          <a
+            href={discoveryCallUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-[#292929] underline decoration-[#292929]/40 underline-offset-4 hover:decoration-[#292929]"
+          >
+            Request access
+          </a>
+        </div>
+      </div>
 
-      <div className="relative z-30 mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 md:px-6">
-        <Link href="/">
+      <div className="mx-auto flex h-[72px] w-full max-w-[1440px] items-center justify-between border-x border-[#9e9e9e]/25 px-5 sm:px-8 lg:px-12">
+        <Link href="/" aria-label="Weppo home" className="inline-flex items-center">
           <Image
-            src={logo}
+            src="/weppo-logo-v4.png"
             alt="Weppo"
-            width={180}
-            height={120}
-            className=""
+            width={1263}
+            height={360}
+            priority
+            className="h-10 w-auto"
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 text-md font-light text-muted-foreground md:flex">
-          <Link href="/#problem" className="hover:text-foreground">
-            Problem
-          </Link>
-          <Link href="/#context-layer" className="hover:text-foreground">
-            Context layer
-          </Link>
-          <Link href="/#value" className="hover:text-foreground">
-            Value
-          </Link>
-          <Link href="/#pricing" className="hover:text-foreground">
-            Pricing
-          </Link>
-        </nav>
-
         <div className="flex items-center gap-4">
-          <Link
+          <a
             href={discoveryCallUrl}
-            className="rounded-full bg-secondary px-4 py-2 text-lg font-light text-[#FFFB2A] hover:opacity-70 md:text-lg"
-            rel="noreferrer"
             target="_blank"
+            rel="noreferrer"
+            className="inline-flex h-10 items-center justify-center rounded-md bg-[#292929] px-5 text-sm font-medium text-white transition-opacity hover:opacity-85"
           >
             Book a call
-          </Link>
+          </a>
         </div>
       </div>
     </header>

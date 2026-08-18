@@ -6,8 +6,8 @@ const discoveryCallUrl = "https://cal.com/safoan/30min";
 export function Header() {
   return (
     <header className="relative z-20 w-full border-b border-[#9e9e9e]/25 bg-white/80 backdrop-blur-3xl">
-      {/* Top Banner with yellow-to-teal animated gradient */}
-      <div className="border-b border-[#9e9e9e]/25 bg-gradient-to-r from-[hsl(55,94%,54%)]/75 via-[hsl(167,72%,60%)]/75 to-[hsl(55,94%,54%)]/75 bg-[length:200%_200%] animate-[gradient-banner_8s_ease_infinite]">
+      {/* Top Banner with animated gradient */}
+      <div className="border-b border-[#9e9e9e]/25 animate-banner-flow">
         <div className="mx-auto flex h-10 w-full max-w-[1440px] items-center justify-center gap-2 border-x border-[#9e9e9e]/25 px-5 text-sm text-[#5d5d5d] sm:px-8 lg:px-12">
           <span className="font-medium text-[#292929]">New</span>
           <span>Weppo is opening private beta.</span>

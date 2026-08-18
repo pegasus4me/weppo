@@ -138,35 +138,49 @@
   }
 }
 
+.animate-banner-flow {
+  background: linear-gradient(
+    90deg,
+    rgba(250, 236, 27, 0.85) 0%,
+    rgba(79, 227, 194, 0.85) 50%,
+    rgba(250, 236, 27, 0.85) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient-banner 6s ease infinite;
+}
+
+.hero-animated-bg {
+  background: linear-gradient(
+    135deg,
+    hsl(55, 94%, 54%) 0%,
+    hsl(167, 72%, 60%) 50%,
+    hsl(55, 94%, 54%) 100%
+  );
+  background-size: 200% 200%;
+  animation: hero-gradient-shift 6s ease infinite;
+}
+
 @keyframes gradient-banner {
-  0%,
-  100% {
+  0% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
   }
-}
-
-@keyframes hero-gradient-drift {
-  0%,
   100% {
-    transform: scale(1.05) translate(0, 0);
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    transform: scale(1.15) translate(-1.5%, 1%);
-    filter: hue-rotate(15deg);
+    background-position: 0% 50%;
   }
 }
 
-@keyframes hero-ambient-flow {
-  0%,
-  100% {
+@keyframes hero-gradient-shift {
+  0% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 

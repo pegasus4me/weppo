@@ -1,159 +1,81 @@
-# Turborepo starter
+# Weppo
 
-This Turborepo starter is maintained by the Turborepo core team.
+Weppo is currently in validation mode. This repository contains the public
+landing page, product surface, and backend foundation for a technical
+investigation workspace serving fast-growing technical B2B SaaS teams.
 
-## Using this example
+The first wedge is focused on Technical Support Engineers and Tier 2 support:
+turning incomplete customer tickets into engineering-ready escalations by
+reconstructing context from read-only support, observability, knowledge, and
+engineering tools.
 
-Run the following command:
+See [PRODUCT.md](PRODUCT.md) for the current ICP, workflow, MVP scope, and
+product boundaries.
 
-```sh
-npx create-turbo@latest
+## Repository
+
+```text
+apps/
+├── backend/   Fastify API, PostgreSQL, auth, permissions, and observability
+├── docs/      Next.js documentation surface
+├── landing/   Public marketing and pilot application site
+└── web/       Auth-ready product application
+
+packages/
+├── eslint-config/
+├── typescript-config/
+└── ui/        Shared UI components
+
+cli/           Reddit research scraper and validation datasets
 ```
 
-## What's inside?
+The workspace uses pnpm and Turborepo. The required Node.js version is defined
+in `.nvmrc`.
 
-This Turborepo includes the following packages/apps:
+## Start locally
 
-### Apps and Packages
+Install dependencies:
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo build
+```bash
+pnpm install
 ```
 
-Without global `turbo`, use your package manager:
+Start PostgreSQL and prepare the backend:
 
-```sh
-cd my-turborepo
-npx turbo build
-pnpm dlx turbo build
-pnpm exec turbo build
+```bash
+cp apps/backend/.env.example apps/backend/.env
+pnpm infra:up
+pnpm --filter backend auth:migrate
 ```
 
-You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+Start all development services:
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo build --filter=docs
+```bash
+pnpm dev
 ```
 
-Without global `turbo`:
+Default ports:
 
-```sh
-npx turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
+- Web: `http://localhost:3000`
+- Docs: `http://localhost:3001`
+- Landing: `http://localhost:3002`
+- Backend: `http://localhost:4000`
+- PostgreSQL: `localhost:5433`
+
+PostgreSQL uses port `5433` on the host to avoid conflicting with an existing
+local PostgreSQL instance.
+
+## Quality checks
+
+```bash
+pnpm lint
+pnpm check-types
+pnpm test
+pnpm build
 ```
 
-### Develop
+Pull requests and pushes to `main` run the same checks in GitHub Actions. The
+backend also ships with a portable production Dockerfile.
 
-To develop all apps and packages, run the following command:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo dev
-```
-
-Without global `turbo`, use your package manager:
-
-```sh
-cd my-turborepo
-npx turbo dev
-pnpm exec turbo dev
-pnpm exec turbo dev
-```
-
-You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo dev --filter=web
-```
-
-Without global `turbo`:
-
-```sh
-npx turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo login
-```
-
-Without global `turbo`, use your package manager:
-
-```sh
-cd my-turborepo
-npx turbo login
-pnpm exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo link
-```
-
-Without global `turbo`:
-
-```sh
-npx turbo link
-pnpm exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
-- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+See [apps/backend/README.md](apps/backend/README.md) for the API boundaries,
+authentication model, health endpoints, and migration commands.

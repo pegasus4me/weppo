@@ -1,0 +1,13 @@
+.git
+.github
+.next
+.turbo
+**/.next
+**/dist
+**/node_modules
+node_modules
+.env
+.env.*
+!.env.example
+coverage
+*.log

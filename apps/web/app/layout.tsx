@@ -1,41 +1,11 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Figtree, Raleway, Urbanist, Crimson_Text } from "next/font/google";
+
+import { Header } from "./components/header";
 import "./globals.css";
 
-const figtree = Figtree({
-  subsets: ["latin"],
-  variable: "--font-figtree",
-});
-
-const raleway = Raleway({
-  subsets: ["latin"],
-  variable: "--font-raleway-variable",
-});
-
-const urbanist = Urbanist({
-  subsets: ["latin"],
-  variable: "--font-urbanist-variable",
-});
-const crimson_text = Crimson_Text({
-  subsets: ["latin"],
-  variable: "--font-crimson-text-variable",
-  weight: ["400", "600", "700"],
-});
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-});
-
 export const metadata: Metadata = {
-  title: "Weppo App",
-  description: "Application workspace for Weppo.",
+  title: "Weppo ",
+  description: "Application dashboard for Weppo.",
 };
 
 export default function RootLayout({
@@ -44,11 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`font-sans ${figtree.variable} ${raleway.variable} ${crimson_text.variable} ${urbanist.variable}`}
-    >
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en">
+      <body>
+        <Header />
         {children}
       </body>
     </html>

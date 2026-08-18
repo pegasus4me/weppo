@@ -40,18 +40,18 @@ export function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 text-md  font-light text-muted-foreground md:flex">
+        <nav className="hidden items-center gap-8 text-md font-light text-muted-foreground md:flex">
           <Link href="/#problem" className="hover:text-foreground">
             Problem
           </Link>
-          <Link href="/#symptoms" className="hover:text-foreground">
-            Symptoms
+          <Link href="/#context-layer" className="hover:text-foreground">
+            Context layer
           </Link>
-          <Link href="/#workflow" className="hover:text-foreground">
-            Workflow
+          <Link href="/#value" className="hover:text-foreground">
+            Value
           </Link>
-          <Link href="/#use-cases" className="hover:text-foreground">
-            Use cases
+          <Link href="/#pricing" className="hover:text-foreground">
+            Pricing
           </Link>
         </nav>
 

@@ -1,0 +1,39 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "auth:generate": "auth generate --config ./src/auth-cli.ts --output ./database/auth-schema.sql --yes",
+    "auth:migrate": "auth migrate --config ./src/auth-cli.ts --yes",
+    "integrations:migrate": "tsx src/integrations-migrate.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.0",
+    "@fastify/helmet": "^13.0.0",
+    "@fastify/rate-limit": "^10.0.0",
+    "better-auth": "^1.0.0",
+    "dotenv": "^17.0.0",
+    "fastify": "^5.0.0",
+    "openai": "^7.4.0",
+    "pg": "^8.0.0",
+    "prom-client": "^15.0.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.0.0",
+    "auth": "^1.6.25",
+    "eslint": "^9.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "5.9.2"
+  }
+}

@@ -1,18 +1,38 @@
 {
   "$schema": "https://turborepo.dev/schema.json",
   "ui": "tui",
-  "globalEnv": ["DISCORD_WEBHOOK_URL"],
+  "globalEnv": [
+    "CI",
+    "DISCORD_WEBHOOK_URL",
+    "ENABLE_MOCK_CASES",
+    "INTERCOM_REGION",
+    "INTERCOM_TEST_USER_EMAIL",
+    "INTERCOM_TEST_USER_EXTERNAL_ID",
+    "INTERCOM_TEST_USER_NAME",
+    "NODE_ENV",
+    "NEXT_RUNTIME",
+    "NEXT_PUBLIC_INTERCOM_APP_ID",
+    "SENTRY_AUTH_TOKEN",
+    "SENTRY_DSN",
+    "SENTRY_ENVIRONMENT",
+    "SENTRY_ORG",
+    "SENTRY_PROJECT",
+    "SENTRY_RELEASE"
+  ],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**", "!.next/dev/**"]
+      "outputs": [".next/**", "!.next/cache/**", "!.next/dev/**", "dist/**"]
     },
     "lint": {
       "dependsOn": ["^lint"]
     },
     "check-types": {
       "dependsOn": ["^check-types"]
+    },
+    "test": {
+      "dependsOn": ["^build"]
     },
     "dev": {
       "cache": false,

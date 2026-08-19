@@ -16,14 +16,25 @@ permissions, SSO, workflow configuration, PLG self-serve workflows, or other tec
 behaviors. A customer issue is rarely solved from the ticket alone: the support
 team (or on-call engineers) have to reconstruct the context before resolving or escalating.
 
+## Problem
+
+Technical Support Engineers spend significant time turning incomplete customer
+tickets into technical cases that Engineering teams can investigate.
+
+For complex issues, the required diagnosis context is scattered across
+ticketing systems, logs, monitoring tools, customer and product data, internal
+documentation, incident history, and engineering-management tools. Support
+engineers manually collect, verify, and organize this context before they can
+escalate.
+
+## Solution
+
+Weppo connects to your tools in read-only mode to pull logs, error traces, and user context into a complete bug report in under 2 minutes. Support escalates instantly with technical proof, and engineers fix bugs without back-and-forth questions.
 ### Primary users
 
 - Technical Support Engineers (TSEs)
-- Tier 2 Support / Product Support Engineers
-- Developer Support Engineers
-- Founding Engineers / Fullstack Devs on support rotation (in 10–25 person Seed teams)
-- Customer Engineers or technical CSMs in smaller startups
-- Founding Support / Head of Support profiles when the team is still small
+- Engineers 
+
 
 ### Buyers and stakeholders
 
@@ -60,16 +71,7 @@ When researching the market, use terms like **technical support engineering**,
 **customer engineering**. The generic phrase “technical support” often returns
 consumer Windows, Mac, or device-support content and is too broad for Weppo.
 
-## Problem
 
-Technical Support Engineers spend significant time turning incomplete customer
-tickets into technical cases that Engineering teams can investigate.
-
-For complex Tier 2 issues, the required diagnosis context is scattered across
-ticketing systems, logs, monitoring tools, customer and product data, internal
-documentation, incident history, and engineering-management tools. Support
-engineers manually collect, verify, and organize this context before they can
-escalate.
 
 As a result, preparing a single complex escalation can take multiple minutes to
 hours, slowing resolution time and consuming engineering-support capacity on

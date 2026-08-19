@@ -9,6 +9,12 @@ turning incomplete customer tickets into engineering-ready escalations by
 reconstructing context from read-only support, observability, knowledge, and
 engineering tools.
 
+### Problem
+Support teams and on-call engineers waste 30–45 minutes per ticket digging through logs, databases, and error trackers to understand what went wrong.
+
+### Solution
+Weppo connects to your tools in read-only mode to pull logs, error traces, and user context into a complete bug report in under 2 minutes. Engineers get clean reproduction steps and technical proof without back-and-forth questions.
+
 See [PRODUCT.md](PRODUCT.md) for the current ICP, workflow, MVP scope, and
 product boundaries.
 

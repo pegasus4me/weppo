@@ -29,7 +29,7 @@ export function Header() {
   return (
     <header className="relative z-20 w-full border-b border-border/25 bg-white/75 backdrop-blur-3xl">
       {isLanding ? (
-        <div className="border-b border-border/25 animate-banner-flow">
+        <div className="border-b border-border/25 bg-[#faec1b]">
           <div className="mx-auto flex h-10 w-full max-w-[1440px] items-center justify-center gap-2 border-x border-border/25 px-5 text-sm text-text-secondary sm:px-8 lg:px-12">
             <span className="font-medium text-foreground">New</span>
             <span>Weppo is opening private beta.</span>

@@ -153,11 +153,11 @@
   background: linear-gradient(
     135deg,
     hsl(55, 94%, 54%) 0%,
-    hsl(167, 72%, 60%) 50%,
-    hsl(55, 94%, 54%) 100%
+    rgba(255, 255, 255, 0.95) 50%,
+    hsl(167, 72%, 60%) 100%
   );
   background-size: 200% 200%;
-  animation: hero-gradient-shift 6s ease infinite;
+  animation: hero-gradient-shift 8s ease infinite;
 }
 
 @keyframes gradient-banner {

@@ -25,18 +25,22 @@ export function Footer() {
             aria-label="Footer navigation"
             className="flex items-center gap-6 text-sm text-text-secondary"
           >
-            <Link
-              href="/sign-in"
+            <a
+              href="https://cal.com/safoan/30min"
+              target="_blank"
+              rel="noreferrer"
               className="transition-colors hover:text-foreground"
             >
-              Sign in
-            </Link>
-            <Link
-              href="/sign-up"
+              Book a discovery call
+            </a>
+            <a
+              href="https://cal.com/safoan/30min"
+              target="_blank"
+              rel="noreferrer"
               className="font-medium text-foreground underline decoration-primary decoration-2 underline-offset-4"
             >
               Request access
-            </Link>
+            </a>
           </nav>
         </div>
 

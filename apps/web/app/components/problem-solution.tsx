@@ -1,20 +1,44 @@
 const problemPoints = [
   {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M12 8v5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="12" cy="16" r="0.5" fill="currentColor" />
+      </svg>
+    ),
     title: "Engineers get pulled in too early",
     description:
       "A vague ticket lands and someone has to dig through logs, databases, and error trackers just to understand what happened — pulling engineers off building.",
   },
   {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="8.5" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M12 7.5V12l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
     title: "Tickets wait for investigation",
     description:
       "Until a human finds time to reconstruct the context, the customer waits. And every hour of waiting makes the issue harder to fix.",
   },
   {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 12h8M8 12l-2-2M8 12l2 2M16 12l2-2M16 12l-2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
     title: "Context gets lost in handoffs",
     description:
       "The person who investigated walks away, or the details live in someone's head. The next person starts from scratch, asking the same questions.",
   },
   {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="8" r="3.5" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
     title: "Support can't scale without hiring",
     description:
       "The volume grows faster than the team. The only lever left is more headcount — even for work a teammate could handle automatically.",
@@ -76,6 +100,9 @@ export function ProblemSolution() {
                 key={point.title}
                 className="rounded-lg border border-border/25 bg-white p-6 shadow-2xs"
               >
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md bg-primary/15 text-foreground">
+                  {point.icon}
+                </div>
                 <h3 className="text-base font-semibold text-foreground">
                   {point.title}
                 </h3>

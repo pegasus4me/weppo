@@ -6,7 +6,7 @@ import { Footer } from "./components/footer";
 import { ProblemSolution } from "./components/problem-solution";
 import { SocialProofTrust } from "./components/social-proof-trust";
 
-
+const discoveryCallUrl = "https://cal.com/safoan/30min";
 
 const heroIntegrations = [
   { name: "Intercom", icon: "/integrations/intercom.svg" },
@@ -17,6 +17,7 @@ const heroIntegrations = [
   { name: "PostgreSQL", icon: "/integrations/postgresql.png" },
   { name: "Linear", icon: "/integrations/linear.svg" },
   { name: "Jira", icon: "/integrations/jira.svg" },
+  { name: "GitHub", icon: "/integrations/github.svg" },
   { name: "Notion", icon: "/integrations/notion.png" },
 ];
 
@@ -41,20 +42,16 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="/sign-up"
+                href={discoveryCallUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex h-11 items-center justify-center rounded-md bg-foreground px-6 text-base font-medium text-background transition-opacity hover:opacity-85"
               >
-                Get started — it&apos;s free
-              </a>
-              <a
-                href="/sign-in"
-                className="inline-flex h-11 items-center justify-center rounded-md border border-border px-6 text-base font-medium text-foreground transition-colors hover:bg-muted/40"
-              >
-                Sign in
+Book a discovery call
               </a>
             </div>
 
-            {/* Logos under Book a call */}
+            {/* Logos under Book a discovery call */}
             <div className="mt-10 flex flex-col items-start gap-2.5">
               <span className="text-[11px] font-normal tracking-wide text-text-tertiary/70">
                 Integrates with
@@ -79,7 +76,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative -mx-5 mt-12 overflow-hidden border-x border-b border-border sm:-mx-8 sm:mt-16 lg:-mx-12">
+          <div className="relative -mx-5 mt-12 overflow-hidden border-b border-border sm:-mx-8 sm:mt-16 lg:-mx-12">
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: "url('/aurora-gradient.png')" }}
@@ -98,7 +95,7 @@ export default function Home() {
                 priority
                 quality={100}
                 unoptimized
-                className="h-auto w-full border border-border/40 bg-white"
+                className="h-auto w-full bg-white"
               />
             </div>
           </div>

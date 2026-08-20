@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const discoveryCallUrl = "https://cal.com/safoan/30min";
 
 export function FinalCloser() {
@@ -31,12 +29,14 @@ export function FinalCloser() {
           >
             Book a discovery call
           </a>
-          <Link
-            href="/sign-up"
+          <a
+            href={discoveryCallUrl}
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex h-12 items-center justify-center rounded-md border border-border/40 bg-white px-6 text-base font-medium text-foreground transition-colors hover:bg-muted/40"
           >
             Request access
-          </Link>
+          </a>
         </div>
       </div>
     </section>

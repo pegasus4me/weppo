@@ -32,6 +32,7 @@ const integrationsList = [
   { name: "PostgreSQL", icon: "/integrations/postgresql.png" },
   { name: "Linear", icon: "/integrations/linear.svg" },
   { name: "Jira", icon: "/integrations/jira.svg" },
+  { name: "GitHub", icon: "/integrations/github.svg" },
   { name: "Notion", icon: "/integrations/notion.png" },
 ];
 

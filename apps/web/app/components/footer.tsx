@@ -17,8 +17,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-6 text-text-secondary">
-              The read-only investigation copilot for technical support
-              engineers.
+              Your AI tech support teammate.
             </p>
           </div>
 
@@ -43,7 +42,7 @@ export function Footer() {
 
         <div className="flex flex-col gap-2 border-t border-border/25 px-5 py-4 text-xs text-text-tertiary sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
           <span>© 2026 Weppo</span>
-          <span>Built for evidence-first technical investigations.</span>
+          <span>AI teammate for engineering teams.</span>
         </div>
       </div>
     </footer>

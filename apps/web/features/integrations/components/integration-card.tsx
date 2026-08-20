@@ -150,7 +150,7 @@ export function IntegrationCard({
               No write access
             </span>
           </div>
-          <ul className="mt-2 space-y-1.5 font-mono">
+          <ul className="mt-2 space-y-1.5">
             {access.map((scope) => (
               <li
                 key={scope}

@@ -46,7 +46,7 @@ export function AgentLoadingState({ label }: { label: string }) {
         ))}
       </span>
       <span className="text-[13px] font-medium text-foreground">{label}</span>
-      <span className="font-mono text-xs tabular-nums text-text-tertiary">
+      <span className="text-xs tabular-nums text-text-tertiary">
         {elapsed}
       </span>
     </div>

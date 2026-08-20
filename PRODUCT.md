@@ -1,149 +1,491 @@
-# Weppo — Product description (MVP)
+# Weppo — Product Description (MVP)
 
-Weppo is a **technical investigation workspace** between the helpdesk and
-Engineering. It replaces neither the ticket nor the engineer: it automates the
-repetitive investigative work.
+## One-liner
 
-## ICP
+**Weppo is an AI tech support teammate working 24/7 alongside your engineering team.**
 
-Weppo is built first for **Seed to Series A technical B2B SaaS companies**
-with roughly **10–100 employees** and high technical ticket velocity. The sweet spot
-is a fast-growing team where technical support volume outpaces the team's capacity—
-forcing either dedicated support agents or core software engineers to drown in repetitive investigations.
+Weppo is not sold as a feature. It is an additional capability inside the team: it plugs into your helpdesk (and Slack or Discord), takes incoming tickets, triages whether a ticket is technical and needs investigation, runs the investigation end-to-end, and notifies engineers and tech support once it has everything needed to resolve the issue quickly.
 
-These companies usually sell products with APIs, integrations, data sync,
-permissions, SSO, workflow configuration, PLG self-serve workflows, or other technically observable
-behaviors. A customer issue is rarely solved from the ticket alone: the support
-team (or on-call engineers) have to reconstruct the context before resolving or escalating.
+---
 
-## Problem
+# 1. The Goal
 
-Technical Support Engineers spend significant time turning incomplete customer
-tickets into technical cases that Engineering teams can investigate.
+### Make high-quality T2 support accessible to growing SaaS companies.
 
-For complex issues, the required diagnosis context is scattered across
-ticketing systems, logs, monitoring tools, customer and product data, internal
-documentation, incident history, and engineering-management tools. Support
-engineers manually collect, verify, and organize this context before they can
-escalate.
+Today's technical support tooling is largely built and priced for large enterprises.
 
-## Solution
+Weppo takes the same high-value investigation workflow and makes it:
 
-Weppo connects to your tools in read-only mode to pull logs, error traces, and user context into a complete bug report in under 2 minutes. Support escalates instantly with technical proof, and engineers fix bugs without back-and-forth questions.
-### Primary users
+* **Accessible** to Seed → Series B SaaS
+* **Self-serve** instead of sales-led
+* **Transparent** instead of opaque enterprise pricing
+* **Fast to deploy** instead of requiring implementation
+* **Affordable enough to adopt early**
+* **Powerful enough to grow with the customer**
 
-- Technical Support Engineers (TSEs)
-- Engineers 
+The goal is not to build a cheaper enterprise product.
 
+**The goal is to bring technical support intelligence to a much larger part of the SaaS market.**
 
-### Buyers and stakeholders
+---
 
-- Head of Support / Head of Customer Success
-- CTO / Engineering leader as the technical stakeholder
-- COO or Founder (in 10–25 person teams where engineers handle support)
+# 2. ICP
 
-### Strong buying signals
+## Primary ICP
 
-- Core software engineers spend >15–20% of their sprint diagnosing customer tickets.
-- High technical ticket volume relative to a tiny (or non-existent) dedicated support team.
-- The company is about to hire more support or technical support capacity.
-- Complex tickets stay open for days because context is scattered.
-- Support often interrupts Engineering to ask for logs, product context, or
-  suspected root causes.
-- Senior agents or founding engineers are the only people who know where to look.
-- The team uses a helpdesk plus observability, documentation, product data, and
-  engineering tools, but no single place reconstructs the case.
-- Escalations are rejected or delayed because Engineering asks for more context.
+**Seed to Series B technical B2B SaaS companies**
 
-### Bad fit
+Typical characteristics:
 
-- Simple B2C or non-technical products.
-- Mostly password, billing, refund, or account-access support.
-- Very early teams with too little support volume to feel the pain.
-- Teams that cannot grant read-only access to the systems needed for
-  investigation.
-- Large enterprises with heavy procurement as the first wedge.
+* ~10–250 employees
+* Technical product
+* Meaningful API / integration / infrastructure complexity
+* Growing customer base
+* Increasing technical support volume
+* Small Support / Customer Success team
+* Engineers still pulled into customer issues
 
-### Search language
+### Initial sweet spot
 
-When researching the market, use terms like **technical support engineering**,
-**Tier 2 support**, **product support engineer**, **developer support**, and
-**customer engineering**. The generic phrase “technical support” often returns
-consumer Windows, Mac, or device-support content and is too broad for Weppo.
+**10–50 employee SaaS companies** where technical support volume is starting to outpace team capacity.
 
+The company does not need a large support organization.
 
+In fact, that is the point.
 
-As a result, preparing a single complex escalation can take multiple minutes to
-hours, slowing resolution time and consuming engineering-support capacity on
-repetitive coordination work.
+Weppo should work when:
 
-## The principle
+> "We have enough technical support problems to hurt, but we're nowhere near big enough to buy a giant enterprise support platform."
 
-A **case** is the investigation folder attached to the original ticket, which
-stays in Zendesk or Intercom. An **agent** understands the problem, searches
-the tools, connects the evidence, and drafts an escalation ready for
-Engineering.
+---
 
-## Workflow to own
+# 3. The Problem
 
-Weppo owns the workflow of **reconstructing the case**:
+Complex B2B SaaS support issues require investigation.
 
-1. Understand the incomplete customer ticket.
-2. Decide which read-only systems are relevant.
-3. Search the helpdesk, observability, product context, internal knowledge, and
-   engineering history.
-4. Connect the signals into a sourced timeline.
-5. Identify what is verified, what is missing, and what remains a hypothesis.
-6. Produce an engineering-ready escalation that a TSE can validate.
+A customer submits an incomplete ticket:
 
-## The journey
+> "Our webhook stopped working yesterday."
 
-1. **Trigger** — the TSE pastes a ticket or clicks “Investigate with Weppo”.
-2. **Understand** — the agent extracts: customer, feature, expected vs observed
-   behavior, time window, impact, environment, missing information.
-3. **Plan** — the agent chooses where to look based on the problem type (sync,
-   SSO, webhook, permissions…).
-4. **Investigate** — loop: question → search a tool → observe → evaluate → next
-   question.
-5. **Reconstruct** — a sourced timeline (timestamp + source + identifier), not
-   just a summary.
-6. **Technical case** — a structured report: impact, expected/observed,
-   environment, timeline, evidence, suspected cause, missing information,
-   workaround, Engineering request.
-7. **Validate** — the TSE corrects, completes, and approves before sending to
-   Linear or Jira.
+The TSE now has to reconstruct what happened.
 
-## Integrations (read-only)
+Relevant information may be scattered across:
 
-- **Helpdesk**: Zendesk, Intercom
-- **Observability**: Datadog, Sentry, Grafana, CloudWatch
-- **Product data**: read-only PostgreSQL, internal API
-- **Internal knowledge**: Notion, Slack, documentation
-- **Engineering**: Linear, Jira, GitHub
+* Helpdesk
+* Application logs
+* Error traces
+* Monitoring
+* Customer data
+* Product data
+* Internal documentation
+* Incident history
+* Slack
+* Jira / Linear
+* GitHub
 
-## Trust model
+The TSE manually collects and connects this information before Engineering can even start.
 
-Every piece of information is classified: **verified fact**, **customer
-statement**, **hypothesis**, **eliminated cause**, **missing information**.
-Engineering immediately sees what is certain and what still needs checking.
+### The result
 
-## Interface
+* TSEs spend too much time investigating
+* Engineers get pulled into repetitive support work
+* Escalations lack context
+* Customers wait longer
+* Support teams need to hire earlier
+* Growing SaaS companies struggle to afford enterprise-grade tooling
 
-Three panes: **Ticket** (conversation), **Investigation** (agent actions +
-sources), **Escalation** (editable report). The agent stays visible:
-“Found 17 failed sync jobs”, “Missing: expected scopes”.
+---
 
-## MVP scope
+# 4. The Solution
 
-**Included**: manual case creation, pasted ticket, one helpdesk connector + one
-logs connector, investigation loop, sourced evidence, missing information,
-technical case generation, validation and manual copy.
+## Weppo is a teammate, not a tool the team operates.
 
-**Excluded**: automatic resolution, modifying customer data, automatic
-escalation to Engineering, ten connectors, global automatic learning, replacing
-the helpdesk.
+Weppo connects to a company's existing tools in read-only mode and works alongside the team like a teammate would.
 
-## Primary metric
+It plugs into the helpdesk (or Slack / Discord), takes the tickets as they come in, and decides what to do with each one.
 
-Time between opening an investigation and an escalation **accepted by
-Engineering with no request for additional context**.
+Given an incoming ticket, Weppo:
+
+1. **Triages** the ticket — is it technical? Does it need investigation?
+2. **Understands** the issue
+3. Determines what information is missing
+4. Chooses relevant systems to investigate
+5. Searches those systems
+6. Connects the evidence
+7. Reconstructs a sourced timeline
+8. Separates facts from hypotheses
+9. Produces an Engineering-ready technical case
+10. **Notifies** engineers and tech support once the investigation is complete, with everything needed to resolve the issue quickly
+
+The result:
+
+> **A TSE can go from incomplete ticket → investigated technical case in minutes instead of manually reconstructing the entire situation.**
+
+Weppo does not replace the ticket.
+
+Weppo does not replace the engineer.
+
+**Weppo removes the investigative work between them.**
+
+---
+
+# 5. Core Workflow
+
+## Own the reconstruction of the case.
+
+### 1. Trigger
+
+A ticket comes in on the helpdesk, Slack, or Discord.
+
+Weppo takes it — no one has to ask it to start.
+
+### 1b. Triage
+
+Weppo decides whether the ticket is technical and needs investigation, or whether it can be answered directly.
+
+Non-technical tickets are handled or routed. Technical tickets move into investigation.
+
+### 2. Understand
+
+Weppo extracts:
+
+* Customer
+* Feature
+* Expected behavior
+* Observed behavior
+* Time window
+* Impact
+* Environment
+* Missing information
+
+### 3. Plan
+
+The agent determines where to investigate based on the issue.
+
+Examples:
+
+* Sync
+* SSO
+* Webhooks
+* API
+* Permissions
+* Data issues
+* Integrations
+
+### 4. Investigate
+
+The agent loops:
+
+**Question → Search → Observe → Evaluate → Next question**
+
+### 5. Reconstruct
+
+Weppo builds a sourced timeline:
+
+**Timestamp + Source + Identifier + Evidence**
+
+Not just an AI-generated summary.
+
+### 6. Technical Case
+
+Weppo produces:
+
+* Impact
+* Expected behavior
+* Observed behavior
+* Environment
+* Timeline
+* Evidence
+* Suspected cause
+* Missing information
+* Workaround
+* Engineering request
+
+### 7. Validate
+
+The TSE reviews, corrects, and approves the investigation before sending it to Engineering.
+
+### 8. Notify
+
+Once the investigation is complete, Weppo notifies the engineers (and tech support) with the technical case — everything they need to resolve the issue quickly.
+
+Weppo works 24/7, so tickets keep being triaged and investigated even when the team is not online.
+
+---
+
+# 6. Product Principle
+
+## Weppo works like a teammate, not a tool you operate.
+
+Weppo is not a button the TSE clicks when a ticket is hard. It is an additional capability in the team: it sits where the tickets come in, picks up the work, and hands it over ready for action.
+
+A **case** is the investigation folder attached to the original ticket.
+
+An **agent** investigates the issue, searches connected systems, connects evidence, and drafts the technical escalation.
+
+Weppo should complement:
+
+* Zendesk
+* Intercom
+* Linear
+* Jira
+* Slack
+* Discord
+* Observability tools
+
+—not replace them.
+
+---
+
+# 7. Primary Users
+
+### Technical Support Engineers
+
+Primary user.
+
+They get technical investigations done for them, reviewed, and handed over ready for Engineering — without doing the digging themselves.
+
+### Engineers
+
+Secondary user.
+
+They get notified with a complete technical case instead of an incomplete ticket, and spend less time asking Support for missing information.
+
+---
+
+# 8. Buyers
+
+### Primary
+
+* Head of Support
+* Head of Customer Success
+* Founder
+
+### Technical stakeholder
+
+* CTO
+* VP Engineering
+* Engineering Lead
+
+### Early-stage reality
+
+At 10–25 employees, the buyer may simply be:
+
+> **The founder or CTO who is tired of engineers doing support.**
+
+---
+
+# 9. Why Weppo Wins
+
+Weppo is designed around an underserved segment:
+
+**Growing SaaS companies that need serious technical support capabilities but are too small to justify enterprise software.**
+
+### The positioning
+
+**Enterprise-grade technical investigation.
+Startup-friendly adoption.**
+
+Weppo should be:
+
+* Easy to start
+* Transparent in pricing
+* Affordable at the entry level
+* Useful with a small team
+* Self-serve
+* Expandable as support volume grows
+
+### Strategic advantage
+
+We don't need to win by charging the most per customer.
+
+We can win by becoming the **default technical investigation layer for growing SaaS companies.**
+
+---
+
+# 10. Business Model Principle
+
+## Land early. Grow with the customer.
+
+The initial product should be inexpensive enough that a growing SaaS company can adopt Weppo without:
+
+* Procurement
+* Enterprise sales
+* Long contracts
+* Implementation projects
+* Large upfront commitments
+
+The customer can start small.
+
+As they grow, Weppo expands through:
+
+* More investigations
+* More users
+* More connected systems
+* More automation
+* More advanced workflows
+* Larger support volumes
+
+### Pricing philosophy
+
+**Accessible entry point + natural expansion.**
+
+Do not optimize the initial contract value at the expense of adoption.
+
+The objective is to maximize:
+
+**Number of SaaS companies using Weppo × retention × expansion.**
+
+---
+
+# 11. Integrations
+
+### Helpdesk
+
+* Zendesk
+* Intercom
+
+### Observability
+
+* Datadog
+* Sentry
+* Grafana
+* CloudWatch
+
+### Product data
+
+* PostgreSQL
+* Internal APIs
+
+### Internal knowledge
+
+* Notion
+* Slack
+* Documentation
+
+### Engineering
+
+* Linear
+* Jira
+* GitHub
+
+All MVP integrations are **read-only**.
+
+---
+
+# 12. Interface
+
+Three panes:
+
+### Ticket
+
+Original customer conversation.
+
+### Investigation
+
+Agent actions, questions, searches, evidence, and sources.
+
+### Escalation
+
+Editable technical case ready for Engineering.
+
+The agent stays visible throughout the investigation.
+
+Examples:
+
+> "Found 17 failed sync jobs."
+
+> "Webhook failures started 14 minutes after deployment."
+
+> "Missing: expected OAuth scopes."
+
+> "3 customers show the same error pattern."
+
+The user should be able to understand **what Weppo knows, where it found it, and what it still doesn't know.**
+
+---
+
+# 13. MVP Scope
+
+## Included
+
+* Manual case creation
+* Pasted ticket
+* One helpdesk connector
+* One logs / observability connector
+* Investigation loop
+* Sourced evidence
+* Missing information detection
+* Timeline reconstruction
+* Technical case generation
+* TSE validation
+* Manual copy to Engineering
+
+## Excluded
+
+* Automatic issue resolution
+* Modifying customer data
+* Automatic Engineering escalation
+* Ten+ connectors
+* Global automatic learning
+* Replacing the helpdesk
+* Fully autonomous support
+
+---
+
+# 14. Primary Metric
+
+## Investigation → accepted escalation
+
+**Time between opening an investigation and an escalation being accepted by Engineering without requesting additional context.**
+
+The product succeeds when:
+
+> **Engineering can act on the first escalation.**
+
+Secondary metrics:
+
+* Investigation completion rate
+* Time saved per investigation
+* % of escalations requiring follow-up
+* Engineering escalations avoided
+* Investigations per customer
+* Weekly active TSEs
+* Customer retention
+* Expansion from usage
+
+---
+
+# 15. Expansion Path
+
+The initial wedge is **T2 investigation**.
+
+The long-term platform can expand from there:
+
+### Phase 1 — Investigate
+
+**Ticket → Evidence → Technical Case**
+
+### Phase 2 — Escalate
+
+**Technical Case → Engineering Workflow**
+
+### Phase 3 — Resolve
+
+**Investigation → Suggested Fix / Resolution**
+
+### Phase 4 — Detect
+
+**Individual Tickets → Recurring Issues / Proactive Detection**
+
+### Phase 5 — Understand
+
+**Support Data → Product & Customer Intelligence**
+
+The long-term vision:
+
+> **Weppo becomes the intelligence layer connecting customers, Support, Product, and Engineering.**
+
+But the initial product remains deliberately narrow:
+
+**Make T2 investigation dramatically faster for growing SaaS teams.**

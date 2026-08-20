@@ -285,12 +285,12 @@ function ActivityItem({
         >
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
             {branch ? (
-              <span className={`inline-flex h-6 items-center rounded-md px-2 font-mono text-[10px] ${branch.badge}`}>
+              <span className={`inline-flex h-6 items-center rounded-md px-2 text-[10px] ${branch.badge}`}>
                 {branch.label}
               </span>
             ) : null}
             {!branch && agent ? (
-              <span className={`inline-flex h-6 items-center rounded-md px-2 font-mono text-[10px] ${agent.badge}`}>
+              <span className={`inline-flex h-6 items-center rounded-md px-2 text-[10px] ${agent.badge}`}>
                 {agent.label}
               </span>
             ) : null}
@@ -370,10 +370,10 @@ function ActivityItem({
           </p>
           {summaryHasHiddenDetail || event.source || event.details?.length || event.plan?.length || event.evidence?.details?.length || event.evidence?.sourceUrl ? (
             <details className="mt-2 text-xs text-text-secondary">
-              <summary className="cursor-pointer select-none font-mono hover:text-foreground">
+              <summary className="cursor-pointer select-none hover:text-foreground">
                 Details
               </summary>
-              <div className="mt-2 space-y-3 border-l border-border/30 pl-3 font-mono text-[11px] leading-5">
+              <div className="mt-2 space-y-3 border-l border-border/30 pl-3 text-[11px] leading-5">
                 {summaryHasHiddenDetail ? <p>{event.publicSummary}</p> : null}
                 {event.source ? (
                   <p>

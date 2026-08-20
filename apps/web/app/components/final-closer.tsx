@@ -16,10 +16,10 @@ export function FinalCloser() {
 
       <div className="relative mx-auto max-w-4xl text-center">
         <h2 className="text-balance text-3xl font-medium leading-tight text-foreground sm:text-5xl lg:text-6xl">
-          Stop wasting engineering sprints on ticket investigations.
+          Give your team an AI teammate that handles the investigation work.
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-relaxed text-text-secondary sm:text-lg">
-          Turn incomplete customer tickets into structured, verified bug reports in minutes. Zero log-digging, zero back-and-forth.
+          Weppo plugs in, triages technical tickets, investigates across your systems, and notifies your engineers — 24/7.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

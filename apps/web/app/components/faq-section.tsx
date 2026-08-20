@@ -9,29 +9,39 @@ type FAQItem = {
 
 const faqs: FAQItem[] = [
   {
-    question: "Does Weppo have write access to our production databases or customer tickets?",
+    question: "How does Weppo work alongside my existing team?",
     answer:
-      "No. Weppo operates exclusively with strict read-only permissions. It cannot alter production data, run destructive queries, or post public responses to your customers without explicit human action.",
+      "Weppo plugs into your helpdesk (Intercom, Zendesk), Slack, or Discord and monitors incoming tickets. When it detects a technical issue that needs investigation, it automatically triages, investigates across your connected systems, and notifies your team with a complete, sourced technical case. Your engineers stay focused on building — they only get pulled in when there's a verified issue with full context.",
   },
   {
-    question: "How does Weppo prevent AI hallucinations in technical escalations?",
+    question: "Does Weppo auto-respond to customers?",
+    answer:
+      "No. Weppo triages and investigates behind the scenes, but it never responds to customers directly. It notifies your team (engineers, tech support) with a complete case — your humans decide what to say and when.",
+  },
+  {
+    question: "Does Weppo have write access to our systems?",
+    answer:
+      "No. Weppo operates exclusively with strict read-only permissions. It cannot alter production data, run destructive queries, or modify customer tickets. It reads, investigates, and reports — nothing more.",
+  },
+  {
+    question: "How does Weppo prevent AI hallucinations in investigations?",
     answer:
       "Weppo uses a strict truth-classification model: every piece of evidence in the report is tagged (Verified Fact, Hypothesis, Customer Statement, or Missing Info) and backed by an exact log timestamp, Sentry event ID, or database query result.",
   },
   {
-    question: "How long does onboarding and connector setup take?",
+    question: "Does Weppo work with Slack and Discord?",
     answer:
-      "Under 5 minutes. You can connect your helpdesk (Intercom, Zendesk) and observability tools (Sentry, Datadog, read-only PostgreSQL) via standard read-only credentials or OAuth integrations.",
+      "Yes. Weppo can plug into Slack channels or Discord servers where customers or internal teams report issues. It monitors messages, identifies technical problems, and runs investigations — just like it does with helpdesk tickets.",
+  },
+  {
+    question: "How long does setup take?",
+    answer:
+      "Under 5 minutes. Connect your helpdesk (Intercom, Zendesk), communication channels (Slack, Discord), and observability tools (Sentry, Datadog, read-only PostgreSQL) via standard read-only credentials or OAuth.",
   },
   {
     question: "Does Weppo replace Technical Support Engineers or Developers?",
     answer:
-      "Neither. Weppo automates the manual, repetitive detective work (log-hunting, context reconstruction). Human support engineers remain in complete control to review, validate, and approve escalations before handoff to Engineering.",
-  },
-  {
-    question: "Which issue trackers and helpdesks are supported for escalation handoffs?",
-    answer:
-      "Weppo generates structured, engineering-ready reports formatted for Linear, Jira, and GitHub Issues, and integrates directly with Intercom and Zendesk for ticket intake.",
+      "Neither. Weppo is a teammate, not a replacement. It handles the repetitive triage and investigation work — log-hunting, context reconstruction, evidence correlation. Your team stays in full control of the resolution.",
   },
 ];
 
@@ -50,7 +60,7 @@ export function FAQSection() {
             Everything you need to know about Weppo
           </h2>
           <p className="mt-4 text-pretty text-base text-text-secondary">
-            Got questions about security, setup, or how investigations work? Here are the most common answers.
+            Got questions about how Weppo works with your team, security, or setup? Here are the most common answers.
           </p>
         </div>
 

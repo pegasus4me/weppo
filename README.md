@@ -24,8 +24,7 @@ product boundaries.
 apps/
 ├── backend/   Fastify API, PostgreSQL, auth, permissions, and observability
 ├── docs/      Next.js documentation surface
-├── landing/   Public marketing and pilot application site
-└── web/       Auth-ready product application
+└── web/       Public landing page and auth-ready product application
 
 packages/
 ├── eslint-config/
@@ -64,7 +63,6 @@ Default ports:
 
 - Web: `http://localhost:3000`
 - Docs: `http://localhost:3001`
-- Landing: `http://localhost:3002`
 - Backend: `http://localhost:4000`
 - PostgreSQL: `localhost:5433`
 

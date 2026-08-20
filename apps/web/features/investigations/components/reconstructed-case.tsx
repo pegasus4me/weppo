@@ -90,7 +90,7 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                   The bounded problem scope used to route every connector search.
                 </p>
               </div>
-              <span className="rounded-full bg-blue-50 px-2 py-1 font-mono text-[10px] uppercase tracking-wide text-blue-700">
+              <span className="rounded-full bg-blue-50 px-2 py-1 text-[10px] uppercase tracking-wide text-blue-700">
                 {ticketScope.problems.length} scoped
               </span>
             </div>
@@ -106,33 +106,33 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                         </p>
                       ) : null}
                     </div>
-                    <span className="rounded-full bg-background px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-text-secondary">
+                    <span className="rounded-full bg-background px-2 py-0.5 text-[10px] uppercase tracking-wide text-text-secondary">
                       {problem.confidence} confidence
                     </span>
                   </div>
                   <dl className="mt-3 grid gap-3 text-sm leading-5 sm:grid-cols-2">
                     {problem.expectedBehavior ? (
                       <div>
-                        <dt className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">Expected</dt>
+                        <dt className="text-[10px] uppercase tracking-wide text-text-tertiary">Expected</dt>
                         <dd className="mt-1 text-text-secondary">{problem.expectedBehavior}</dd>
                       </div>
                     ) : null}
                     <div>
-                      <dt className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">Observed</dt>
+                      <dt className="text-[10px] uppercase tracking-wide text-text-tertiary">Observed</dt>
                       <dd className="mt-1 text-text-secondary">{problem.observedBehavior}</dd>
                     </div>
                   </dl>
                   <details className="mt-3 text-xs text-text-secondary">
-                    <summary className="cursor-pointer select-none font-mono hover:text-foreground">
+                    <summary className="cursor-pointer select-none hover:text-foreground">
                       Scope signals and ticket evidence
                     </summary>
                     <div className="mt-2 grid gap-3 border-l border-border/25 pl-3 sm:grid-cols-2">
                       <div>
-                        <p className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">Search signals</p>
-                        <p className="mt-1 font-mono text-[11px] leading-5 text-foreground">{problem.searchSignals.join(" · ")}</p>
+                        <p className="text-[10px] uppercase tracking-wide text-text-tertiary">Search signals</p>
+                        <p className="mt-1 text-[11px] leading-5 text-foreground">{problem.searchSignals.join(" · ")}</p>
                       </div>
                       <div>
-                        <p className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">Ticket evidence</p>
+                        <p className="text-[10px] uppercase tracking-wide text-text-tertiary">Ticket evidence</p>
                         <p className="mt-1 text-[11px] leading-5 text-foreground">{problem.ticketEvidence.join(" ")}</p>
                       </div>
                     </div>
@@ -142,7 +142,7 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
             </div>
             {ticketScope.ambiguities.length ? (
               <div className="mt-3 rounded-lg bg-amber-50/65 px-3 py-3 text-sm text-amber-900">
-                <p className="font-mono text-[10px] uppercase tracking-wide">Ambiguities retained</p>
+                <p className="text-[10px] uppercase tracking-wide">Ambiguities retained</p>
                 <p className="mt-1 leading-5">{ticketScope.ambiguities.join(" · ")}</p>
               </div>
             ) : null}
@@ -172,7 +172,7 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                     <dt className="text-[11px] font-medium text-text-tertiary">
                       {label}
                     </dt>
-                    <dd className="mt-1 break-words font-mono text-xs text-foreground">
+                    <dd className="mt-1 break-words text-xs text-foreground">
                       {value}
                     </dd>
                   </div>
@@ -191,7 +191,7 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                 <summary className="cursor-pointer select-none font-medium hover:text-foreground">
                   View all Intercom attributes
                 </summary>
-                <div className="mt-3 space-y-3 font-mono text-[11px] leading-5">
+                <div className="mt-3 space-y-3 text-[11px] leading-5">
                   {Object.entries(intercom.attributes).map(([key, value]) => (
                     <p key={`ticket-${key}`} className="break-words">
                       <span className="text-text-tertiary">ticket.{key}: </span>
@@ -230,21 +230,21 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
           >
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">
+                <p className="text-[10px] uppercase tracking-wide text-text-tertiary">
                   TSE handoff
                 </p>
                 <h3 id="tse-handoff-heading" className="mt-1 text-sm font-medium text-foreground">
                   {handoffStatus}
                 </h3>
               </div>
-              <span className="rounded-full bg-amber-50 px-2 py-1 font-mono text-[10px] uppercase tracking-wide text-amber-800">
+              <span className="rounded-full bg-amber-50 px-2 py-1 text-[10px] uppercase tracking-wide text-amber-800">
                 Review required
               </span>
             </div>
 
             <div className="mt-4 grid gap-4 text-sm leading-5">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">
+                <p className="text-[10px] uppercase tracking-wide text-text-tertiary">
                   Ticket scope
                 </p>
                 <p className="mt-1 text-text-secondary">
@@ -252,7 +252,7 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                 </p>
               </div>
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">
+                <p className="text-[10px] uppercase tracking-wide text-text-tertiary">
                   Verified evidence
                 </p>
                 <ul className="mt-1 space-y-1.5 text-text-secondary">
@@ -265,7 +265,7 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                 </ul>
               </div>
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">
+                <p className="text-[10px] uppercase tracking-wide text-text-tertiary">
                   Current assessment
                 </p>
                 <ul className="mt-1 space-y-1.5 text-text-secondary">
@@ -279,7 +279,7 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
               </div>
               {nextSteps.length ? (
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">
+                  <p className="text-[10px] uppercase tracking-wide text-text-tertiary">
                     Next evidence required
                   </p>
                   <ul className="mt-1 space-y-2 text-text-secondary">
@@ -316,20 +316,20 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                     <h3 className="text-sm font-medium text-foreground">
                       {branch.label}
                     </h3>
-                    <span className="rounded-full border border-border/30 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-text-secondary">
+                    <span className="rounded-full border border-border/30 px-2 py-0.5 text-[10px] uppercase tracking-wide text-text-secondary">
                       {branch.status.replace("-", " ")}
                     </span>
                   </div>
                   <dl className="mt-3 space-y-3 text-sm leading-5">
                     <div>
-                      <dt className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">
+                      <dt className="text-[10px] uppercase tracking-wide text-text-tertiary">
                         Question
                       </dt>
                       <dd className="mt-1 text-text-secondary">{branch.question}</dd>
                     </div>
                     {branch.observation ? (
                       <div>
-                        <dt className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">
+                        <dt className="text-[10px] uppercase tracking-wide text-text-tertiary">
                           Verified observation
                         </dt>
                         <dd className="mt-1 text-text-secondary">{branch.observation}</dd>
@@ -337,7 +337,7 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                     ) : null}
                     {branch.conclusion ? (
                       <div>
-                        <dt className="font-mono text-[10px] uppercase tracking-wide text-text-tertiary">
+                        <dt className="text-[10px] uppercase tracking-wide text-text-tertiary">
                           Current conclusion
                         </dt>
                         <dd className="mt-1 text-text-secondary">{branch.conclusion}</dd>
@@ -346,7 +346,7 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                   </dl>
                   {branch.nextStep ? (
                     <div className="mt-4 rounded-md border border-amber-200/80 bg-amber-50/60 px-3 py-3">
-                      <p className="font-mono text-[10px] uppercase tracking-wide text-amber-900">
+                      <p className="text-[10px] uppercase tracking-wide text-amber-900">
                         Next evidence required · {branch.nextStep.availability}
                       </p>
                       <p className="mt-1 text-sm font-medium text-foreground">
@@ -376,7 +376,7 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
             <ol className="mt-3 divide-y divide-border/15 rounded-lg border border-border/25">
               {knowledgeRetrieval.map((step, index) => (
                 <li key={step.id} className="grid grid-cols-[24px_minmax(0,1fr)_auto] gap-3 px-4 py-3.5">
-                  <span className="pt-0.5 font-mono text-[11px] text-text-tertiary">
+                  <span className="pt-0.5 text-[11px] text-text-tertiary">
                     {index + 1}.
                   </span>
                   <div className="min-w-0">
@@ -384,7 +384,7 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                     <p className="mt-1 text-sm leading-5 text-text-secondary">{step.summary}</p>
                   </div>
                   <span
-                    className={`mt-0.5 h-fit rounded-full px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide ${
+                    className={`mt-0.5 h-fit rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wide ${
                       step.status === "completed"
                         ? "bg-emerald-50 text-emerald-800"
                         : "bg-background text-text-tertiary"
@@ -449,10 +449,10 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                     ) : null}
                     {item.details?.length ? (
                       <details className="text-xs text-text-secondary">
-                        <summary className="cursor-pointer select-none font-mono hover:text-foreground">
+                        <summary className="cursor-pointer select-none hover:text-foreground">
                           Telemetry details
                         </summary>
-                        <dl className="mt-2 grid gap-x-5 gap-y-1.5 border-l border-border/25 pl-3 font-mono text-[11px] leading-5 sm:grid-cols-2">
+                        <dl className="mt-2 grid gap-x-5 gap-y-1.5 border-l border-border/25 pl-3 text-[11px] leading-5 sm:grid-cols-2">
                           {item.details.map((detail) => (
                             <div key={`${detail.label}-${detail.value}`} className="min-w-0">
                               <dt className="text-text-tertiary">{detail.label}</dt>
@@ -494,16 +494,16 @@ export function ReconstructedCase({ investigation }: ReconstructedCaseProps) {
                     <p className="text-sm font-medium leading-5 text-foreground">
                       {hypothesis.statement}
                     </p>
-                    <span className="shrink-0 rounded-full border border-border/35 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-text-secondary">
+                    <span className="shrink-0 rounded-full border border-border/35 px-2 py-0.5 text-[10px] uppercase tracking-wide text-text-secondary">
                       {hypothesis.confidence}
                     </span>
                   </div>
                   {hypothesis.limitations.length ? (
                     <details className="mt-2.5">
-                      <summary className="cursor-pointer font-mono text-[11px] text-text-secondary">
+                      <summary className="cursor-pointer text-[11px] text-text-secondary">
                         Evidence boundaries
                       </summary>
-                      <ul className="mt-2 space-y-1 font-mono text-[11px] leading-5 text-text-secondary">
+                      <ul className="mt-2 space-y-1 text-[11px] leading-5 text-text-secondary">
                         {hypothesis.limitations.map((limitation) => (
                           <li key={limitation}>{limitation}</li>
                         ))}

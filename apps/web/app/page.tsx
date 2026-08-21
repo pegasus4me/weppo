@@ -29,15 +29,13 @@ export default function Home() {
         <section className="flex min-h-[calc(100svh-112px)] flex-col px-5 pb-12 pt-16 sm:px-8 sm:pt-24 lg:px-12 lg:pt-28">
           <div className="max-w-4xl text-left">
             <h1 className="text-balance text-[40px] font-medium leading-[1.06] text-foreground sm:text-[52px] lg:text-[50px]">
-              Your B2B Agentic tech support teammate.{" "}
-              <span className="text-2xl font-light text-text-secondary sm:text-3xl lg:text-[32px]">
-                Working 24/7 alongside your engineering team.
-              </span>
+              Your B2B agentic teammate for technical support investigations
             </h1>
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-[1.45] text-text-secondary sm:text-xl">
-              Weppo plugs into your helpdesk, Slack, or Discord — triages
-              technical tickets, runs the investigation across your systems,
-              and notifies your team with everything they need to resolve fast.
+              Weppo plugs into your helpdesk, Slack, or Discord, triages
+              incoming technical tickets, investigates across your systems, and
+              gives your support and engineering teams the context they need to
+              resolve issues faster.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">

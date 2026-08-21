@@ -29,7 +29,7 @@ export default function Home() {
         <section className="flex min-h-[calc(100svh-112px)] flex-col px-5 pb-12 pt-16 sm:px-8 sm:pt-24 lg:px-12 lg:pt-28">
           <div className="max-w-4xl text-left">
             <h1 className="text-balance text-[40px] font-medium leading-[1.06] text-foreground sm:text-[52px] lg:text-[50px]">
-              Your AI tech support teammate.{" "}
+              Your B2B Agentic tech support teammate.{" "}
               <span className="text-2xl font-light text-text-secondary sm:text-3xl lg:text-[32px]">
                 Working 24/7 alongside your engineering team.
               </span>

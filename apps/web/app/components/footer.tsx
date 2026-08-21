@@ -17,7 +17,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-6 text-text-secondary">
-              Your AI tech support teammate.
+              Your B2B Agentic tech support teammate.
             </p>
           </div>
 

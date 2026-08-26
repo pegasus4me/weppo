@@ -1,5 +1,6 @@
 "use client";
 
+import posthog from "posthog-js";
 import { useState, type FormEvent, type KeyboardEvent } from "react";
 
 type FollowUpComposerProps = {
@@ -24,6 +25,9 @@ export function FollowUpComposer({
 
     try {
       await onSubmit(followUp);
+      posthog.capture("follow_up_sent", {
+        prompt_length: followUp.length,
+      });
       setPrompt("");
       setWasSent(true);
     } catch {

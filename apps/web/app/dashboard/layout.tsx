@@ -19,6 +19,8 @@ import {
   statusLabels,
   type InvestigationSummary,
 } from "@/features/investigations/model/investigation.types";
+import posthog from "posthog-js";
+
 import { authClient } from "@/lib/auth-client";
 
 type DashboardLayoutProps = {
@@ -89,6 +91,12 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       router.replace("/sign-in");
     }
   }, [isPending, router, session]);
+
+  useEffect(() => {
+    if (!isPending && session) {
+      posthog.identify(session.user.id, { email: session.user.email });
+    }
+  }, [isPending, session]);
 
   useEffect(() => {
     if (isPending || !sessionUserId) return;

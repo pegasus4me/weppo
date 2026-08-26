@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { DiscoveryCallLink } from "./components/discovery-call-link";
 import { FAQSection } from "./components/faq-section";
 import { FinalCloser } from "./components/final-closer";
 import { Footer } from "./components/footer";
@@ -39,14 +40,12 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
+              <DiscoveryCallLink
                 href={discoveryCallUrl}
-                target="_blank"
-                rel="noreferrer"
                 className="inline-flex h-11 items-center justify-center rounded-md bg-foreground px-6 text-base font-medium text-background transition-opacity hover:opacity-85"
               >
-Book a discovery call
-              </a>
+                Book a discovery call
+              </DiscoveryCallLink>
             </div>
 
             {/* Logos under Book a discovery call */}

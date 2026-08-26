@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
 import { useState } from "react";
 
+import posthog from "posthog-js";
+
 import { createInvestigation } from "../data/investigation-api.client";
 
 export function NewInvestigationForm() {
@@ -18,10 +20,15 @@ export function NewInvestigationForm() {
     const form = new FormData(event.currentTarget);
 
     try {
+      const ticketUrl = String(form.get("ticket") ?? "").trim() || undefined;
       const created = await createInvestigation({
         customer: String(form.get("customer") ?? "").trim(),
         report: String(form.get("report") ?? "").trim(),
-        ticketUrl: String(form.get("ticket") ?? "").trim() || undefined,
+        ticketUrl,
+      });
+      posthog.capture("investigation_created", {
+        investigation_id: created.case.id,
+        has_ticket_url: Boolean(ticketUrl),
       });
       router.push(`/dashboard/investigations/${created.case.id}`);
     } catch (reason) {

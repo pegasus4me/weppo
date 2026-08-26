@@ -1,5 +1,6 @@
 "use client";
 
+import posthog from "posthog-js";
 import { useCallback, useEffect, useState } from "react";
 
 import {
@@ -161,6 +162,7 @@ export function IntegrationsSettings() {
     setActions((current) => ({ ...current, [provider]: "authorizing" }));
     setErrors((current) => ({ ...current, [provider]: null }));
 
+    posthog.capture("integration_connect_clicked", { provider });
     try {
       const authorizationUrl =
         provider === "intercom"
@@ -187,6 +189,7 @@ export function IntegrationsSettings() {
 
     try {
       await disconnectIntegration(provider);
+      posthog.capture("integration_disconnected", { provider });
       setConnections((current) => {
         const connection = current[provider];
         if (!connection) return current;

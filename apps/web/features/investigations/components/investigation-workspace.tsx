@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+import posthog from "posthog-js";
+
 import { deleteInvestigation } from "../data/investigation-api.client";
 import { useLiveInvestigation } from "../hooks/use-live-investigation";
 import { statusLabels, type InvestigationSnapshot } from "../model/investigation.types";
@@ -29,6 +31,10 @@ export function InvestigationWorkspace({
     setIsDeleting(true);
     try {
       await deleteInvestigation(investigation.id);
+      posthog.capture("investigation_deleted", {
+        investigation_id: investigation.id,
+        status: investigation.status,
+      });
       router.push("/dashboard/investigations");
       router.refresh();
     } finally {

@@ -5,6 +5,8 @@ import Link from "next/link";
 import type { FormEvent } from "react";
 import { useState } from "react";
 
+import posthog from "posthog-js";
+
 import { authClient } from "@/lib/auth-client";
 
 type AuthMode = "sign-in" | "sign-up";
@@ -72,8 +74,17 @@ export function AuthForm({ mode }: AuthFormProps) {
         return;
       }
 
+      const userId = result.data?.user?.id;
+      if (userId) {
+        posthog.identify(userId, { email: result.data?.user?.email });
+      }
+      posthog.capture(isSignUp ? "sign_up_submitted" : "sign_in_submitted", {
+        method: "email",
+      });
+
       window.location.assign("/dashboard");
-    } catch {
+    } catch (err) {
+      posthog.captureException(err);
       setError("We could not reach Weppo. Please try again.");
     } finally {
       setPendingMethod(null);
@@ -94,8 +105,13 @@ export function AuthForm({ mode }: AuthFormProps) {
         setError(
           "Google sign-in is not available yet. Check the OAuth configuration and try again.",
         );
+      } else {
+        posthog.capture(isSignUp ? "sign_up_submitted" : "sign_in_submitted", {
+          method: "google",
+        });
       }
-    } catch {
+    } catch (err) {
+      posthog.captureException(err);
       setError("We could not reach Google sign-in. Please try again.");
     } finally {
       setPendingMethod(null);

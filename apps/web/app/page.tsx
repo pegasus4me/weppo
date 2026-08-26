@@ -33,10 +33,9 @@ export default function Home() {
               Your B2B agentic teammate for technical support investigations
             </h1>
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-[1.45] text-text-secondary sm:text-xl">
-              Weppo plugs into your helpdesk, Slack, or Discord, triages
-              incoming technical tickets, investigates across your systems, and
-              gives your support and engineering teams the context they need to
-              resolve issues faster.
+              Weppo automates the technical investigation behind customer
+              support issues — gathering context, checking logs, reproducing
+              bugs, and preparing engineering-ready escalations.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">

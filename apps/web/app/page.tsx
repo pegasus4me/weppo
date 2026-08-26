@@ -35,7 +35,7 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-[1.45] text-text-secondary sm:text-xl">
               Weppo automates the technical investigation behind customer
               support issues — gathering context, checking logs, reproducing
-              bugs, and preparing engineering-ready escalations.
+              bugs in a sandbox, and preparing engineering-ready escalations.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">

@@ -4,7 +4,7 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="border-y border-border/25 bg-white">
-      <div className="mx-auto w-full max-w-[1440px] border-x border-border/25">
+      <div className="mx-auto w-full max-w-[1440px] border-x border-dashed border-border/25">
         <div className="flex flex-col gap-8 px-5 py-10 sm:flex-row sm:items-end sm:justify-between sm:px-8 lg:px-12">
           <div>
             <Link href="/" aria-label="Weppo home" className="inline-flex">

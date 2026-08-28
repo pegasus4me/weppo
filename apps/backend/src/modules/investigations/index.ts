@@ -6,6 +6,7 @@ import {
   IntercomInvestigationRunner,
 } from "./intercom-runner.js";
 import { OpenAIInvestigationPlanner } from "./openai-planner.js";
+import { OpenAICaseAnswerer } from "./openai-case-answerer.js";
 import { PlanningInvestigationRunner } from "./planning-runner.js";
 import { InvestigationService } from "./service.js";
 import { SupervisorInvestigationRunner } from "./supervisor-runner.js";
@@ -46,7 +47,15 @@ export function createInvestigationModule(
           : [],
       )
     : new DemoInvestigationRunner();
-  const service = new InvestigationService(repository, runner, subscriptions);
+  const questionAnswerer = options.openAI
+    ? new OpenAICaseAnswerer(options.openAI)
+    : undefined;
+  const service = new InvestigationService(
+    repository,
+    runner,
+    subscriptions,
+    questionAnswerer,
+  );
 
   return {
     service,

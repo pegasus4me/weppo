@@ -76,6 +76,20 @@ export type InvestigationBranch = {
   limitations: string[];
 };
 
+export type InvestigationDiagnosis = {
+  verdict: "confirmed" | "likely" | "inconclusive";
+  headline: string;
+  summary: string;
+  confidence: "low" | "medium" | "high" | null;
+  impact: string | null;
+  evidenceIds: string[];
+  recommendedNextStep: string | null;
+  drafts: {
+    engineering: string | null;
+    customerReply: string | null;
+  };
+};
+
 export type AgentEventType =
   | "run.started"
   | "ticket.parsed"
@@ -118,6 +132,7 @@ export type InvestigationPatch = {
   knowledgeRetrieval?: KnowledgeRetrievalStep[];
   missingInformation?: string[];
   engineeringDraft?: string | null;
+  diagnosis?: InvestigationDiagnosis | null;
 };
 
 export type AgentEvent = {
@@ -200,6 +215,7 @@ export type InvestigationCase = {
     knowledgeRetrieval: KnowledgeRetrievalStep[];
     missingInformation: string[];
     engineeringDraft: string | null;
+    diagnosis?: InvestigationDiagnosis | null;
   };
   createdAt: string;
   updatedAt: string;

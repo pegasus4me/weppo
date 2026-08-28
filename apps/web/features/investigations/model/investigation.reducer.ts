@@ -117,6 +117,10 @@ export function investigationReducer(
             patch?.knowledgeRetrieval ?? currentCase.reconstructed.knowledgeRetrieval,
           engineeringDraft:
             patch?.engineeringDraft ?? currentCase.reconstructed.engineeringDraft,
+          diagnosis:
+            patch?.diagnosis === undefined
+              ? currentCase.reconstructed.diagnosis
+              : patch.diagnosis,
         },
       },
     },

@@ -51,7 +51,7 @@ export function InvestigationPageClient({
   }
 
   return (
-    <main className="flex min-h-[calc(100svh-56px)] items-center justify-center bg-white px-6">
+    <main className="flex min-h-[calc(100svh-48px)] items-center justify-center bg-card px-6">
       <p className="text-sm text-text-tertiary">
         {error ?? "Loading investigation…"}
       </p>

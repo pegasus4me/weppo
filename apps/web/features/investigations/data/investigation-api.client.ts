@@ -74,5 +74,5 @@ export async function submitInvestigationFollowUp(
       body: JSON.stringify({ prompt }),
     },
   );
-  return parseResponse<{ event: { id: string; sequence: number } }>(response);
+  return parseResponse<{ answer: string }>(response);
 }

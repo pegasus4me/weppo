@@ -155,6 +155,20 @@ export type InvestigationBranch = {
   limitations: string[];
 };
 
+export type InvestigationDiagnosis = {
+  verdict: "confirmed" | "likely" | "inconclusive";
+  headline: string;
+  summary: string;
+  confidence: "low" | "medium" | "high" | null;
+  impact: string | null;
+  evidenceIds: string[];
+  recommendedNextStep: string | null;
+  drafts: {
+    engineering: string | null;
+    customerReply: string | null;
+  };
+};
+
 export type ReconstructedCase = {
   customer: string;
   environment: string | null;
@@ -167,6 +181,7 @@ export type ReconstructedCase = {
   knowledgeRetrieval: KnowledgeRetrievalStep[];
   missingInformation: string[];
   engineeringDraft: string | null;
+  diagnosis?: InvestigationDiagnosis | null;
 };
 
 export type InvestigationCase = {
@@ -270,6 +285,7 @@ export type InvestigationPatch = {
   knowledgeRetrieval?: KnowledgeRetrievalStep[];
   missingInformation?: string[];
   engineeringDraft?: string | null;
+  diagnosis?: InvestigationDiagnosis | null;
 };
 
 export type RunnerStep = {

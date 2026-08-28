@@ -40,6 +40,8 @@ const supportedProviders = new Set<IntegrationProvider>([
   "intercom",
   "sentry",
   "notion",
+  "postgresql",
+  "github",
   "zendesk",
   "datadog",
   "linear",

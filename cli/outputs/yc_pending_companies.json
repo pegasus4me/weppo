@@ -1,0 +1,2342 @@
+[
+  {
+    "companyId": "30498",
+    "slug": null,
+    "name": "Alkali"
+  },
+  {
+    "companyId": "30430",
+    "slug": null,
+    "name": "Almond"
+  },
+  {
+    "companyId": "30435",
+    "slug": null,
+    "name": "Alpha Research"
+  },
+  {
+    "companyId": "30485",
+    "slug": null,
+    "name": "Anana"
+  },
+  {
+    "companyId": "30403",
+    "slug": null,
+    "name": "Aravolta"
+  },
+  {
+    "companyId": "30336",
+    "slug": null,
+    "name": "Atlog"
+  },
+  {
+    "companyId": "30449",
+    "slug": null,
+    "name": "Attune"
+  },
+  {
+    "companyId": "29662",
+    "slug": null,
+    "name": "Atum Works"
+  },
+  {
+    "companyId": "30425",
+    "slug": null,
+    "name": "Auctor"
+  },
+  {
+    "companyId": "30415",
+    "slug": null,
+    "name": "Avallon AI"
+  },
+  {
+    "companyId": "30173",
+    "slug": null,
+    "name": "Aviro"
+  },
+  {
+    "companyId": "30438",
+    "slug": null,
+    "name": "Beluga"
+  },
+  {
+    "companyId": "30500",
+    "slug": null,
+    "name": "Besimple AI"
+  },
+  {
+    "companyId": "30452",
+    "slug": null,
+    "name": "Better Auth"
+  },
+  {
+    "companyId": "30406",
+    "slug": null,
+    "name": "BitBoard"
+  },
+  {
+    "companyId": "30558",
+    "slug": null,
+    "name": "BitPatrol"
+  },
+  {
+    "companyId": "30366",
+    "slug": null,
+    "name": "Blaxel"
+  },
+  {
+    "companyId": "30412",
+    "slug": null,
+    "name": "Bloom"
+  },
+  {
+    "companyId": "30451",
+    "slug": null,
+    "name": "Bluejay"
+  },
+  {
+    "companyId": "30553",
+    "slug": null,
+    "name": "Blueshoe"
+  },
+  {
+    "companyId": "30554",
+    "slug": null,
+    "name": "Bond"
+  },
+  {
+    "companyId": "30509",
+    "slug": null,
+    "name": "Boost Robotics"
+  },
+  {
+    "companyId": "30516",
+    "slug": null,
+    "name": "Bramante"
+  },
+  {
+    "companyId": "30543",
+    "slug": null,
+    "name": "Cactus"
+  },
+  {
+    "companyId": "30428",
+    "slug": null,
+    "name": "Capacitive"
+  },
+  {
+    "companyId": "30501",
+    "slug": null,
+    "name": "Cartpole"
+  },
+  {
+    "companyId": "30556",
+    "slug": null,
+    "name": "Cascade Space"
+  },
+  {
+    "companyId": "30477",
+    "slug": null,
+    "name": "Casco"
+  },
+  {
+    "companyId": "30447",
+    "slug": null,
+    "name": "Caucus"
+  },
+  {
+    "companyId": "30384",
+    "slug": null,
+    "name": "Chestnut"
+  },
+  {
+    "companyId": "30459",
+    "slug": null,
+    "name": "Chiron"
+  },
+  {
+    "companyId": "30526",
+    "slug": null,
+    "name": "chrt"
+  },
+  {
+    "companyId": "30429",
+    "slug": null,
+    "name": "Claim Health"
+  },
+  {
+    "companyId": "30439",
+    "slug": null,
+    "name": "Clarm"
+  },
+  {
+    "companyId": "30468",
+    "slug": null,
+    "name": "Clidey"
+  },
+  {
+    "companyId": "30541",
+    "slug": null,
+    "name": "Code Four"
+  },
+  {
+    "companyId": "30565",
+    "slug": null,
+    "name": "Cohesive"
+  },
+  {
+    "companyId": "30461",
+    "slug": null,
+    "name": "Combinely"
+  },
+  {
+    "companyId": "30535",
+    "slug": null,
+    "name": "Cotool"
+  },
+  {
+    "companyId": "30479",
+    "slug": null,
+    "name": "Crimson"
+  },
+  {
+    "companyId": "30420",
+    "slug": null,
+    "name": "Cua"
+  },
+  {
+    "companyId": "30411",
+    "slug": null,
+    "name": "cubic"
+  },
+  {
+    "companyId": "30538",
+    "slug": null,
+    "name": "Den"
+  },
+  {
+    "companyId": "30562",
+    "slug": null,
+    "name": "Docket"
+  },
+  {
+    "companyId": "30513",
+    "slug": null,
+    "name": "Eloquent AI"
+  },
+  {
+    "companyId": "30431",
+    "slug": null,
+    "name": "Feyn"
+  },
+  {
+    "companyId": "30480",
+    "slug": null,
+    "name": "Flott HQ"
+  },
+  {
+    "companyId": "30560",
+    "slug": null,
+    "name": "Foundation Industries"
+  },
+  {
+    "companyId": "30462",
+    "slug": null,
+    "name": "Freesolo"
+  },
+  {
+    "companyId": "30399",
+    "slug": null,
+    "name": "Frekil"
+  },
+  {
+    "companyId": "30422",
+    "slug": null,
+    "name": "Galen AI"
+  },
+  {
+    "companyId": "30559",
+    "slug": null,
+    "name": "Godela"
+  },
+  {
+    "companyId": "30407",
+    "slug": null,
+    "name": "Golf"
+  },
+  {
+    "companyId": "30417",
+    "slug": null,
+    "name": "GroundControl"
+  },
+  {
+    "companyId": "30469",
+    "slug": null,
+    "name": "HABIT"
+  },
+  {
+    "companyId": "30442",
+    "slug": null,
+    "name": "Hanji"
+  },
+  {
+    "companyId": "30432",
+    "slug": null,
+    "name": "HelixDB"
+  },
+  {
+    "companyId": "30519",
+    "slug": null,
+    "name": "Hemut"
+  },
+  {
+    "companyId": "30497",
+    "slug": null,
+    "name": "Human Behavior"
+  },
+  {
+    "companyId": "30487",
+    "slug": null,
+    "name": "IRBC"
+  },
+  {
+    "companyId": "30458",
+    "slug": null,
+    "name": "Jeevy Fabrication"
+  },
+  {
+    "companyId": "30437",
+    "slug": null,
+    "name": "Kaelio"
+  },
+  {
+    "companyId": "30521",
+    "slug": null,
+    "name": "Kairos"
+  },
+  {
+    "companyId": "30471",
+    "slug": null,
+    "name": "Kaizen"
+  },
+  {
+    "companyId": "30418",
+    "slug": null,
+    "name": "Kanava AI"
+  },
+  {
+    "companyId": "30402",
+    "slug": null,
+    "name": "Kashikoi"
+  },
+  {
+    "companyId": "30450",
+    "slug": null,
+    "name": "Kestral"
+  },
+  {
+    "companyId": "30446",
+    "slug": null,
+    "name": "Kirana AI"
+  },
+  {
+    "companyId": "30506",
+    "slug": null,
+    "name": "Klavis AI"
+  },
+  {
+    "companyId": "30466",
+    "slug": null,
+    "name": "Labric"
+  },
+  {
+    "companyId": "29656",
+    "slug": null,
+    "name": "Leeroo"
+  },
+  {
+    "companyId": "30515",
+    "slug": null,
+    "name": "Libretto"
+  },
+  {
+    "companyId": "30482",
+    "slug": null,
+    "name": "Lucis"
+  },
+  {
+    "companyId": "30540",
+    "slug": null,
+    "name": "Lumari"
+  },
+  {
+    "companyId": "30445",
+    "slug": null,
+    "name": "Mbodi AI"
+  },
+  {
+    "companyId": "30523",
+    "slug": null,
+    "name": "Mesmer"
+  },
+  {
+    "companyId": "30527",
+    "slug": null,
+    "name": "MindFort"
+  },
+  {
+    "companyId": "30419",
+    "slug": null,
+    "name": "Minerva"
+  },
+  {
+    "companyId": "30539",
+    "slug": null,
+    "name": "mlop"
+  },
+  {
+    "companyId": "30531",
+    "slug": null,
+    "name": "Moby Analytics"
+  },
+  {
+    "companyId": "30475",
+    "slug": null,
+    "name": "Morphik"
+  },
+  {
+    "companyId": "30512",
+    "slug": null,
+    "name": "MorphoAI"
+  },
+  {
+    "companyId": "30405",
+    "slug": null,
+    "name": "nao Labs"
+  },
+  {
+    "companyId": "30522",
+    "slug": null,
+    "name": "Naïve"
+  },
+  {
+    "companyId": "30423",
+    "slug": null,
+    "name": "neoncoral"
+  },
+  {
+    "companyId": "30532",
+    "slug": null,
+    "name": "Nimbic AI"
+  },
+  {
+    "companyId": "30502",
+    "slug": null,
+    "name": "NODI Energy"
+  },
+  {
+    "companyId": "30476",
+    "slug": null,
+    "name": "Nomi"
+  },
+  {
+    "companyId": "30491",
+    "slug": null,
+    "name": "Novoflow"
+  },
+  {
+    "companyId": "30467",
+    "slug": null,
+    "name": "Opusense AI"
+  },
+  {
+    "companyId": "30518",
+    "slug": null,
+    "name": "Orchid"
+  },
+  {
+    "companyId": "30455",
+    "slug": null,
+    "name": "Paper Instruments"
+  },
+  {
+    "companyId": "30507",
+    "slug": null,
+    "name": "ParaQuery"
+  },
+  {
+    "companyId": "30453",
+    "slug": null,
+    "name": "Parsewise"
+  },
+  {
+    "companyId": "30191",
+    "slug": null,
+    "name": "Partcl"
+  },
+  {
+    "companyId": "30533",
+    "slug": null,
+    "name": "Pelica"
+  },
+  {
+    "companyId": "30444",
+    "slug": null,
+    "name": "Percival"
+  },
+  {
+    "companyId": "30448",
+    "slug": null,
+    "name": "PgDog"
+  },
+  {
+    "companyId": "30465",
+    "slug": null,
+    "name": "Photonium"
+  },
+  {
+    "companyId": "30400",
+    "slug": null,
+    "name": "Plexe"
+  },
+  {
+    "companyId": "30492",
+    "slug": null,
+    "name": "Prism"
+  },
+  {
+    "companyId": "30528",
+    "slug": null,
+    "name": "Probo"
+  },
+  {
+    "companyId": "30536",
+    "slug": null,
+    "name": "Propolis"
+  },
+  {
+    "companyId": "30367",
+    "slug": null,
+    "name": "QFEX"
+  },
+  {
+    "companyId": "30496",
+    "slug": null,
+    "name": "QualGent"
+  },
+  {
+    "companyId": "30426",
+    "slug": null,
+    "name": "Ralo"
+  },
+  {
+    "companyId": "30454",
+    "slug": null,
+    "name": "Refresh"
+  },
+  {
+    "companyId": "30530",
+    "slug": null,
+    "name": "Rimba"
+  },
+  {
+    "companyId": "30474",
+    "slug": null,
+    "name": "RunRL"
+  },
+  {
+    "companyId": "30514",
+    "slug": null,
+    "name": "Scalar Field"
+  },
+  {
+    "companyId": "30552",
+    "slug": null,
+    "name": "sieve"
+  },
+  {
+    "companyId": "30440",
+    "slug": null,
+    "name": "Sim"
+  },
+  {
+    "companyId": "30464",
+    "slug": null,
+    "name": "Sixtyfour"
+  },
+  {
+    "companyId": "30545",
+    "slug": null,
+    "name": "StarSling"
+  },
+  {
+    "companyId": "30441",
+    "slug": null,
+    "name": "stratify"
+  },
+  {
+    "companyId": "30561",
+    "slug": null,
+    "name": "Sureform"
+  },
+  {
+    "companyId": "30508",
+    "slug": null,
+    "name": "Sygaldry Technologies"
+  },
+  {
+    "companyId": "30421",
+    "slug": null,
+    "name": "Synthio Labs"
+  },
+  {
+    "companyId": "30463",
+    "slug": null,
+    "name": "Tegore"
+  },
+  {
+    "companyId": "30547",
+    "slug": null,
+    "name": "Text.ai"
+  },
+  {
+    "companyId": "30433",
+    "slug": null,
+    "name": "The Robot Learning Company"
+  },
+  {
+    "companyId": "30548",
+    "slug": null,
+    "name": "Theorem"
+  },
+  {
+    "companyId": "30488",
+    "slug": null,
+    "name": "Theta"
+  },
+  {
+    "companyId": "30504",
+    "slug": null,
+    "name": "Third Chair"
+  },
+  {
+    "companyId": "30484",
+    "slug": null,
+    "name": "throxy"
+  },
+  {
+    "companyId": "30472",
+    "slug": null,
+    "name": "Ticket Wallet"
+  },
+  {
+    "companyId": "30456",
+    "slug": null,
+    "name": "Tinfoil"
+  },
+  {
+    "companyId": "30457",
+    "slug": null,
+    "name": "Trapeze"
+  },
+  {
+    "companyId": "30443",
+    "slug": null,
+    "name": "Units"
+  },
+  {
+    "companyId": "30517",
+    "slug": null,
+    "name": "ValueMate"
+  },
+  {
+    "companyId": "30511",
+    "slug": null,
+    "name": "Vassar Robotics"
+  },
+  {
+    "companyId": "30503",
+    "slug": null,
+    "name": "Vesence"
+  },
+  {
+    "companyId": "30542",
+    "slug": null,
+    "name": "Vision Lab"
+  },
+  {
+    "companyId": "30460",
+    "slug": null,
+    "name": "VoiceOS"
+  },
+  {
+    "companyId": "30404",
+    "slug": null,
+    "name": "Vybe"
+  },
+  {
+    "companyId": "30329",
+    "slug": null,
+    "name": "Waffle"
+  },
+  {
+    "companyId": "30544",
+    "slug": null,
+    "name": "Wavedash"
+  },
+  {
+    "companyId": "29666",
+    "slug": null,
+    "name": "Willow"
+  },
+  {
+    "companyId": "30434",
+    "slug": null,
+    "name": "Zeon Systems"
+  },
+  {
+    "companyId": "30606",
+    "slug": null,
+    "name": "Acrely"
+  },
+  {
+    "companyId": "30596",
+    "slug": null,
+    "name": "Adaptional"
+  },
+  {
+    "companyId": "30611",
+    "slug": null,
+    "name": "AgentMail"
+  },
+  {
+    "companyId": "30727",
+    "slug": null,
+    "name": "Alara"
+  },
+  {
+    "companyId": "30704",
+    "slug": null,
+    "name": "Albacore Inc."
+  },
+  {
+    "companyId": "30651",
+    "slug": null,
+    "name": "Alter"
+  },
+  {
+    "companyId": "30738",
+    "slug": null,
+    "name": "Altur"
+  },
+  {
+    "companyId": "30362",
+    "slug": null,
+    "name": "Ambral"
+  },
+  {
+    "companyId": "30616",
+    "slug": null,
+    "name": "args"
+  },
+  {
+    "companyId": "30614",
+    "slug": null,
+    "name": "Astor"
+  },
+  {
+    "companyId": "30720",
+    "slug": null,
+    "name": "Autosana"
+  },
+  {
+    "companyId": "30086",
+    "slug": null,
+    "name": "Autumn"
+  },
+  {
+    "companyId": "30734",
+    "slug": null,
+    "name": "Avelis Health"
+  },
+  {
+    "companyId": "30799",
+    "slug": null,
+    "name": "Avent"
+  },
+  {
+    "companyId": "30689",
+    "slug": null,
+    "name": "b12 Labs"
+  },
+  {
+    "companyId": "30634",
+    "slug": null,
+    "name": "bitrig"
+  },
+  {
+    "companyId": "30792",
+    "slug": null,
+    "name": "Bizzy AI"
+  },
+  {
+    "companyId": "30613",
+    "slug": null,
+    "name": "Blank Bio"
+  },
+  {
+    "companyId": "30813",
+    "slug": null,
+    "name": "Blue"
+  },
+  {
+    "companyId": "30675",
+    "slug": null,
+    "name": "BootLoop"
+  },
+  {
+    "companyId": "30801",
+    "slug": null,
+    "name": "burnt"
+  },
+  {
+    "companyId": "30510",
+    "slug": null,
+    "name": "Cactus Compute"
+  },
+  {
+    "companyId": "30666",
+    "slug": null,
+    "name": "CareSwift"
+  },
+  {
+    "companyId": "30759",
+    "slug": null,
+    "name": "Certus AI"
+  },
+  {
+    "companyId": "30695",
+    "slug": null,
+    "name": "Channel3"
+  },
+  {
+    "companyId": "30711",
+    "slug": null,
+    "name": "Char"
+  },
+  {
+    "companyId": "30774",
+    "slug": null,
+    "name": "CLODO"
+  },
+  {
+    "companyId": "30603",
+    "slug": null,
+    "name": "Closera"
+  },
+  {
+    "companyId": "30670",
+    "slug": null,
+    "name": "cocreate"
+  },
+  {
+    "companyId": "30698",
+    "slug": null,
+    "name": "Comena"
+  },
+  {
+    "companyId": "30626",
+    "slug": null,
+    "name": "ContextFort"
+  },
+  {
+    "companyId": "30747",
+    "slug": null,
+    "name": "Convexia"
+  },
+  {
+    "companyId": "30681",
+    "slug": null,
+    "name": "Conviction"
+  },
+  {
+    "companyId": "30692",
+    "slug": null,
+    "name": "Costream"
+  },
+  {
+    "companyId": "30647",
+    "slug": null,
+    "name": "Cyberdesk"
+  },
+  {
+    "companyId": "30628",
+    "slug": null,
+    "name": "Datafruit"
+  },
+  {
+    "companyId": "30605",
+    "slug": null,
+    "name": "Dedalus Labs"
+  },
+  {
+    "companyId": "30662",
+    "slug": null,
+    "name": "DeepAware AI (Robotics Center of Silicon Valley)"
+  },
+  {
+    "companyId": "30656",
+    "slug": null,
+    "name": "DeepGrove"
+  },
+  {
+    "companyId": "30637",
+    "slug": null,
+    "name": "Design Arena"
+  },
+  {
+    "companyId": "30684",
+    "slug": null,
+    "name": "Doe"
+  },
+  {
+    "companyId": "30781",
+    "slug": null,
+    "name": "Duranium"
+  },
+  {
+    "companyId": "30636",
+    "slug": null,
+    "name": "EffiGov"
+  },
+  {
+    "companyId": "30691",
+    "slug": null,
+    "name": "Embedder"
+  },
+  {
+    "companyId": "30694",
+    "slug": null,
+    "name": "Epicenter"
+  },
+  {
+    "companyId": "30832",
+    "slug": null,
+    "name": "F2"
+  },
+  {
+    "companyId": "30741",
+    "slug": null,
+    "name": "F4 Industries"
+  },
+  {
+    "companyId": "30716",
+    "slug": null,
+    "name": "Finto"
+  },
+  {
+    "companyId": "30690",
+    "slug": null,
+    "name": "Flai"
+  },
+  {
+    "companyId": "30775",
+    "slug": null,
+    "name": "Fleetline"
+  },
+  {
+    "companyId": "30729",
+    "slug": null,
+    "name": "Floot"
+  },
+  {
+    "companyId": "30771",
+    "slug": null,
+    "name": "Flywheel AI"
+  },
+  {
+    "companyId": "30802",
+    "slug": null,
+    "name": "Freya"
+  },
+  {
+    "companyId": "30655",
+    "slug": null,
+    "name": "Frizzle"
+  },
+  {
+    "companyId": "30688",
+    "slug": null,
+    "name": "Fulcrum"
+  },
+  {
+    "companyId": "30598",
+    "slug": null,
+    "name": "GETASAP"
+  },
+  {
+    "companyId": "30696",
+    "slug": null,
+    "name": "GhostEye"
+  },
+  {
+    "companyId": "30618",
+    "slug": null,
+    "name": "Golpo"
+  },
+  {
+    "companyId": "30609",
+    "slug": null,
+    "name": "Halluminate"
+  },
+  {
+    "companyId": "30758",
+    "slug": null,
+    "name": "Hera"
+  },
+  {
+    "companyId": "30732",
+    "slug": null,
+    "name": "Humoniq"
+  },
+  {
+    "companyId": "30730",
+    "slug": null,
+    "name": "idler"
+  },
+  {
+    "companyId": "30650",
+    "slug": null,
+    "name": "Imprezia"
+  },
+  {
+    "companyId": "30686",
+    "slug": null,
+    "name": "Interface"
+  },
+  {
+    "companyId": "30789",
+    "slug": null,
+    "name": "Interfere"
+  },
+  {
+    "companyId": "30717",
+    "slug": null,
+    "name": "Iron Grid"
+  },
+  {
+    "companyId": "30685",
+    "slug": null,
+    "name": "IronLedger.ai"
+  },
+  {
+    "companyId": "30648",
+    "slug": null,
+    "name": "Janet AI"
+  },
+  {
+    "companyId": "30769",
+    "slug": null,
+    "name": "Juxta"
+  },
+  {
+    "companyId": "30677",
+    "slug": null,
+    "name": "Kalinda"
+  },
+  {
+    "companyId": "30762",
+    "slug": null,
+    "name": "KERNEL"
+  },
+  {
+    "companyId": "30721",
+    "slug": null,
+    "name": "Knowlify"
+  },
+  {
+    "companyId": "30615",
+    "slug": null,
+    "name": "Lanesurf"
+  },
+  {
+    "companyId": "30630",
+    "slug": null,
+    "name": "Lark"
+  },
+  {
+    "companyId": "30649",
+    "slug": null,
+    "name": "Lilac"
+  },
+  {
+    "companyId": "30622",
+    "slug": null,
+    "name": "Liva AI"
+  },
+  {
+    "companyId": "30625",
+    "slug": null,
+    "name": "LLM Stats"
+  },
+  {
+    "companyId": "30754",
+    "slug": null,
+    "name": "Locata"
+  },
+  {
+    "companyId": "30638",
+    "slug": null,
+    "name": "Lotas"
+  },
+  {
+    "companyId": "30804",
+    "slug": null,
+    "name": "Luminal"
+  },
+  {
+    "companyId": "30776",
+    "slug": null,
+    "name": "Magnetic"
+  },
+  {
+    "companyId": "30660",
+    "slug": null,
+    "name": "Magnitude"
+  },
+  {
+    "companyId": "30608",
+    "slug": null,
+    "name": "MangoDesk"
+  },
+  {
+    "companyId": "30710",
+    "slug": null,
+    "name": "Manufact"
+  },
+  {
+    "companyId": "30731",
+    "slug": null,
+    "name": "Maximal"
+  },
+  {
+    "companyId": "30602",
+    "slug": null,
+    "name": "Meteor"
+  },
+  {
+    "companyId": "30740",
+    "slug": null,
+    "name": "Metis"
+  },
+  {
+    "companyId": "30701",
+    "slug": null,
+    "name": "Mimos"
+  },
+  {
+    "companyId": "30725",
+    "slug": null,
+    "name": "Minimal AI"
+  },
+  {
+    "companyId": "30777",
+    "slug": null,
+    "name": "Modelence"
+  },
+  {
+    "companyId": "30640",
+    "slug": null,
+    "name": "Monarcha"
+  },
+  {
+    "companyId": "30352",
+    "slug": null,
+    "name": "Monte"
+  },
+  {
+    "companyId": "30713",
+    "slug": null,
+    "name": "Motives"
+  },
+  {
+    "companyId": "30786",
+    "slug": null,
+    "name": "Munify"
+  },
+  {
+    "companyId": "30733",
+    "slug": null,
+    "name": "Nautilus"
+  },
+  {
+    "companyId": "30673",
+    "slug": null,
+    "name": "Nexa Labs"
+  },
+  {
+    "companyId": "30494",
+    "slug": null,
+    "name": "Nixo"
+  },
+  {
+    "companyId": "30697",
+    "slug": null,
+    "name": "Normal"
+  },
+  {
+    "companyId": "30795",
+    "slug": null,
+    "name": "NOSO LABS"
+  },
+  {
+    "companyId": "30756",
+    "slug": null,
+    "name": "Notte"
+  },
+  {
+    "companyId": "30709",
+    "slug": null,
+    "name": "Novaflow"
+  },
+  {
+    "companyId": "30818",
+    "slug": null,
+    "name": "Nox Metals"
+  },
+  {
+    "companyId": "30700",
+    "slug": null,
+    "name": "Nozomio"
+  },
+  {
+    "companyId": "30768",
+    "slug": null,
+    "name": "Okibi"
+  },
+  {
+    "companyId": "30722",
+    "slug": null,
+    "name": "Omnara"
+  },
+  {
+    "companyId": "30652",
+    "slug": null,
+    "name": "OnDeck AI"
+  },
+  {
+    "companyId": "30743",
+    "slug": null,
+    "name": "Opennote"
+  },
+  {
+    "companyId": "30642",
+    "slug": null,
+    "name": "Orange Slice"
+  },
+  {
+    "companyId": "30755",
+    "slug": null,
+    "name": "Pally"
+  },
+  {
+    "companyId": "30807",
+    "slug": null,
+    "name": "Paloma"
+  },
+  {
+    "companyId": "30645",
+    "slug": null,
+    "name": "Panels"
+  },
+  {
+    "companyId": "30665",
+    "slug": null,
+    "name": "Pangolin"
+  },
+  {
+    "companyId": "30671",
+    "slug": null,
+    "name": "Panoptive"
+  },
+  {
+    "companyId": "30736",
+    "slug": null,
+    "name": "PARES AI"
+  },
+  {
+    "companyId": "30708",
+    "slug": null,
+    "name": "Perseus Defense"
+  },
+  {
+    "companyId": "30778",
+    "slug": null,
+    "name": "Perspectives Health"
+  },
+  {
+    "companyId": "30707",
+    "slug": null,
+    "name": "Phases"
+  },
+  {
+    "companyId": "30703",
+    "slug": null,
+    "name": "Physical Turing"
+  },
+  {
+    "companyId": "30582",
+    "slug": null,
+    "name": "Pingo"
+  },
+  {
+    "companyId": "30623",
+    "slug": null,
+    "name": "Playgent"
+  },
+  {
+    "companyId": "30748",
+    "slug": null,
+    "name": "Pleom"
+  },
+  {
+    "companyId": "30566",
+    "slug": null,
+    "name": "Preseen"
+  },
+  {
+    "companyId": "30719",
+    "slug": null,
+    "name": "ProcIndex"
+  },
+  {
+    "companyId": "30659",
+    "slug": null,
+    "name": "Proliferate"
+  },
+  {
+    "companyId": "30739",
+    "slug": null,
+    "name": "Quotain"
+  },
+  {
+    "companyId": "30761",
+    "slug": null,
+    "name": "Reacher"
+  },
+  {
+    "companyId": "30805",
+    "slug": null,
+    "name": "RealRoots"
+  },
+  {
+    "companyId": "30763",
+    "slug": null,
+    "name": "Rebulk"
+  },
+  {
+    "companyId": "30712",
+    "slug": null,
+    "name": "Relling"
+  },
+  {
+    "companyId": "30724",
+    "slug": null,
+    "name": "Risely AI"
+  },
+  {
+    "companyId": "30680",
+    "slug": null,
+    "name": "Riverbank"
+  },
+  {
+    "companyId": "30785",
+    "slug": null,
+    "name": "RowFlow"
+  },
+  {
+    "companyId": "30798",
+    "slug": null,
+    "name": "Ruvo"
+  },
+  {
+    "companyId": "30796",
+    "slug": null,
+    "name": "Sapien"
+  },
+  {
+    "companyId": "30413",
+    "slug": null,
+    "name": "Serafis"
+  },
+  {
+    "companyId": "30619",
+    "slug": null,
+    "name": "Shor"
+  },
+  {
+    "companyId": "30744",
+    "slug": null,
+    "name": "SigmanticAI"
+  },
+  {
+    "companyId": "30742",
+    "slug": null,
+    "name": "Sira"
+  },
+  {
+    "companyId": "30669",
+    "slug": null,
+    "name": "Slashy"
+  },
+  {
+    "companyId": "30726",
+    "slug": null,
+    "name": "Socratix AI"
+  },
+  {
+    "companyId": "30706",
+    "slug": null,
+    "name": "Solva"
+  },
+  {
+    "companyId": "30791",
+    "slug": null,
+    "name": "Spotlight Realty"
+  },
+  {
+    "companyId": "30772",
+    "slug": null,
+    "name": "stagewise"
+  },
+  {
+    "companyId": "30676",
+    "slug": null,
+    "name": "Stellon Labs"
+  },
+  {
+    "companyId": "30661",
+    "slug": null,
+    "name": "Stockline"
+  },
+  {
+    "companyId": "29697",
+    "slug": null,
+    "name": "Stormy"
+  },
+  {
+    "companyId": "30520",
+    "slug": null,
+    "name": "Synthetic Society"
+  },
+  {
+    "companyId": "30782",
+    "slug": null,
+    "name": "TectoAI"
+  },
+  {
+    "companyId": "30663",
+    "slug": null,
+    "name": "Tesora"
+  },
+  {
+    "companyId": "30607",
+    "slug": null,
+    "name": "The Prompting Company"
+  },
+  {
+    "companyId": "30683",
+    "slug": null,
+    "name": "Theora"
+  },
+  {
+    "companyId": "30629",
+    "slug": null,
+    "name": "Topological"
+  },
+  {
+    "companyId": "30687",
+    "slug": null,
+    "name": "Trace"
+  },
+  {
+    "companyId": "30610",
+    "slug": null,
+    "name": "TraceRoot.AI"
+  },
+  {
+    "companyId": "30612",
+    "slug": null,
+    "name": "truthsystems"
+  },
+  {
+    "companyId": "30702",
+    "slug": null,
+    "name": "TwentyTwo"
+  },
+  {
+    "companyId": "30806",
+    "slug": null,
+    "name": "Uplift AI"
+  },
+  {
+    "companyId": "30797",
+    "slug": null,
+    "name": "Veritus"
+  },
+  {
+    "companyId": "30624",
+    "slug": null,
+    "name": "Verne Robotics"
+  },
+  {
+    "companyId": "30699",
+    "slug": null,
+    "name": "VibeFlow"
+  },
+  {
+    "companyId": "30794",
+    "slug": null,
+    "name": "Vulcan Technologies"
+  },
+  {
+    "companyId": "30644",
+    "slug": null,
+    "name": "Wafer"
+  },
+  {
+    "companyId": "30364",
+    "slug": null,
+    "name": "Wayline"
+  },
+  {
+    "companyId": "30668",
+    "slug": null,
+    "name": "Wedge"
+  },
+  {
+    "companyId": "30250",
+    "slug": null,
+    "name": "10x"
+  },
+  {
+    "companyId": "30223",
+    "slug": null,
+    "name": "a0.dev"
+  },
+  {
+    "companyId": "30221",
+    "slug": null,
+    "name": "A1Zap by A1Base"
+  },
+  {
+    "companyId": "30234",
+    "slug": null,
+    "name": "Adam"
+  },
+  {
+    "companyId": "30303",
+    "slug": null,
+    "name": "AfterQuery"
+  },
+  {
+    "companyId": "30278",
+    "slug": null,
+    "name": "Agentin AI"
+  },
+  {
+    "companyId": "30197",
+    "slug": null,
+    "name": "Alice.tech"
+  },
+  {
+    "companyId": "30222",
+    "slug": null,
+    "name": "Altrina"
+  },
+  {
+    "companyId": "30238",
+    "slug": null,
+    "name": "Amby Health"
+  },
+  {
+    "companyId": "30307",
+    "slug": null,
+    "name": "Archon"
+  },
+  {
+    "companyId": "30354",
+    "slug": null,
+    "name": "Artifact"
+  },
+  {
+    "companyId": "30298",
+    "slug": null,
+    "name": "Artificial Societies"
+  },
+  {
+    "companyId": "30355",
+    "slug": null,
+    "name": "assistant-ui"
+  },
+  {
+    "companyId": "30259",
+    "slug": null,
+    "name": "Asteroid"
+  },
+  {
+    "companyId": "30202",
+    "slug": null,
+    "name": "Astro"
+  },
+  {
+    "companyId": "30268",
+    "slug": null,
+    "name": "AthenaHQ"
+  },
+  {
+    "companyId": "30199",
+    "slug": null,
+    "name": "awen"
+  },
+  {
+    "companyId": "30353",
+    "slug": null,
+    "name": "Axal"
+  },
+  {
+    "companyId": "30192",
+    "slug": null,
+    "name": "Axiom"
+  },
+  {
+    "companyId": "30240",
+    "slug": null,
+    "name": "Bezel"
+  },
+  {
+    "companyId": "30177",
+    "slug": null,
+    "name": "Bild AI"
+  },
+  {
+    "companyId": "30263",
+    "slug": null,
+    "name": "Bindwell"
+  },
+  {
+    "companyId": "30363",
+    "slug": null,
+    "name": "BlindPay"
+  },
+  {
+    "companyId": "30334",
+    "slug": null,
+    "name": "Bluebook"
+  },
+  {
+    "companyId": "30341",
+    "slug": null,
+    "name": "Browser Use"
+  },
+  {
+    "companyId": "30193",
+    "slug": null,
+    "name": "Bud"
+  },
+  {
+    "companyId": "30335",
+    "slug": null,
+    "name": "Butter"
+  },
+  {
+    "companyId": "30279",
+    "slug": null,
+    "name": "Bystreet"
+  },
+  {
+    "companyId": "30287",
+    "slug": null,
+    "name": "Calltree"
+  },
+  {
+    "companyId": "30273",
+    "slug": null,
+    "name": "Candor"
+  },
+  {
+    "companyId": "30178",
+    "slug": null,
+    "name": "Candor"
+  },
+  {
+    "companyId": "30239",
+    "slug": null,
+    "name": "Cardamon"
+  },
+  {
+    "companyId": "30232",
+    "slug": null,
+    "name": "careCycle"
+  },
+  {
+    "companyId": "30227",
+    "slug": null,
+    "name": "Caseflood.ai"
+  },
+  {
+    "companyId": "30343",
+    "slug": null,
+    "name": "Cedar"
+  },
+  {
+    "companyId": "30266",
+    "slug": null,
+    "name": "Cenote"
+  },
+  {
+    "companyId": "30243",
+    "slug": null,
+    "name": "Cifrato"
+  },
+  {
+    "companyId": "30209",
+    "slug": null,
+    "name": "Closure"
+  },
+  {
+    "companyId": "30283",
+    "slug": null,
+    "name": "Confident AI"
+  },
+  {
+    "companyId": "30210",
+    "slug": null,
+    "name": "Conntour"
+  },
+  {
+    "companyId": "30215",
+    "slug": null,
+    "name": "Contrario"
+  },
+  {
+    "companyId": "30338",
+    "slug": null,
+    "name": "CopyCat"
+  },
+  {
+    "companyId": "30319",
+    "slug": null,
+    "name": "Corsair"
+  },
+  {
+    "companyId": "30252",
+    "slug": null,
+    "name": "Cuckoo Labs"
+  },
+  {
+    "companyId": "30328",
+    "slug": null,
+    "name": "Dalus"
+  },
+  {
+    "companyId": "30201",
+    "slug": null,
+    "name": "Dartboard"
+  },
+  {
+    "companyId": "29988",
+    "slug": null,
+    "name": "Delineate"
+  },
+  {
+    "companyId": "30351",
+    "slug": null,
+    "name": "Dex"
+  },
+  {
+    "companyId": "30198",
+    "slug": null,
+    "name": "Dollyglot"
+  },
+  {
+    "companyId": "30165",
+    "slug": null,
+    "name": "Edexia"
+  },
+  {
+    "companyId": "28922",
+    "slug": null,
+    "name": "Egress Health"
+  },
+  {
+    "companyId": "30226",
+    "slug": null,
+    "name": "Elip AI"
+  },
+  {
+    "companyId": "30172",
+    "slug": null,
+    "name": "Enhanced Radar"
+  },
+  {
+    "companyId": "30339",
+    "slug": null,
+    "name": "Ergo"
+  },
+  {
+    "companyId": "30185",
+    "slug": null,
+    "name": "Excellence Learning"
+  },
+  {
+    "companyId": "29986",
+    "slug": null,
+    "name": "Exin Therapeutics"
+  },
+  {
+    "companyId": "30284",
+    "slug": null,
+    "name": "Exla"
+  },
+  {
+    "companyId": "30253",
+    "slug": null,
+    "name": "finbar"
+  },
+  {
+    "companyId": "30356",
+    "slug": null,
+    "name": "Fira"
+  },
+  {
+    "companyId": "30182",
+    "slug": null,
+    "name": "Flowtel"
+  },
+  {
+    "companyId": "30305",
+    "slug": null,
+    "name": "Forge Automation"
+  },
+  {
+    "companyId": "30301",
+    "slug": null,
+    "name": "Fuse AI"
+  },
+  {
+    "companyId": "30270",
+    "slug": null,
+    "name": "G LNK"
+  },
+  {
+    "companyId": "30258",
+    "slug": null,
+    "name": "Gale"
+  },
+  {
+    "companyId": "30276",
+    "slug": null,
+    "name": "General Trajectory"
+  },
+  {
+    "companyId": "30265",
+    "slug": null,
+    "name": "Harbera"
+  },
+  {
+    "companyId": "30288",
+    "slug": null,
+    "name": "Harper"
+  },
+  {
+    "companyId": "30249",
+    "slug": null,
+    "name": "HealthKey"
+  },
+  {
+    "companyId": "30188",
+    "slug": null,
+    "name": "Hey Telo"
+  },
+  {
+    "companyId": "30254",
+    "slug": null,
+    "name": "HUD"
+  },
+  {
+    "companyId": "30295",
+    "slug": null,
+    "name": "Infinite"
+  },
+  {
+    "companyId": "30347",
+    "slug": null,
+    "name": "Instinct Space"
+  },
+  {
+    "companyId": "30233",
+    "slug": null,
+    "name": "Inversion Semiconductor"
+  },
+  {
+    "companyId": "30200",
+    "slug": null,
+    "name": "Karoo"
+  },
+  {
+    "companyId": "30285",
+    "slug": null,
+    "name": "Karsa"
+  },
+  {
+    "companyId": "30181",
+    "slug": null,
+    "name": "Leaping AI"
+  },
+  {
+    "companyId": "30269",
+    "slug": null,
+    "name": "Liquid Compute"
+  },
+  {
+    "companyId": "30267",
+    "slug": null,
+    "name": "Lopus"
+  },
+  {
+    "companyId": "30261",
+    "slug": null,
+    "name": "Lucid"
+  },
+  {
+    "companyId": "30272",
+    "slug": null,
+    "name": "Lucidic AI"
+  },
+  {
+    "companyId": "30260",
+    "slug": null,
+    "name": "Macadamia"
+  },
+  {
+    "companyId": "30229",
+    "slug": null,
+    "name": "Maive"
+  },
+  {
+    "companyId": "30224",
+    "slug": null,
+    "name": "Maritime Fusion"
+  },
+  {
+    "companyId": "30304",
+    "slug": null,
+    "name": "Mastra"
+  },
+  {
+    "companyId": "30251",
+    "slug": null,
+    "name": "Mecha Health"
+  },
+  {
+    "companyId": "30365",
+    "slug": null,
+    "name": "Mentra"
+  },
+  {
+    "companyId": "30346",
+    "slug": null,
+    "name": "Mercura"
+  },
+  {
+    "companyId": "30292",
+    "slug": null,
+    "name": "Mesh"
+  },
+  {
+    "companyId": "30302",
+    "slug": null,
+    "name": "Misprint"
+  },
+  {
+    "companyId": "30299",
+    "slug": null,
+    "name": "Miyagi Labs"
+  },
+  {
+    "companyId": "30244",
+    "slug": null,
+    "name": "Mosaic"
+  },
+  {
+    "companyId": "30271",
+    "slug": null,
+    "name": "Mundo AI"
+  },
+  {
+    "companyId": "30286",
+    "slug": null,
+    "name": "Nitrode"
+  },
+  {
+    "companyId": "30242",
+    "slug": null,
+    "name": "Oki"
+  },
+  {
+    "companyId": "30255",
+    "slug": null,
+    "name": "Olive"
+  },
+  {
+    "companyId": "29999",
+    "slug": null,
+    "name": "Onlook"
+  },
+  {
+    "companyId": "30297",
+    "slug": null,
+    "name": "OpenIntake"
+  },
+  {
+    "companyId": "30248",
+    "slug": null,
+    "name": "Operand"
+  },
+  {
+    "companyId": "30315",
+    "slug": null,
+    "name": "Optifye.ai"
+  },
+  {
+    "companyId": "30293",
+    "slug": null,
+    "name": "Orbital Operations"
+  },
+  {
+    "companyId": "30247",
+    "slug": null,
+    "name": "Osmosis"
+  },
+  {
+    "companyId": "30291",
+    "slug": null,
+    "name": "Outlit"
+  },
+  {
+    "companyId": "30176",
+    "slug": null,
+    "name": "Outship"
+  },
+  {
+    "companyId": "29727",
+    "slug": null,
+    "name": "Overstand Labs"
+  },
+  {
+    "companyId": "30214",
+    "slug": null,
+    "name": "Ovlo"
+  },
+  {
+    "companyId": "30231",
+    "slug": null,
+    "name": "Paragon"
+  },
+  {
+    "companyId": "30337",
+    "slug": null,
+    "name": "Paratus Health"
+  },
+  {
+    "companyId": "30257",
+    "slug": null,
+    "name": "Pave Robotics"
+  },
+  {
+    "companyId": "30256",
+    "slug": null,
+    "name": "PAX Markets"
+  },
+  {
+    "companyId": "30296",
+    "slug": null,
+    "name": "Peppr AI"
+  },
+  {
+    "companyId": "30317",
+    "slug": null,
+    "name": "Permitify"
+  },
+  {
+    "companyId": "30262",
+    "slug": null,
+    "name": "Pickle"
+  },
+  {
+    "companyId": "30314",
+    "slug": null,
+    "name": "Pinch"
+  },
+  {
+    "companyId": "30187",
+    "slug": null,
+    "name": "Praxim"
+  },
+  {
+    "companyId": "30320",
+    "slug": null,
+    "name": "Proception Inc"
+  },
+  {
+    "companyId": "30207",
+    "slug": null,
+    "name": "Promptless"
+  },
+  {
+    "companyId": "30160",
+    "slug": null,
+    "name": "Quantstruct"
+  },
+  {
+    "companyId": "30235",
+    "slug": null,
+    "name": "Rally"
+  },
+  {
+    "companyId": "30324",
+    "slug": null,
+    "name": "Rebolt"
+  },
+  {
+    "companyId": "30368",
+    "slug": null,
+    "name": "Red Barn Robotics"
+  },
+  {
+    "companyId": "30316",
+    "slug": null,
+    "name": "Reditus Space"
+  },
+  {
+    "companyId": "30277",
+    "slug": null,
+    "name": "ReJot"
+  },
+  {
+    "companyId": "30312",
+    "slug": null,
+    "name": "Retrofit"
+  },
+  {
+    "companyId": "30174",
+    "slug": null,
+    "name": "Revise Robotics"
+  },
+  {
+    "companyId": "30282",
+    "slug": null,
+    "name": "Riviera"
+  },
+  {
+    "companyId": "30325",
+    "slug": null,
+    "name": "Roark"
+  },
+  {
+    "companyId": "30217",
+    "slug": null,
+    "name": "Rocketable"
+  },
+  {
+    "companyId": "30230",
+    "slug": null,
+    "name": "SalesPatriot"
+  },
+  {
+    "companyId": "30348",
+    "slug": null,
+    "name": "SAMMY Labs"
+  },
+  {
+    "companyId": "30205",
+    "slug": null,
+    "name": "Scout"
+  },
+  {
+    "companyId": "30294",
+    "slug": null,
+    "name": "Sennu AI"
+  },
+  {
+    "companyId": "30275",
+    "slug": null,
+    "name": "Solidroad"
+  },
+  {
+    "companyId": "30194",
+    "slug": null,
+    "name": "Splash Inc."
+  },
+  {
+    "companyId": "30322",
+    "slug": null,
+    "name": "Spott"
+  },
+  {
+    "companyId": "30196",
+    "slug": null,
+    "name": "Stamp"
+  },
+  {
+    "companyId": "30190",
+    "slug": null,
+    "name": "Steinmetz"
+  },
+  {
+    "companyId": "30264",
+    "slug": null,
+    "name": "Stillwind"
+  },
+  {
+    "companyId": "30189",
+    "slug": null,
+    "name": "SubImage"
+  },
+  {
+    "companyId": "30216",
+    "slug": null,
+    "name": "Sublingual"
+  },
+  {
+    "companyId": "30204",
+    "slug": null,
+    "name": "Subtrace"
+  },
+  {
+    "companyId": "30212",
+    "slug": null,
+    "name": "superglue"
+  },
+  {
+    "companyId": "30246",
+    "slug": null,
+    "name": "Swerve"
+  },
+  {
+    "companyId": "30340",
+    "slug": null,
+    "name": "TamLabs"
+  },
+  {
+    "companyId": "30345",
+    "slug": null,
+    "name": "Tee Time Tommy"
+  },
+  {
+    "companyId": "30333",
+    "slug": null,
+    "name": "TensorPool"
+  },
+  {
+    "companyId": "30236",
+    "slug": null,
+    "name": "Tergle"
+  },
+  {
+    "companyId": "30290",
+    "slug": null,
+    "name": "Tire Swing"
+  },
+  {
+    "companyId": "30218",
+    "slug": null,
+    "name": "Toothy AI"
+  },
+  {
+    "companyId": "30350",
+    "slug": null,
+    "name": "TrainLoop"
+  },
+  {
+    "companyId": "30274",
+    "slug": null,
+    "name": "Trata"
+  },
+  {
+    "companyId": "30225",
+    "slug": null,
+    "name": "Trava"
+  },
+  {
+    "companyId": "30237",
+    "slug": null,
+    "name": "Trim"
+  },
+  {
+    "companyId": "30213",
+    "slug": null,
+    "name": "Truffle AI"
+  },
+  {
+    "companyId": "30183",
+    "slug": null,
+    "name": "Tweeks.io"
+  },
+  {
+    "companyId": "29959",
+    "slug": null,
+    "name": "Uncommon Therapeutics"
+  },
+  {
+    "companyId": "30357",
+    "slug": null,
+    "name": "Vantel"
+  },
+  {
+    "companyId": "30220",
+    "slug": null,
+    "name": "Verbiflow"
+  },
+  {
+    "companyId": "30179",
+    "slug": null,
+    "name": "Vetnio"
+  },
+  {
+    "companyId": "30203",
+    "slug": null,
+    "name": "Vocality Health"
+  },
+  {
+    "companyId": "30281",
+    "slug": null,
+    "name": "Waypoint Transit"
+  },
+  {
+    "companyId": "30228",
+    "slug": null,
+    "name": "Weave"
+  },
+  {
+    "companyId": "30318",
+    "slug": null,
+    "name": "Wildcard"
+  },
+  {
+    "companyId": "30321",
+    "slug": null,
+    "name": "Woz"
+  },
+  {
+    "companyId": "29790",
+    "slug": null,
+    "name": "YouShift"
+  },
+  {
+    "companyId": "30241",
+    "slug": null,
+    "name": "ZeroEntropy"
+  }
+]

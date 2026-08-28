@@ -34,6 +34,33 @@ type CallbackNotice = {
   message: string;
 };
 
+const categoryPixelColors = [
+  ["#28745f", "#6fa38f", "#b9d7ca", "#4f8d78", "#91bbaa", "#d9e9e2", "#397e68", "#7cad99", "#c9e0d6"],
+  ["#9a5b39", "#c48764", "#e5b99e", "#ad6c47", "#d69c78", "#f1d5c4", "#a86240", "#ce8f6d", "#e9c7b2"],
+  ["#356b9a", "#6f9fc5", "#b1cee3", "#4f83ad", "#8eb4d1", "#d4e4f0", "#4277a3", "#7da8c9", "#c3d9e9"],
+  ["#74538f", "#9a7bb3", "#c6b3d5", "#84629d", "#ad91c2", "#e1d6e9", "#7d5a96", "#a589ba", "#d4c4df"],
+  ["#a74b4b", "#c67878", "#e5b2b2", "#b55e5e", "#d38f8f", "#f0d2d2", "#ae5555", "#cc8383", "#e9c1c1"],
+] as const;
+
+function CategoryPixelMark({ index }: { index: number }) {
+  const colors = categoryPixelColors[index % categoryPixelColors.length]!;
+
+  return (
+    <span
+      aria-hidden="true"
+      className="mt-0.5 grid shrink-0 grid-cols-3 gap-[2px]"
+    >
+      {colors.map((color, pixelIndex) => (
+        <span
+          key={`${color}-${pixelIndex}`}
+          className="size-[5px] rounded-[1px]"
+          style={{ backgroundColor: color }}
+        />
+      ))}
+    </span>
+  );
+}
+
 function errorMessage(reason: unknown, fallback: string) {
   return reason instanceof Error && reason.message ? reason.message : fallback;
 }
@@ -94,6 +121,16 @@ export function IntegrationsSettings() {
   const [callbackNotice, setCallbackNotice] = useState<CallbackNotice | null>(
     null,
   );
+  const [openGroups, setOpenGroups] = useState<Set<string>>(() => new Set());
+
+  function toggleGroup(groupName: string) {
+    setOpenGroups((current) => {
+      const next = new Set(current);
+      if (next.has(groupName)) next.delete(groupName);
+      else next.add(groupName);
+      return next;
+    });
+  }
 
   const refresh = useCallback(async (signal?: AbortSignal) => {
     setIsLoading(true);
@@ -222,7 +259,7 @@ export function IntegrationsSettings() {
 
   return (
     <main className="min-h-full px-6 py-8 sm:px-8 lg:px-10 lg:py-10">
-      <div className="mx-auto w-full max-w-5xl">
+      <div className="mx-auto w-[90%]">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm text-text-tertiary">Workspace</p>
@@ -239,7 +276,7 @@ export function IntegrationsSettings() {
             <button
               type="button"
               onClick={() => void refresh()}
-              className="inline-flex h-9 w-fit items-center rounded-full border border-border/35 px-4 text-xs font-medium text-text-secondary transition-colors hover:border-foreground/40 hover:text-foreground"
+              className="inline-flex h-[34px] w-fit items-center rounded-lg border border-border/35 bg-card px-3 text-xs font-medium text-text-secondary transition-colors hover:border-foreground/40 hover:text-foreground"
             >
               Retry
             </button>
@@ -269,50 +306,69 @@ export function IntegrationsSettings() {
         ) : null}
 
         <div className="mt-9 divide-y divide-border/20 border-y border-border/20">
-          {integrationGroups.map((group) => (
-            <section
-              key={group.name}
-              className="grid gap-6 py-7 md:grid-cols-[minmax(190px,0.7fr)_minmax(360px,1.3fr)] md:items-start"
-              aria-labelledby={`${group.name.toLowerCase()}-integrations-heading`}
-            >
-              <div>
-                <h2
-                  id={`${group.name.toLowerCase()}-integrations-heading`}
-                  className="text-sm font-medium text-foreground"
-                >
-                  {group.name}
-                </h2>
-                <p className="mt-2 max-w-xs text-sm leading-6 text-text-tertiary">
-                  {group.description}
-                </p>
-              </div>
+          {integrationGroups.map((group, groupIndex) => {
+            const isOpen = openGroups.has(group.name);
+            const groupId = `${group.name.toLowerCase().replaceAll(" ", "-")}-integrations`;
 
-              <div className="space-y-3">
-                {group.integrations.map((definition) => {
-                  const provider = definition.provider;
-                  const connectable = isConnectableProvider(provider);
-                  return (
-                    <IntegrationCard
-                      key={provider}
-                      definition={definition}
-                      connection={
-                        connectable ? (connections[provider] ?? null) : null
-                      }
-                      isLoading={connectable && isLoading}
-                      action={connectable ? (actions[provider] ?? null) : null}
-                      error={connectable ? (errors[provider] ?? null) : null}
-                      intercomRegion={intercomRegion}
-                      onIntercomRegionChange={setIntercomRegion}
-                      onConnect={(provider) => void handleConnect(provider)}
-                      onDisconnect={(provider) =>
-                        void handleDisconnect(provider)
-                      }
-                    />
-                  );
-                })}
-              </div>
-            </section>
-          ))}
+            return (
+              <section key={group.name} className="py-2">
+                <button
+                  type="button"
+                  aria-expanded={isOpen}
+                  aria-controls={groupId}
+                  onClick={() => toggleGroup(group.name)}
+                  className="flex w-full items-center justify-between gap-6 rounded-lg px-2 py-3 text-left transition-colors hover:bg-background"
+                >
+                  <span className="flex min-w-0 items-start gap-2.5">
+                    <CategoryPixelMark index={groupIndex} />
+                    <span className="min-w-0">
+                      <span className="block text-sm font-medium text-foreground">
+                        {group.name}
+                      </span>
+                      <span className="mt-1 block text-sm leading-5 text-text-tertiary">
+                        {group.description}
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className={`shrink-0 text-lg leading-none text-text-tertiary transition-transform duration-200 ${
+                      isOpen ? "rotate-90" : ""
+                    }`}
+                  >
+                    ›
+                  </span>
+                </button>
+
+                {isOpen ? (
+                  <div id={groupId} className="space-y-3 px-2 pb-4 pt-2">
+                    {group.integrations.map((definition) => {
+                      const provider = definition.provider;
+                      const connectable = isConnectableProvider(provider);
+                      return (
+                        <IntegrationCard
+                          key={provider}
+                          definition={definition}
+                          connection={
+                            connectable ? (connections[provider] ?? null) : null
+                          }
+                          isLoading={connectable && isLoading}
+                          action={connectable ? (actions[provider] ?? null) : null}
+                          error={connectable ? (errors[provider] ?? null) : null}
+                          intercomRegion={intercomRegion}
+                          onIntercomRegionChange={setIntercomRegion}
+                          onConnect={(provider) => void handleConnect(provider)}
+                          onDisconnect={(provider) =>
+                            void handleDisconnect(provider)
+                          }
+                        />
+                      );
+                    })}
+                  </div>
+                ) : null}
+              </section>
+            );
+          })}
         </div>
       </div>
     </main>

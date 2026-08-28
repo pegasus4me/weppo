@@ -153,13 +153,13 @@ export const investigationRoutes: FastifyPluginAsync<
       });
     }
 
-    const event = await service.requestFollowUp(
+    const answer = await service.answerFollowUp(
       actor,
       request.params.caseId,
       parsed.data,
     );
-    if (!event) return notFound(reply);
-    return reply.status(202).send({ event });
+    if (!answer) return notFound(reply);
+    return reply.status(200).send({ answer });
   });
 
   app.get<{ Params: { caseId: string }; Querystring: { after?: string } }>(

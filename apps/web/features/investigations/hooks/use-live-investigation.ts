@@ -60,7 +60,7 @@ export function useLiveInvestigation(
       setIsSendingFollowUp(true);
       setFollowUpError(null);
       try {
-        await stream.sendFollowUp(initialSnapshot.case.id, prompt);
+        return await stream.sendFollowUp(initialSnapshot.case.id, prompt);
       } catch (error) {
         const message =
           error instanceof Error

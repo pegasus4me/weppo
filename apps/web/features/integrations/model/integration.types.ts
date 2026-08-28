@@ -2,6 +2,8 @@ export type IntegrationProvider =
   | "intercom"
   | "sentry"
   | "notion"
+  | "postgresql"
+  | "github"
   | "zendesk"
   | "datadog"
   | "linear"
@@ -12,6 +14,8 @@ export const integrationLogos = {
     "https://play-lh.googleusercontent.com/eSTxYLsSpc1EO26uX1UQJ8BPXeSa7IFFXAB7fT-GX9AGrg6xGB9wbHa8LV-ANemGuP8XlwbpS0-D0VOkQxo",
   sentry: "https://www.svgrepo.com/show/354332/sentry-icon.svg",
   notion: "https://www.svgrepo.com/show/504667/notion.svg",
+  postgresql: "/integrations/postgresql.png",
+  github: "/integrations/github.svg",
   zendesk: "/integrations/zendesk.svg",
   datadog: "/integrations/datadog.svg",
   linear: "/integrations/linear.svg",
@@ -110,6 +114,26 @@ export const integrationGroups: readonly IntegrationGroup[] = [
     ],
   },
   {
+    name: "Data stores",
+    description:
+      "Inspect application data through connections restricted to read-only queries.",
+    integrations: [
+      {
+        provider: "postgresql",
+        name: "PostgreSQL",
+        logo: integrationLogos.postgresql,
+        description:
+          "Inspect schemas and query relevant records with a restricted database role.",
+        available: false,
+        readOnlyAccess: [
+          "Inspect database schemas",
+          "Run SELECT queries only",
+          "No insert, update, delete or DDL permissions",
+        ],
+      },
+    ],
+  },
+  {
     name: "Documentation",
     description:
       "Retrieve trusted technical context from pages explicitly shared with Weppo.",
@@ -133,6 +157,19 @@ export const integrationGroups: readonly IntegrationGroup[] = [
     name: "Engineering",
     description: "Find related bugs and publish validated escalations.",
     integrations: [
+      {
+        provider: "github",
+        name: "GitHub",
+        logo: integrationLogos.github,
+        description:
+          "Search repositories, issues, pull requests and commit history for related evidence.",
+        available: false,
+        readOnlyAccess: [
+          "Read repository metadata and source code",
+          "Read issues and pull requests",
+          "Read commit history",
+        ],
+      },
       {
         provider: "linear",
         name: "Linear",

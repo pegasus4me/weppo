@@ -52,7 +52,7 @@ export function InvestigationList({ status }: InvestigationListProps) {
 
   return (
     <main className="min-h-full px-6 py-8 sm:px-8 lg:px-10 lg:py-10">
-      <div className="mx-auto w-full max-w-5xl">
+      <div className="mx-auto w-[90%]">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm text-text-tertiary">Workspace</p>
@@ -68,7 +68,7 @@ export function InvestigationList({ status }: InvestigationListProps) {
 
           <Link
             href="/dashboard/investigations/new"
-            className="inline-flex h-10 items-center justify-center rounded-full bg-foreground px-5 text-sm font-medium text-white transition-colors hover:bg-text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            className="inline-flex h-[34px] items-center justify-center rounded-lg bg-foreground px-3 text-sm font-medium text-background transition-colors hover:bg-text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
             New investigation
           </Link>
@@ -104,7 +104,8 @@ export function InvestigationList({ status }: InvestigationListProps) {
                     {investigation.customer} · {investigation.summary}
                   </p>
                 </div>
-                <span className="text-xs text-text-secondary">
+                <span className="inline-flex w-fit items-center gap-1.5 whitespace-nowrap rounded-full bg-background px-2 py-1 text-xs text-text-secondary">
+                  <span className="size-1.5 rounded-full bg-text-tertiary" aria-hidden="true" />
                   {statusLabels[investigation.status]}
                 </span>
                 <span className="text-xs text-text-tertiary">

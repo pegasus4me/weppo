@@ -88,17 +88,18 @@ export function IntegrationCard({
 
   return (
     <article
-      className="rounded-lg border border-border/25 bg-white px-4 py-4"
+      className="rounded-lg border border-border/25 bg-card px-4 py-4"
       aria-busy={action !== null || undefined}
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex min-w-0 items-center gap-3">
-          <span className="flex size-9 shrink-0 items-center justify-center rounded-md border border-border/20 bg-white">
+          <span className="flex size-10 shrink-0 items-center justify-center">
             <Image
               src={definition.logo}
               alt=""
-              width={20}
-              height={20}
+              width={28}
+              height={28}
+              className="size-7 object-contain"
               aria-hidden="true"
             />
           </span>
@@ -120,13 +121,17 @@ export function IntegrationCard({
         <span
           className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium ${
             isConnected
-              ? "bg-primary/45 text-foreground"
+              ? "bg-[#eaf4ef] text-[#28745f] dark:bg-emerald-950/60 dark:text-emerald-300"
+              : connection?.status === "pending"
+                ? "bg-[#f8eee8] text-[#9a5b39] dark:bg-amber-950/60 dark:text-amber-300"
+                : connection?.status === "error"
+                  ? "bg-[#faeeee] text-[#a74b4b] dark:bg-red-950/60 dark:text-red-300"
               : "bg-background text-text-secondary"
           }`}
         >
           {isConnected ? (
             <span
-              className="size-1.5 rounded-full bg-foreground"
+              className="size-1.5 rounded-full bg-current"
               aria-hidden="true"
             />
           ) : null}
@@ -138,7 +143,7 @@ export function IntegrationCard({
         {definition.description}
       </p>
 
-      {definition.available ? (
+      {definition.readOnlyAccess.length > 0 ? (
         <div className="mt-4 rounded-md bg-background px-3.5 py-3">
           <div className="flex items-center justify-between gap-3">
             <p className="text-xs font-medium text-foreground">
@@ -214,7 +219,7 @@ export function IntegrationCard({
           <button
             type="button"
             disabled
-            className="inline-flex h-9 cursor-not-allowed items-center rounded-full bg-background px-4 text-xs font-medium text-text-tertiary"
+            className="inline-flex h-[34px] cursor-not-allowed items-center rounded-lg bg-background px-3 text-xs font-medium text-text-tertiary"
           >
             Coming next
           </button>
@@ -224,7 +229,7 @@ export function IntegrationCard({
             disabled={action !== null}
             aria-describedby={describedBy}
             onClick={() => onDisconnect(provider)}
-            className="inline-flex h-9 items-center rounded-full border border-border/35 px-4 text-xs font-medium text-text-secondary transition-colors hover:border-foreground/40 hover:text-foreground disabled:cursor-wait disabled:text-text-tertiary"
+            className="inline-flex h-[34px] items-center rounded-lg border border-border/35 bg-card px-3 text-xs font-medium text-text-secondary transition-colors hover:border-foreground/40 hover:text-foreground disabled:cursor-wait disabled:text-text-tertiary"
           >
             {action === "disconnecting" ? "Disconnecting…" : "Disconnect"}
           </button>
@@ -242,7 +247,7 @@ export function IntegrationCard({
                   onChange={(event) =>
                     onIntercomRegionChange(event.target.value as IntercomRegion)
                   }
-                  className="h-9 rounded-full border border-border/35 bg-white px-3 text-xs font-medium text-text-secondary outline-none transition-colors focus:border-foreground disabled:cursor-not-allowed disabled:bg-background disabled:text-text-tertiary"
+                  className="h-[34px] rounded-lg border border-border/35 bg-card px-3 text-xs font-medium text-text-secondary outline-none transition-colors focus:border-foreground disabled:cursor-not-allowed disabled:bg-background disabled:text-text-tertiary"
                 >
                   <option value="us">US</option>
                   <option value="eu">EU</option>
@@ -255,7 +260,7 @@ export function IntegrationCard({
               disabled={controlsDisabled}
               aria-describedby={describedBy}
               onClick={() => onConnect(provider)}
-              className="inline-flex h-9 items-center rounded-full bg-foreground px-4 text-xs font-medium text-white transition-colors hover:bg-text-secondary disabled:cursor-not-allowed disabled:bg-text-tertiary"
+              className="inline-flex h-[34px] items-center rounded-lg bg-foreground px-3 text-xs font-medium text-background transition-colors hover:bg-text-secondary disabled:cursor-not-allowed disabled:bg-text-tertiary"
             >
               {action === "authorizing"
                 ? "Redirecting…"

@@ -7,85 +7,59 @@ import type {
   AgentEvent,
   ConnectionState,
 } from "../model/investigation.types";
-import { selectInvokedTools } from "../model/invoked-tools";
 import { AgentLoadingState } from "./agent-loading-state";
-import { FollowUpComposer } from "./follow-up-composer";
 
 type ActivityFeedProps = {
   events: AgentEvent[];
   connection: ConnectionState;
   announcement: string;
-  onFollowUp: (prompt: string) => Promise<void>;
-  isSendingFollowUp: boolean;
-  followUpError: string | null;
+  onReviewCaseDetails: () => void;
 };
-
-const connectionLabels: Record<ConnectionState, string> = {
-  connecting: "Connecting",
-  live: "Live",
-  reconnecting: "Reconnecting",
-  offline: "Offline",
-  closed: "Closed",
-};
-
-const toolBorderColors = [
-  "#4b2f7a",
-  "#1d4ed8",
-  "#0f9f6e",
-  "#d97706",
-  "#dc2626",
-  "#7c3aed",
-];
 
 const branchStyles = {
   "webhook-retry": {
     label: "Webhook branch",
     dot: "bg-[#4b2f7a]",
     rail: "border-[#4b2f7a]/35",
-    badge: "bg-[#4b2f7a]/[0.06] text-[#70538b]",
+    badge: "bg-[#4b2f7a]/[0.06] text-[#70538b] dark:bg-violet-950/60 dark:text-violet-300",
   },
   "invoice-export": {
     label: "Invoice branch",
     dot: "bg-[#b45309]",
     rail: "border-amber-600/35",
-    badge: "bg-amber-50 text-amber-800",
+    badge: "bg-amber-50 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300",
   },
 } as const;
 
 const dynamicBranchStyles = [
-  { dot: "bg-[#0f766e]", rail: "border-teal-600/35", badge: "bg-teal-50 text-teal-800" },
-  { dot: "bg-[#2563eb]", rail: "border-blue-600/35", badge: "bg-blue-50 text-blue-800" },
-  { dot: "bg-[#be185d]", rail: "border-pink-600/35", badge: "bg-pink-50 text-pink-800" },
-  { dot: "bg-[#7c3aed]", rail: "border-violet-600/35", badge: "bg-violet-50 text-violet-800" },
+  { dot: "bg-[#0f766e]", rail: "border-teal-600/35", badge: "bg-teal-50 text-teal-800 dark:bg-teal-950/60 dark:text-teal-300" },
+  { dot: "bg-[#2563eb]", rail: "border-blue-600/35", badge: "bg-blue-50 text-blue-800 dark:bg-blue-950/60 dark:text-blue-300" },
+  { dot: "bg-[#be185d]", rail: "border-pink-600/35", badge: "bg-pink-50 text-pink-800 dark:bg-pink-950/60 dark:text-pink-300" },
+  { dot: "bg-[#7c3aed]", rail: "border-violet-600/35", badge: "bg-violet-50 text-violet-800 dark:bg-violet-950/60 dark:text-violet-300" },
 ] as const;
 
 const agentStyles = {
   supervisor: {
     label: "Supervisor",
     rail: "border-slate-400/45",
-    badge: "bg-slate-100 text-slate-600",
+    badge: "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300",
   },
   case: {
     label: "Case",
     rail: "border-blue-500/40",
-    badge: "bg-blue-50 text-blue-700",
+    badge: "bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300",
   },
   observability: {
     label: "Observability",
     rail: "border-violet-500/35",
-    badge: "bg-violet-50 text-violet-700",
+    badge: "bg-violet-50 text-violet-700 dark:bg-violet-950/60 dark:text-violet-300",
   },
   knowledge: {
     label: "Knowledge",
     rail: "border-emerald-500/35",
-    badge: "bg-emerald-50 text-emerald-700",
+    badge: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300",
   },
 } as const;
-
-function toolBorderColor(id: string) {
-  const total = [...id].reduce((sum, char) => sum + char.charCodeAt(0), 0);
-  return toolBorderColors[total % toolBorderColors.length];
-}
 
 function roleLabel(role: AgentEvent["agentRole"]) {
   if (!role) return null;
@@ -145,7 +119,7 @@ function InputRequest({ message }: { message: string }) {
 
   if (submitted) {
     return (
-      <p className="mt-3 rounded-md bg-white px-3 py-2.5 text-sm text-text-secondary">
+      <p className="mt-3 rounded-md bg-card px-3 py-2.5 text-sm text-text-secondary">
         Answer added to the case. The agent will resume when the backend input
         endpoint is connected.
       </p>
@@ -169,12 +143,12 @@ function InputRequest({ message }: { message: string }) {
         onChange={(event) => setAnswer(event.target.value)}
         rows={3}
         placeholder={message}
-        className="w-full resize-none rounded-md border border-border/30 bg-white px-3 py-2.5 text-sm leading-5 text-foreground outline-none placeholder:text-text-tertiary focus:border-foreground"
+        className="w-full resize-none rounded-md border border-border/30 bg-card px-3 py-2.5 text-sm leading-5 text-foreground outline-none placeholder:text-text-tertiary focus:border-foreground"
       />
       <div className="mt-2 flex justify-end">
         <button
           type="submit"
-          className="inline-flex h-9 items-center justify-center rounded-full bg-foreground px-4 text-xs font-medium text-white transition-colors hover:bg-text-secondary"
+          className="inline-flex h-[34px] items-center justify-center rounded-lg bg-foreground px-3 text-xs font-medium text-background transition-colors hover:bg-text-secondary"
         >
           Send answer
         </button>
@@ -240,15 +214,19 @@ function StreamingTextOutput({ text }: { text: string }) {
 function ActivityItem({
   event,
   animateAgent,
+  onReviewCaseDetails,
 }: {
   event: AgentEvent;
   animateAgent: boolean;
+  onReviewCaseDetails: () => void;
 }) {
   const isWorking = event.type === "tool.started";
   const isFinding = event.type === "finding.added";
   const isInput = event.type === "input.requested";
   const isFollowUp = event.type === "follow_up.requested";
   const isTicketUnderstood = event.type === "ticket.parsed";
+  const isCompleted = event.type === "run.completed";
+  const isFailed = event.type === "run.failed";
   const isSentrySearch = isWorking && event.source === "Sentry";
   const isSentryEvidence = Boolean(event.evidence?.source.startsWith("Sentry"));
   const branch = branchForEvent(event);
@@ -256,12 +234,47 @@ function ActivityItem({
   const agentRoleLabel = roleLabel(event.agentRole);
   const visibleSummary = compactSummary(event.publicSummary);
   const summaryHasHiddenDetail = visibleSummary !== event.publicSummary;
+  const diagnosis = event.casePatch?.diagnosis;
+
+  if (isCompleted) {
+    return (
+      <li>
+        <article className="relative grid grid-cols-[18px_minmax(0,1fr)] gap-3 pb-7">
+          <span className="relative z-10 mt-1.5 size-2.5 rounded-full border-2 border-card bg-[#28745f]" aria-hidden="true" />
+          <div className="border-l-2 border-[#28745f]/40 bg-card px-4 py-4">
+            <p className="text-[11px] font-medium uppercase tracking-wide text-[#28745f]">
+              Investigation complete
+            </p>
+            <h3 className="mt-1.5 text-base font-medium text-foreground">
+              {diagnosis?.headline ?? event.title}
+            </h3>
+            <p className="mt-1.5 text-sm leading-6 text-text-secondary">
+              {diagnosis?.summary ?? event.publicSummary}
+            </p>
+            {diagnosis?.recommendedNextStep ? (
+              <p className="mt-3 text-sm text-text-secondary">
+                <span className="font-medium text-foreground">Next:</span>{" "}
+                {diagnosis.recommendedNextStep}
+              </p>
+            ) : null}
+            <button
+              type="button"
+              onClick={onReviewCaseDetails}
+              className="mt-4 inline-flex h-[34px] items-center rounded-lg bg-foreground px-3 text-xs font-medium text-background transition-colors hover:bg-text-secondary"
+            >
+              Review case details
+            </button>
+          </div>
+        </article>
+      </li>
+    );
+  }
 
   return (
     <li>
       <article className="relative grid grid-cols-[18px_minmax(0,1fr)] gap-3 pb-7">
         <span
-          className={`relative z-10 mt-1.5 h-2.5 w-2.5 rounded-full border-2 border-white ${
+          className={`relative z-10 mt-1.5 h-2.5 w-2.5 rounded-full border-2 border-card ${
             branch
               ? branch.dot
               : isFollowUp
@@ -269,19 +282,27 @@ function ActivityItem({
               : isFinding
               ? "bg-primary"
               : isInput
-                ? "bg-text-tertiary"
+                ? "bg-[#9a5b39]"
+                : isFailed
+                  ? "bg-[#a74b4b]"
                 : isWorking
-                  ? "bg-[#7f6df2]"
+                  ? "bg-text-tertiary"
                   : "bg-foreground"
           }`}
           aria-hidden="true"
         />
         <div
-          className={`min-w-0 ${
-            isSentryEvidence
-              ? "rounded-lg bg-[#4b2f7a]/[0.025] px-3 py-3"
-              : ""
-          } border-l-2 pl-3 ${branch?.rail ?? agent?.rail ?? "border-transparent"}`}
+          className={`min-w-0 border-l-2 pl-3 ${
+            isFailed
+              ? "border-[#a74b4b]/40 bg-[#faeeee] px-3 py-3 dark:bg-red-950/30"
+              : isInput
+                ? "border-[#9a5b39]/40 bg-[#f8eee8] px-3 py-3 dark:bg-amber-950/30"
+                : isFinding
+                  ? "border-primary bg-card px-3 py-3"
+                  : isWorking
+                    ? "border-transparent text-text-tertiary"
+                    : `${branch?.rail ?? agent?.rail ?? "border-transparent"} ${isSentryEvidence ? "bg-[#4b2f7a]/[0.025] px-3 py-3" : ""}`
+          }`}
         >
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
             {branch ? (
@@ -295,7 +316,7 @@ function ActivityItem({
               </span>
             ) : null}
             {isSentryEvidence ? (
-              <span className="inline-flex h-7 items-center gap-1.5 rounded-md bg-[#4b2f7a]/[0.06] px-2.5 text-xs font-medium text-[#70538b]">
+              <span className="inline-flex h-7 items-center gap-1.5 rounded-md bg-[#4b2f7a]/[0.06] px-2.5 text-xs font-medium text-[#70538b] dark:bg-violet-950/60 dark:text-violet-300">
                 <Image
                   src="/integrations/sentry.svg"
                   alt=""
@@ -309,7 +330,7 @@ function ActivityItem({
             {isWorking && animateAgent ? (
               <div className="flex flex-wrap items-center gap-2">
                 {isSentrySearch ? (
-                  <span className="inline-flex h-7 items-center gap-1.5 rounded-md bg-[#4b2f7a]/[0.06] px-2.5 text-xs font-medium text-[#70538b]">
+                  <span className="inline-flex h-7 items-center gap-1.5 rounded-md bg-[#4b2f7a]/[0.06] px-2.5 text-xs font-medium text-[#70538b] dark:bg-violet-950/60 dark:text-violet-300">
                     <Image
                       src="/integrations/sentry.svg"
                       alt=""
@@ -323,7 +344,7 @@ function ActivityItem({
                 <AgentLoadingState label={event.title} />
               </div>
             ) : isSentrySearch ? (
-              <span className="inline-flex h-7 items-center gap-1.5 rounded-md bg-[#4b2f7a]/[0.06] px-2.5 text-xs font-medium text-[#70538b]">
+              <span className="inline-flex h-7 items-center gap-1.5 rounded-md bg-[#4b2f7a]/[0.06] px-2.5 text-xs font-medium text-[#70538b] dark:bg-violet-950/60 dark:text-violet-300">
                 <Image
                   src="/integrations/sentry.svg"
                   alt=""
@@ -334,12 +355,14 @@ function ActivityItem({
                 {event.title}
               </span>
             ) : isTicketUnderstood ? (
-              <span className="inline-flex h-7 items-center gap-1.5 rounded-md bg-[#2563eb]/12 px-2.5 text-xs font-medium text-[#1d4ed8]">
+              <span className="inline-flex h-7 items-center gap-1.5 rounded-md bg-[#2563eb]/12 px-2.5 text-xs font-medium text-[#1d4ed8] dark:bg-blue-950/60 dark:text-blue-300">
                 <TicketIcon />
                 {event.title}
               </span>
             ) : (
-              <h3 className="text-sm font-medium text-foreground">{event.title}</h3>
+              <h3 className={`text-sm ${isWorking ? "font-normal text-text-secondary" : "font-medium text-foreground"}`}>
+                {event.title}
+              </h3>
             )}
             {agentRoleLabel ? (
               <span className="text-[11px] font-medium text-text-tertiary">
@@ -361,7 +384,7 @@ function ActivityItem({
               }).format(new Date(event.occurredAt))}
             </time>
           </div>
-          <p className="mt-1.5 text-sm leading-6 text-text-secondary">
+          <p className={`mt-1.5 text-sm leading-6 ${isWorking ? "text-text-tertiary" : "text-text-secondary"}`}>
             {animateAgent ? (
               <StreamingTextOutput text={visibleSummary} />
             ) : (
@@ -439,14 +462,9 @@ export function ActivityFeed({
   events,
   connection,
   announcement,
-  onFollowUp,
-  isSendingFollowUp,
-  followUpError,
+  onReviewCaseDetails,
 }: ActivityFeedProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const invokedTools = useMemo(() => selectInvokedTools(events), [events]);
-  const visibleTools = invokedTools.slice(-3);
-  const hiddenToolCount = invokedTools.length - visibleTools.length;
 
   useEffect(() => {
     const container = scrollRef.current;
@@ -464,69 +482,8 @@ export function ActivityFeed({
   }, [events.length]);
 
   return (
-    <section className="flex min-h-0 flex-col bg-background/55" aria-labelledby="activity-heading">
-      <div className="flex h-14 shrink-0 items-center justify-between border-b border-border/20 px-5 sm:px-6">
-        <h2 id="activity-heading" className="text-sm font-medium text-foreground">
-          Agent activity
-        </h2>
-        <div className="flex min-w-0 items-center gap-2 text-xs text-text-tertiary">
-          {invokedTools.length > 0 ? (
-            <>
-              <div
-                className="flex min-w-0 items-center -space-x-2"
-                aria-label={`Tools used: ${invokedTools
-                  .map((tool) => tool.label)
-                  .join(", ")}`}
-              >
-                {hiddenToolCount > 0 ? (
-                  <span
-                    className="relative z-20 inline-flex size-7 shrink-0 items-center justify-center rounded-full border-[3px] bg-white text-[10px] font-medium text-text-tertiary"
-                    style={{ borderColor: "#9e9e9e" }}
-                    title={invokedTools
-                      .slice(0, hiddenToolCount)
-                      .map((tool) => tool.label)
-                      .join(", ")}
-                  >
-                    +{hiddenToolCount}
-                  </span>
-                ) : null}
-                {visibleTools.map((tool) => (
-                  <span
-                    key={tool.id}
-                    title={tool.label}
-                    className="relative inline-flex size-7 shrink-0 items-center justify-center rounded-full border-[3px] bg-white"
-                    style={{ borderColor: toolBorderColor(tool.id) }}
-                  >
-                    {tool.logo ? (
-                      <Image
-                        src={tool.logo}
-                        alt=""
-                        width={15}
-                        height={15}
-                        aria-hidden="true"
-                        className="shrink-0"
-                      />
-                    ) : null}
-                    <span className="sr-only">{tool.label}</span>
-                  </span>
-                ))}
-              </div>
-              <span className="h-4 w-px shrink-0 bg-border/30" aria-hidden="true" />
-            </>
-          ) : null}
-          <span
-            className={`h-2 w-2 shrink-0 rounded-full ${
-              connection === "live" ? "bg-[#42a66b]" : "bg-text-tertiary"
-            }`}
-            aria-hidden="true"
-          />
-          <span className="shrink-0">{connectionLabels[connection]}</span>
-        </div>
-        <p className="sr-only" role="status" aria-live="polite">
-          {announcement}
-        </p>
-      </div>
-
+    <section className="flex h-full min-h-0 flex-col bg-background/55" aria-label="Agent investigator">
+      <p className="sr-only" role="status" aria-live="polite">{announcement}</p>
       <div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto px-5 py-6 sm:px-6">
         <ol className="relative before:absolute before:bottom-7 before:left-[4px] before:top-2 before:w-px before:bg-border/25">
           {events.map((event) => (
@@ -538,16 +495,11 @@ export function ActivityFeed({
                 event.type === "tool.started" &&
                 connection === "live"
               }
+              onReviewCaseDetails={onReviewCaseDetails}
             />
           ))}
         </ol>
       </div>
-
-      <FollowUpComposer
-        onSubmit={onFollowUp}
-        isSending={isSendingFollowUp}
-        error={followUpError}
-      />
     </section>
   );
 }

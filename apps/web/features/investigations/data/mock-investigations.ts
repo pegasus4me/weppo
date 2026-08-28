@@ -1,6 +1,7 @@
 import type {
   AgentEvent,
   EvidenceItem,
+  InvestigationDiagnosis,
   InvestigationSnapshot,
   InvestigationStatus,
   InvestigationSummary,
@@ -162,6 +163,32 @@ const activeMocks = mocks.filter(
   (mock) => mock.id === "salesforce-sync-failure",
 );
 
+function diagnosisForMock(mock: MockInvestigation): InvestigationDiagnosis | null {
+  if (mock.status !== "ready-for-review") return null;
+  const evidenceIds = mock.evidence.map(
+    (_, index) => `${mock.id}-evidence-${index + 1}`,
+  );
+  return {
+    verdict: "likely",
+    headline:
+      mock.id === "api-requests-returning-401"
+        ? "The revoked API key is still being used"
+        : "Overlapping jobs likely produced the export issue",
+    summary: mock.summary,
+    confidence: "high",
+    impact: mock.impact,
+    evidenceIds,
+    recommendedNextStep:
+      mock.id === "api-requests-returning-401"
+        ? "Reload the replacement key in the EU checkout service, then retry one request."
+        : "Add a uniqueness guard and rerun the export for the affected date range.",
+    drafts: {
+      engineering: mock.engineeringDraft,
+      customerReply: `We found evidence that explains the reported issue. ${mock.summary} We recommend validating the proposed next step before retrying the affected workflow.`,
+    },
+  };
+}
+
 function initialActivity(mock: MockInvestigation): AgentEvent[] {
   const base = Date.now() - 120_000;
   const events: AgentEvent[] = [
@@ -226,8 +253,12 @@ function initialActivity(mock: MockInvestigation): AgentEvent[] {
       runId: `${mock.id}-run`,
       sequence: events.length + 1,
       type: "run.completed",
-      title: "Case ready for review",
-      publicSummary: "The reconstructed case is ready for human validation.",
+      title: "Investigation complete",
+      publicSummary: "The diagnosis and supporting evidence are ready for review.",
+      casePatch: {
+        status: "ready-for-review",
+        diagnosis: diagnosisForMock(mock),
+      },
       occurredAt: new Date(base + 70_000).toISOString(),
     });
   }
@@ -248,9 +279,13 @@ export const mockInvestigationSummaries: InvestigationSummary[] =
 export function getMockInvestigationSnapshot(
   caseId: string,
 ): InvestigationSnapshot | null {
-  const mock = activeMocks.find((item) => item.id === caseId);
+  const mock = mocks.find((item) => item.id === caseId);
   if (!mock) return null;
   const activity = initialActivity(mock);
+  const evidenceItems = mock.evidence.map((item, index) => ({
+    ...item,
+    id: `${mock.id}-evidence-${index + 1}`,
+  }));
 
   return {
     case: {
@@ -267,15 +302,13 @@ export function getMockInvestigationSnapshot(
         environment: mock.environment,
         impact: mock.impact,
         summary: mock.summary,
-        evidence: mock.evidence.map((item, index) => ({
-          ...item,
-          id: `${mock.id}-evidence-${index + 1}`,
-        })),
+        evidence: evidenceItems,
         hypotheses: [],
         branches: [],
         knowledgeRetrieval: [],
         missingInformation: mock.missingInformation,
         engineeringDraft: mock.engineeringDraft,
+        diagnosis: diagnosisForMock(mock),
       },
       createdAt: new Date(Date.now() - 180_000).toISOString(),
       updatedAt: new Date().toISOString(),

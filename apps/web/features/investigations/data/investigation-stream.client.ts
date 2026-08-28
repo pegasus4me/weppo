@@ -13,7 +13,7 @@ export type InvestigationStreamOptions = {
 
 export interface InvestigationStream {
   connect(options: InvestigationStreamOptions): () => void;
-  sendFollowUp(caseId: string, prompt: string): Promise<void>;
+  sendFollowUp(caseId: string, prompt: string): Promise<string>;
 }
 
 export class SseInvestigationStream implements InvestigationStream {
@@ -49,6 +49,7 @@ export class SseInvestigationStream implements InvestigationStream {
   }
 
   async sendFollowUp(caseId: string, prompt: string) {
-    await submitInvestigationFollowUp(caseId, prompt);
+    const response = await submitInvestigationFollowUp(caseId, prompt);
+    return response.answer;
   }
 }

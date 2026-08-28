@@ -75,6 +75,13 @@ test("Intercom runner searches Sentry by customer identity and conversation time
   assert.match(evidence?.summary ?? "", /workflow correlation/);
   assert.doesNotMatch(evidence?.summary ?? "", /directly matches/);
   assert.equal(steps.at(-1)?.patch?.status, "ready-for-review");
+  assert.equal(steps.at(-1)?.patch?.diagnosis?.verdict, "inconclusive");
+  assert.equal(steps.at(-1)?.patch?.diagnosis?.confidence, null);
+  assert.deepEqual(steps.at(-1)?.patch?.diagnosis?.evidenceIds, [evidence?.id]);
+  assert.equal(
+    steps.at(-1)?.patch?.diagnosis?.drafts.engineering,
+    steps.at(-1)?.patch?.engineeringDraft,
+  );
 });
 
 test("Intercom runner excludes unrelated customer errors and inspects matching issue evidence", async () => {

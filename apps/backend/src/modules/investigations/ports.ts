@@ -56,6 +56,10 @@ export interface InvestigationPlanner {
   ): Promise<InvestigationPlan>;
 }
 
+export interface InvestigationQuestionAnswerer {
+  answer(investigation: InvestigationCase, prompt: string): Promise<string>;
+}
+
 export type AgentEventListener = (event: AgentEvent) => void;
 
 export interface AgentEventSubscription {

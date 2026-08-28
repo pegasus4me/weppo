@@ -1,0 +1,3935 @@
+{
+  "28922": {
+    "slug": "egress-health",
+    "name": "Egress Health",
+    "tags": []
+  },
+  "29656": {
+    "slug": "leeroo",
+    "name": "Leeroo",
+    "tags": []
+  },
+  "29662": {
+    "slug": "atum-works",
+    "name": "Atum Works",
+    "tags": [
+      "Hard Tech",
+      "3D Printing",
+      "Semiconductors"
+    ]
+  },
+  "29666": {
+    "slug": "willow",
+    "name": "Willow",
+    "tags": [
+      "Artificial Intelligence",
+      "Consumer",
+      "Productivity",
+      "AI"
+    ]
+  },
+  "29697": {
+    "slug": "stormy",
+    "name": "Stormy",
+    "tags": [
+      "Artificial Intelligence",
+      "SaaS",
+      "B2B",
+      "Customer Service"
+    ]
+  },
+  "29727": {
+    "slug": "overstand-labs",
+    "name": "Overstand Labs",
+    "tags": [
+      "Artificial Intelligence",
+      "LegalTech",
+      "Data Science",
+      "Data Engineering",
+      "Conversational AI"
+    ]
+  },
+  "29790": {
+    "slug": "youshift",
+    "name": "YouShift",
+    "tags": [
+      "Artificial Intelligence",
+      "Health Tech",
+      "Healthcare",
+      "HR Tech",
+      "Operations"
+    ]
+  },
+  "29959": {
+    "slug": "uncommon-therapeutics",
+    "name": "Uncommon Therapeutics",
+    "tags": [
+      "Gene Therapy",
+      "CRISPR",
+      "Biotechnology"
+    ]
+  },
+  "29986": {
+    "slug": "exin-therapeutics",
+    "name": "Exin Therapeutics",
+    "tags": [
+      "Neurotechnology",
+      "Biotech",
+      "Therapeutics"
+    ]
+  },
+  "29988": {
+    "slug": "delineate",
+    "name": "Delineate",
+    "tags": [
+      "SaaS",
+      "Biotech",
+      "AI"
+    ]
+  },
+  "29999": {
+    "slug": "onlook",
+    "name": "Onlook",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Design",
+      "Design Tools"
+    ]
+  },
+  "30086": {
+    "slug": "autumn",
+    "name": "Autumn",
+    "tags": []
+  },
+  "30160": {
+    "slug": "quantstruct",
+    "name": "Quantstruct",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "B2B",
+      "API",
+      "Automation"
+    ]
+  },
+  "30165": {
+    "slug": "edexia",
+    "name": "Edexia",
+    "tags": [
+      "AI-Enhanced Learning",
+      "Artificial Intelligence",
+      "Education",
+      "SaaS",
+      "AI Assistant"
+    ]
+  },
+  "30172": {
+    "slug": "enhanced-radar",
+    "name": "Enhanced Radar",
+    "tags": []
+  },
+  "30173": {
+    "slug": "aviro",
+    "name": "Aviro",
+    "tags": [
+      "Reinforcement Learning"
+    ]
+  },
+  "30174": {
+    "slug": "revise-robotics",
+    "name": "Revise Robotics",
+    "tags": [
+      "Robotic Process Automation",
+      "ClimateTech",
+      "Electronics"
+    ]
+  },
+  "30176": {
+    "slug": "outship",
+    "name": "Outship",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Recruiting"
+    ]
+  },
+  "30177": {
+    "slug": "bild-ai",
+    "name": "Bild AI",
+    "tags": []
+  },
+  "30178": {
+    "slug": "candor",
+    "name": "Candor",
+    "tags": [
+      "Artificial Intelligence",
+      "GovTech"
+    ]
+  },
+  "30179": {
+    "slug": "vetnio",
+    "name": "Vetnio",
+    "tags": [
+      "Artificial Intelligence",
+      "SaaS",
+      "B2B",
+      "AI"
+    ]
+  },
+  "30181": {
+    "slug": "leaping-ai",
+    "name": "Leaping AI",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Conversational AI"
+    ]
+  },
+  "30182": {
+    "slug": "flowtel",
+    "name": "Flowtel",
+    "tags": []
+  },
+  "30183": {
+    "slug": "tweeksio",
+    "name": "Tweeks.io",
+    "tags": [
+      "Artificial Intelligence",
+      "Consumer",
+      "AI"
+    ]
+  },
+  "30185": {
+    "slug": "excellence-learning",
+    "name": "Excellence Learning",
+    "tags": [
+      "AI-Enhanced Learning",
+      "Education",
+      "SaaS",
+      "Edtech"
+    ]
+  },
+  "30187": {
+    "slug": "praxim",
+    "name": "Praxim",
+    "tags": [
+      "Artificial Intelligence",
+      "SaaS",
+      "Consumer",
+      "B2B",
+      "Databases"
+    ]
+  },
+  "30188": {
+    "slug": "hey-telo",
+    "name": "Hey Telo",
+    "tags": []
+  },
+  "30189": {
+    "slug": "subimage",
+    "name": "SubImage",
+    "tags": []
+  },
+  "30190": {
+    "slug": "steinmetz",
+    "name": "Steinmetz",
+    "tags": [
+      "Hardware",
+      "Electric Vehicles",
+      "Electronics"
+    ]
+  },
+  "30191": {
+    "slug": "partcl",
+    "name": "Partcl",
+    "tags": []
+  },
+  "30192": {
+    "slug": "axiom",
+    "name": "Axiom",
+    "tags": [
+      "Fintech",
+      "Crypto / Web3",
+      "Consumer Finance",
+      "Trading"
+    ]
+  },
+  "30193": {
+    "slug": "bud",
+    "name": "Bud",
+    "tags": []
+  },
+  "30194": {
+    "slug": "splash-inc",
+    "name": "Splash Inc.",
+    "tags": []
+  },
+  "30196": {
+    "slug": "stamp",
+    "name": "Stamp",
+    "tags": []
+  },
+  "30197": {
+    "slug": "alice-tech",
+    "name": "Alice.tech",
+    "tags": [
+      "AI-Enhanced Learning",
+      "Artificial Intelligence",
+      "Education",
+      "Generative AI",
+      "SaaS"
+    ]
+  },
+  "30198": {
+    "slug": "dollyglot",
+    "name": "Dollyglot",
+    "tags": [
+      "Generative AI",
+      "Consumer",
+      "Social",
+      "Conversational AI"
+    ]
+  },
+  "30199": {
+    "slug": "awen",
+    "name": "awen",
+    "tags": [
+      "Generative AI",
+      "SaaS",
+      "Creator Economy"
+    ]
+  },
+  "30200": {
+    "slug": "karoo",
+    "name": "Karoo",
+    "tags": [
+      "Fintech",
+      "Consumer",
+      "Neobank"
+    ]
+  },
+  "30201": {
+    "slug": "dartboard",
+    "name": "Dartboard",
+    "tags": [
+      "Artificial Intelligence",
+      "Hardware",
+      "Robotics",
+      "Energy",
+      "Industrial"
+    ]
+  },
+  "30202": {
+    "slug": "astro",
+    "name": "Astro",
+    "tags": [
+      "Solar Power",
+      "Energy",
+      "Renewable Energy",
+      "ClimateTech",
+      "AI"
+    ]
+  },
+  "30203": {
+    "slug": "vocality-health",
+    "name": "Vocality Health",
+    "tags": [
+      "Artificial Intelligence",
+      "Healthcare",
+      "Health &amp; Wellness"
+    ]
+  },
+  "30204": {
+    "slug": "subtrace",
+    "name": "Subtrace",
+    "tags": []
+  },
+  "30205": {
+    "slug": "scout-4",
+    "name": "Scout",
+    "tags": [
+      "Artificial Intelligence",
+      "Education",
+      "Workflow Automation"
+    ]
+  },
+  "30207": {
+    "slug": "promptless",
+    "name": "Promptless",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Generative AI",
+      "SaaS",
+      "B2B"
+    ]
+  },
+  "30209": {
+    "slug": "closure",
+    "name": "Closure",
+    "tags": [
+      "GovTech",
+      "LegalTech",
+      "AI"
+    ]
+  },
+  "30210": {
+    "slug": "conntour",
+    "name": "Conntour",
+    "tags": []
+  },
+  "30212": {
+    "slug": "superglue",
+    "name": "superglue",
+    "tags": [
+      "Open Source",
+      "API",
+      "Enterprise",
+      "Enterprise Software",
+      "AI"
+    ]
+  },
+  "30213": {
+    "slug": "truffle-ai",
+    "name": "Truffle AI",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Generative AI",
+      "Infrastructure",
+      "AI Assistant"
+    ]
+  },
+  "30214": {
+    "slug": "ovlo",
+    "name": "Ovlo",
+    "tags": [
+      "SaaS",
+      "AI Assistant"
+    ]
+  },
+  "30215": {
+    "slug": "contrario",
+    "name": "Contrario",
+    "tags": [
+      "SaaS",
+      "Recruiting",
+      "AI"
+    ]
+  },
+  "30216": {
+    "slug": "sublingual",
+    "name": "Sublingual",
+    "tags": [
+      "Developer Tools",
+      "Open Source",
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30217": {
+    "slug": "rocketable",
+    "name": "Rocketable",
+    "tags": []
+  },
+  "30218": {
+    "slug": "toothy-ai",
+    "name": "Toothy AI",
+    "tags": [
+      "Artificial Intelligence",
+      "Health Tech",
+      "Healthcare",
+      "Dental",
+      "Conversational AI"
+    ]
+  },
+  "30220": {
+    "slug": "verbiflow",
+    "name": "Verbiflow",
+    "tags": [
+      "SaaS",
+      "Analytics",
+      "Sales",
+      "Sales Enablement",
+      "AI"
+    ]
+  },
+  "30221": {
+    "slug": "a1zap-by-a1base",
+    "name": "A1Zap by A1Base",
+    "tags": [
+      "Social"
+    ]
+  },
+  "30222": {
+    "slug": "altrina",
+    "name": "Altrina",
+    "tags": []
+  },
+  "30223": {
+    "slug": "a0-dev",
+    "name": "a0.dev",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Generative AI",
+      "Design"
+    ]
+  },
+  "30224": {
+    "slug": "maritime-fusion",
+    "name": "Maritime Fusion",
+    "tags": [
+      "Fusion Energy",
+      "Hard Tech",
+      "Energy"
+    ]
+  },
+  "30225": {
+    "slug": "trava",
+    "name": "Trava",
+    "tags": [
+      "Generative AI",
+      "B2B",
+      "Compliance",
+      "Logistics",
+      "Supply Chain"
+    ]
+  },
+  "30226": {
+    "slug": "elip-ai",
+    "name": "Elip AI",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Recruiting"
+    ]
+  },
+  "30227": {
+    "slug": "caseflood-ai",
+    "name": "Caseflood.ai",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Sales",
+      "Legal",
+      "Call Center"
+    ]
+  },
+  "30228": {
+    "slug": "weave-3",
+    "name": "Weave",
+    "tags": [
+      "B2B",
+      "Analytics",
+      "AI"
+    ]
+  },
+  "30229": {
+    "slug": "maive",
+    "name": "Maive",
+    "tags": [
+      "Artificial Intelligence",
+      "Home Services"
+    ]
+  },
+  "30230": {
+    "slug": "salespatriot",
+    "name": "SalesPatriot",
+    "tags": [
+      "SaaS",
+      "B2B",
+      "Sales",
+      "AI",
+      "Industrial"
+    ]
+  },
+  "30231": {
+    "slug": "deployparagon",
+    "name": "Paragon",
+    "tags": []
+  },
+  "30232": {
+    "slug": "carecycle",
+    "name": "careCycle",
+    "tags": [
+      "Health Insurance",
+      "Telecommunications",
+      "Conversational AI"
+    ]
+  },
+  "30233": {
+    "slug": "inversion-semiconductor",
+    "name": "Inversion Semiconductor",
+    "tags": [
+      "Hardware",
+      "Manufacturing",
+      "Semiconductors"
+    ]
+  },
+  "30234": {
+    "slug": "adam",
+    "name": "Adam",
+    "tags": [
+      "Artificial Intelligence",
+      "Hardware",
+      "Design"
+    ]
+  },
+  "30235": {
+    "slug": "rally-3",
+    "name": "Rally",
+    "tags": [
+      "Fintech",
+      "Logistics",
+      "Transportation",
+      "AI"
+    ]
+  },
+  "30236": {
+    "slug": "tergle",
+    "name": "Tergle",
+    "tags": [
+      "Generative AI",
+      "AI"
+    ]
+  },
+  "30237": {
+    "slug": "trim",
+    "name": "Trim",
+    "tags": [
+      "AI"
+    ]
+  },
+  "30238": {
+    "slug": "amby-health",
+    "name": "Amby Health",
+    "tags": [
+      "SaaS",
+      "Health Tech",
+      "Digital Health",
+      "Healthcare",
+      "Health &amp; Wellness"
+    ]
+  },
+  "30239": {
+    "slug": "cardamon",
+    "name": "Cardamon",
+    "tags": [
+      "Artificial Intelligence",
+      "Fintech",
+      "Compliance",
+      "Regtech"
+    ]
+  },
+  "30240": {
+    "slug": "bezel",
+    "name": "Bezel",
+    "tags": [
+      "Generative AI",
+      "Machine Learning",
+      "Marketing"
+    ]
+  },
+  "30241": {
+    "slug": "zeroentropy",
+    "name": "ZeroEntropy",
+    "tags": []
+  },
+  "30242": {
+    "slug": "oki",
+    "name": "Oki",
+    "tags": [
+      "SaaS",
+      "B2B",
+      "Enterprise",
+      "AI"
+    ]
+  },
+  "30243": {
+    "slug": "cifrato",
+    "name": "Cifrato",
+    "tags": [
+      "FinOps",
+      "SaaS",
+      "AI"
+    ]
+  },
+  "30244": {
+    "slug": "mosaic-2",
+    "name": "Mosaic",
+    "tags": []
+  },
+  "30246": {
+    "slug": "swerve",
+    "name": "Swerve",
+    "tags": [
+      "Artificial Intelligence",
+      "Consumer",
+      "Entertainment"
+    ]
+  },
+  "30247": {
+    "slug": "osmosis",
+    "name": "Osmosis",
+    "tags": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Reinforcement Learning",
+      "Infrastructure"
+    ]
+  },
+  "30248": {
+    "slug": "operand",
+    "name": "Operand",
+    "tags": []
+  },
+  "30249": {
+    "slug": "healthkey",
+    "name": "HealthKey",
+    "tags": []
+  },
+  "30250": {
+    "slug": "10x",
+    "name": "10x",
+    "tags": []
+  },
+  "30251": {
+    "slug": "mecha-health",
+    "name": "Mecha Health",
+    "tags": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Computer Vision",
+      "Health Tech",
+      "Healthcare"
+    ]
+  },
+  "30252": {
+    "slug": "cuckoo-labs",
+    "name": "Cuckoo Labs",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Sales",
+      "Marketing"
+    ]
+  },
+  "30253": {
+    "slug": "finbar",
+    "name": "finbar",
+    "tags": [
+      "Documents",
+      "Fintech",
+      "Finance",
+      "Workflow Automation"
+    ]
+  },
+  "30254": {
+    "slug": "hud",
+    "name": "HUD",
+    "tags": [
+      "Artificial Intelligence",
+      "Reinforcement Learning"
+    ]
+  },
+  "30255": {
+    "slug": "olive",
+    "name": "Olive",
+    "tags": [
+      "Productivity",
+      "Team Collaboration",
+      "AI"
+    ]
+  },
+  "30256": {
+    "slug": "pax-markets",
+    "name": "PAX Markets",
+    "tags": []
+  },
+  "30257": {
+    "slug": "pave-robotics",
+    "name": "Pave Robotics",
+    "tags": []
+  },
+  "30258": {
+    "slug": "gale",
+    "name": "Gale",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Legal",
+      "HR Tech",
+      "Immigration"
+    ]
+  },
+  "30259": {
+    "slug": "asteroid",
+    "name": "Asteroid",
+    "tags": [
+      "Artificial Intelligence",
+      "Robotic Process Automation",
+      "Health Tech",
+      "B2B",
+      "Automation"
+    ]
+  },
+  "30260": {
+    "slug": "macadamia",
+    "name": "Macadamia",
+    "tags": []
+  },
+  "30261": {
+    "slug": "lucid",
+    "name": "Lucid",
+    "tags": []
+  },
+  "30262": {
+    "slug": "pickle-2",
+    "name": "Pickle",
+    "tags": [
+      "Artificial Intelligence",
+      "Hardware",
+      "Augmented Reality",
+      "Consumer"
+    ]
+  },
+  "30263": {
+    "slug": "bindwell",
+    "name": "Bindwell",
+    "tags": []
+  },
+  "30264": {
+    "slug": "stillwind",
+    "name": "Stillwind",
+    "tags": [
+      "AIOps",
+      "Electronics",
+      "AI"
+    ]
+  },
+  "30265": {
+    "slug": "harbera",
+    "name": "Harbera",
+    "tags": [
+      "Artificial Intelligence",
+      "Health Tech",
+      "Healthcare",
+      "Healthcare IT",
+      "AI"
+    ]
+  },
+  "30266": {
+    "slug": "cenote",
+    "name": "Cenote",
+    "tags": [
+      "B2B",
+      "Digital Health",
+      "E-commerce",
+      "AI"
+    ]
+  },
+  "30267": {
+    "slug": "lopus",
+    "name": "Lopus",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Analytics"
+    ]
+  },
+  "30268": {
+    "slug": "athenahq",
+    "name": "AthenaHQ",
+    "tags": []
+  },
+  "30269": {
+    "slug": "liquid-compute",
+    "name": "Liquid Compute",
+    "tags": [
+      "FinOps",
+      "Fintech",
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30270": {
+    "slug": "g-lnk",
+    "name": "G LNK",
+    "tags": [
+      "SaaS",
+      "Health Tech",
+      "B2B",
+      "Digital Health",
+      "AI Assistant"
+    ]
+  },
+  "30271": {
+    "slug": "mundo-ai",
+    "name": "Mundo AI",
+    "tags": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "AI"
+    ]
+  },
+  "30272": {
+    "slug": "lucidic-ai",
+    "name": "Lucidic AI",
+    "tags": [
+      "AIOps",
+      "Artificial Intelligence",
+      "Developer Tools",
+      "SaaS",
+      "Automation"
+    ]
+  },
+  "30273": {
+    "slug": "candor-security",
+    "name": "Candor",
+    "tags": [
+      "Artificial Intelligence",
+      "Cybersecurity"
+    ]
+  },
+  "30274": {
+    "slug": "trata",
+    "name": "Trata",
+    "tags": [
+      "Artificial Intelligence",
+      "Finance",
+      "B2B",
+      "Community",
+      "Investing"
+    ]
+  },
+  "30275": {
+    "slug": "solidroad",
+    "name": "Solidroad",
+    "tags": []
+  },
+  "30276": {
+    "slug": "general-trajectory",
+    "name": "General Trajectory",
+    "tags": [
+      "Robotics",
+      "AI"
+    ]
+  },
+  "30277": {
+    "slug": "rejot",
+    "name": "ReJot",
+    "tags": [
+      "Developer Tools",
+      "API",
+      "Infrastructure",
+      "Databases"
+    ]
+  },
+  "30278": {
+    "slug": "agentin-ai",
+    "name": "Agentin AI",
+    "tags": [
+      "Reinforcement Learning",
+      "Enterprise",
+      "AI"
+    ]
+  },
+  "30279": {
+    "slug": "bystreet",
+    "name": "Bystreet",
+    "tags": [
+      "SaaS",
+      "B2B",
+      "Proptech"
+    ]
+  },
+  "30281": {
+    "slug": "waypoint-transit",
+    "name": "Waypoint Transit",
+    "tags": []
+  },
+  "30282": {
+    "slug": "riviera",
+    "name": "Riviera",
+    "tags": [
+      "SaaS",
+      "B2B",
+      "Travel",
+      "Analytics",
+      "AI"
+    ]
+  },
+  "30283": {
+    "slug": "confident-ai",
+    "name": "Confident AI",
+    "tags": [
+      "Developer Tools",
+      "Generative AI",
+      "Open Source",
+      "AI"
+    ]
+  },
+  "30284": {
+    "slug": "exla",
+    "name": "Exla",
+    "tags": [
+      "Artificial Intelligence",
+      "Infrastructure"
+    ]
+  },
+  "30285": {
+    "slug": "karsa",
+    "name": "Karsa",
+    "tags": [
+      "Fintech",
+      "Emerging Markets",
+      "Cryptocurrency"
+    ]
+  },
+  "30286": {
+    "slug": "nitrode",
+    "name": "Nitrode",
+    "tags": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "B2B",
+      "Data Engineering"
+    ]
+  },
+  "30287": {
+    "slug": "calltree",
+    "name": "Calltree",
+    "tags": [
+      "Generative AI",
+      "SaaS",
+      "B2B",
+      "Customer Service",
+      "AI"
+    ]
+  },
+  "30288": {
+    "slug": "harper",
+    "name": "Harper",
+    "tags": [
+      "Fintech",
+      "Insurance",
+      "AI"
+    ]
+  },
+  "30290": {
+    "slug": "tire-swing",
+    "name": "Tire Swing",
+    "tags": [
+      "GovTech",
+      "Real Estate",
+      "Housing",
+      "Compliance",
+      "Legal"
+    ]
+  },
+  "30291": {
+    "slug": "outlit",
+    "name": "Outlit",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Customer Success"
+    ]
+  },
+  "30292": {
+    "slug": "mesh-2",
+    "name": "Mesh",
+    "tags": [
+      "FinOps",
+      "Fintech",
+      "Finance",
+      "AI"
+    ]
+  },
+  "30293": {
+    "slug": "orbital-operations",
+    "name": "Orbital Operations",
+    "tags": []
+  },
+  "30294": {
+    "slug": "sennu-ai",
+    "name": "Sennu AI",
+    "tags": [
+      "Artificial Intelligence",
+      "Generative AI",
+      "SaaS",
+      "B2B",
+      "AI"
+    ]
+  },
+  "30295": {
+    "slug": "infinite",
+    "name": "Infinite",
+    "tags": [
+      "Developer Tools",
+      "Payments",
+      "B2B",
+      "Compliance"
+    ]
+  },
+  "30296": {
+    "slug": "peppr-ai",
+    "name": "Peppr AI",
+    "tags": [
+      "Sales",
+      "Sales Enablement"
+    ]
+  },
+  "30297": {
+    "slug": "openintake",
+    "name": "OpenIntake",
+    "tags": [
+      "SaaS",
+      "B2B",
+      "Sales",
+      "Legal",
+      "LegalTech"
+    ]
+  },
+  "30298": {
+    "slug": "artificial-societies",
+    "name": "Artificial Societies",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Market Research"
+    ]
+  },
+  "30299": {
+    "slug": "miyagi-labs",
+    "name": "Miyagi Labs",
+    "tags": [
+      "AI-Enhanced Learning",
+      "Education",
+      "eLearning",
+      "Edtech"
+    ]
+  },
+  "30301": {
+    "slug": "fuse-ai",
+    "name": "Fuse AI",
+    "tags": []
+  },
+  "30302": {
+    "slug": "misprint",
+    "name": "Misprint",
+    "tags": [
+      "Marketplace",
+      "Consumer"
+    ]
+  },
+  "30303": {
+    "slug": "afterquery",
+    "name": "AfterQuery",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Data Labeling",
+      "Big Data",
+      "AI"
+    ]
+  },
+  "30304": {
+    "slug": "mastra",
+    "name": "Mastra",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Open Source",
+      "AI"
+    ]
+  },
+  "30305": {
+    "slug": "forge-automation",
+    "name": "Forge Automation",
+    "tags": [
+      "Hard Tech",
+      "Hardware",
+      "Robotics",
+      "Manufacturing",
+      "Industrial"
+    ]
+  },
+  "30307": {
+    "slug": "archon",
+    "name": "Archon",
+    "tags": [
+      "GovTech",
+      "Compliance",
+      "Cybersecurity",
+      "Cloud Computing"
+    ]
+  },
+  "30312": {
+    "slug": "retrofit",
+    "name": "Retrofit",
+    "tags": []
+  },
+  "30314": {
+    "slug": "pinch",
+    "name": "Pinch",
+    "tags": [
+      "Artificial Intelligence",
+      "Telecommunications"
+    ]
+  },
+  "30315": {
+    "slug": "optifye-ai",
+    "name": "Optifye.ai",
+    "tags": [
+      "Hard Tech",
+      "Computer Vision",
+      "Manufacturing"
+    ]
+  },
+  "30316": {
+    "slug": "reditus-space",
+    "name": "Reditus Space",
+    "tags": [
+      "Hard Tech",
+      "Manufacturing",
+      "Aerospace"
+    ]
+  },
+  "30317": {
+    "slug": "permitify",
+    "name": "Permitify",
+    "tags": [
+      "Generative AI",
+      "GovTech",
+      "Computer Vision",
+      "Construction"
+    ]
+  },
+  "30318": {
+    "slug": "wildcard",
+    "name": "Wildcard",
+    "tags": [
+      "Generative AI",
+      "E-commerce",
+      "Marketing",
+      "Retail Tech",
+      "AI"
+    ]
+  },
+  "30319": {
+    "slug": "corsair",
+    "name": "Corsair",
+    "tags": [
+      "Developer Tools",
+      "B2B",
+      "Workflow Automation",
+      "Open Source",
+      "Personalization"
+    ]
+  },
+  "30320": {
+    "slug": "proception-inc",
+    "name": "Proception Inc",
+    "tags": [
+      "Artificial Intelligence",
+      "Robotics"
+    ]
+  },
+  "30321": {
+    "slug": "woz",
+    "name": "Woz",
+    "tags": [
+      "Artificial Intelligence",
+      "SaaS",
+      "AI"
+    ]
+  },
+  "30322": {
+    "slug": "spott",
+    "name": "Spott",
+    "tags": [
+      "SaaS",
+      "B2B",
+      "HR Tech",
+      "Enterprise Software",
+      "AI"
+    ]
+  },
+  "30324": {
+    "slug": "rebolt",
+    "name": "Rebolt",
+    "tags": [
+      "Enterprise Software",
+      "AI",
+      "AI Assistant"
+    ]
+  },
+  "30325": {
+    "slug": "roark",
+    "name": "Roark",
+    "tags": [
+      "Analytics",
+      "AI",
+      "Conversational AI"
+    ]
+  },
+  "30328": {
+    "slug": "dalus",
+    "name": "Dalus",
+    "tags": []
+  },
+  "30329": {
+    "slug": "waffle",
+    "name": "Waffle",
+    "tags": [
+      "Consumer",
+      "AI"
+    ]
+  },
+  "30333": {
+    "slug": "tensorpool",
+    "name": "TensorPool",
+    "tags": [
+      "AIOps",
+      "Developer Tools",
+      "SaaS",
+      "DevOps",
+      "Cloud Computing"
+    ]
+  },
+  "30334": {
+    "slug": "bluebook",
+    "name": "Bluebook",
+    "tags": [
+      "Fintech",
+      "B2B",
+      "AI"
+    ]
+  },
+  "30335": {
+    "slug": "butter",
+    "name": "Butter",
+    "tags": []
+  },
+  "30336": {
+    "slug": "atlog",
+    "name": "Atlog",
+    "tags": []
+  },
+  "30337": {
+    "slug": "paratus-health",
+    "name": "Paratus Health",
+    "tags": [
+      "Sales",
+      "Sales Enablement",
+      "Digital Health",
+      "Healthcare IT"
+    ]
+  },
+  "30338": {
+    "slug": "copycat",
+    "name": "CopyCat",
+    "tags": [
+      "Artificial Intelligence",
+      "Insurance"
+    ]
+  },
+  "30339": {
+    "slug": "ergo",
+    "name": "Ergo",
+    "tags": [
+      "SaaS",
+      "B2B",
+      "Sales",
+      "AI"
+    ]
+  },
+  "30340": {
+    "slug": "tamlabs",
+    "name": "TamLabs",
+    "tags": [
+      "Artificial Intelligence",
+      "Finance",
+      "Workflow Automation",
+      "Legal",
+      "Enterprise"
+    ]
+  },
+  "30341": {
+    "slug": "browser-use",
+    "name": "Browser Use",
+    "tags": [
+      "Artificial Intelligence",
+      "Open Source",
+      "API",
+      "Automation"
+    ]
+  },
+  "30343": {
+    "slug": "cedar",
+    "name": "Cedar",
+    "tags": [
+      "Sales",
+      "Sales Enablement",
+      "CRM",
+      "Email"
+    ]
+  },
+  "30345": {
+    "slug": "tee-time-tommy",
+    "name": "Tee Time Tommy",
+    "tags": [
+      "Sports Tech",
+      "Consumer",
+      "Booking"
+    ]
+  },
+  "30346": {
+    "slug": "mercura",
+    "name": "Mercura",
+    "tags": []
+  },
+  "30347": {
+    "slug": "instinct-space",
+    "name": "Instinct Space",
+    "tags": [
+      "Hard Tech",
+      "Space Exploration"
+    ]
+  },
+  "30348": {
+    "slug": "sammy-labs",
+    "name": "SAMMY Labs",
+    "tags": []
+  },
+  "30350": {
+    "slug": "trainloop",
+    "name": "TrainLoop",
+    "tags": [
+      "Developer Tools",
+      "Generative AI",
+      "Reinforcement Learning"
+    ]
+  },
+  "30351": {
+    "slug": "joindex",
+    "name": "Dex",
+    "tags": [
+      "Artificial Intelligence",
+      "Productivity",
+      "Consumer Products",
+      "AI"
+    ]
+  },
+  "30352": {
+    "slug": "monte",
+    "name": "Monte",
+    "tags": [
+      "Reinforcement Learning",
+      "B2B",
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30353": {
+    "slug": "axal",
+    "name": "Axal",
+    "tags": [
+      "Hardware",
+      "Robotics",
+      "Manufacturing",
+      "Electronics"
+    ]
+  },
+  "30354": {
+    "slug": "artifact-2",
+    "name": "Artifact",
+    "tags": []
+  },
+  "30355": {
+    "slug": "assistant-ui",
+    "name": "assistant-ui",
+    "tags": [
+      "Developer Tools",
+      "Generative AI",
+      "Chat",
+      "Web Development",
+      "AI Assistant"
+    ]
+  },
+  "30356": {
+    "slug": "fira",
+    "name": "Fira",
+    "tags": []
+  },
+  "30357": {
+    "slug": "vantel",
+    "name": "Vantel",
+    "tags": [
+      "Documents",
+      "Insurance",
+      "CRM"
+    ]
+  },
+  "30362": {
+    "slug": "ambral",
+    "name": "Ambral",
+    "tags": []
+  },
+  "30363": {
+    "slug": "blindpay",
+    "name": "BlindPay",
+    "tags": [
+      "Developer Tools",
+      "Fintech",
+      "Crypto / Web3",
+      "Payments",
+      "API"
+    ]
+  },
+  "30364": {
+    "slug": "wayline",
+    "name": "Wayline",
+    "tags": []
+  },
+  "30365": {
+    "slug": "mentra",
+    "name": "Mentra",
+    "tags": [
+      "Artificial Intelligence",
+      "Hardware",
+      "Consumer",
+      "Open Source",
+      "AR"
+    ]
+  },
+  "30366": {
+    "slug": "blaxel",
+    "name": "Blaxel",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Cloud Computing",
+      "Infrastructure"
+    ]
+  },
+  "30367": {
+    "slug": "qfex",
+    "name": "QFEX",
+    "tags": [
+      "Fintech",
+      "Marketplace",
+      "Trading"
+    ]
+  },
+  "30368": {
+    "slug": "red-barn-robotics",
+    "name": "Red Barn Robotics",
+    "tags": []
+  },
+  "30384": {
+    "slug": "chestnut",
+    "name": "Chestnut",
+    "tags": [
+      "Fintech",
+      "Real Estate",
+      "Consumer",
+      "AI"
+    ]
+  },
+  "30399": {
+    "slug": "frekil",
+    "name": "Frekil",
+    "tags": [
+      "Health Tech",
+      "B2B",
+      "Biotech",
+      "Healthcare",
+      "AI"
+    ]
+  },
+  "30400": {
+    "slug": "plexe",
+    "name": "Plexe",
+    "tags": [
+      "Machine Learning",
+      "Data Science",
+      "AI"
+    ]
+  },
+  "30402": {
+    "slug": "kashikoi",
+    "name": "Kashikoi",
+    "tags": [
+      "Developer Tools",
+      "Generative AI",
+      "Machine Learning",
+      "AI"
+    ]
+  },
+  "30403": {
+    "slug": "aravolta",
+    "name": "Aravolta",
+    "tags": [
+      "Enterprise Software",
+      "Cloud Computing",
+      "Monitoring"
+    ]
+  },
+  "30404": {
+    "slug": "vybe",
+    "name": "Vybe",
+    "tags": []
+  },
+  "30405": {
+    "slug": "nao-labs",
+    "name": "nao Labs",
+    "tags": [
+      "Analytics",
+      "Open Source",
+      "AI"
+    ]
+  },
+  "30406": {
+    "slug": "bitboard",
+    "name": "BitBoard",
+    "tags": [
+      "B2B",
+      "Analytics",
+      "Data Visualization",
+      "AI"
+    ]
+  },
+  "30407": {
+    "slug": "golf",
+    "name": "Golf",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Security",
+      "Infrastructure"
+    ]
+  },
+  "30411": {
+    "slug": "cubic",
+    "name": "cubic",
+    "tags": [
+      "Developer Tools"
+    ]
+  },
+  "30412": {
+    "slug": "bloom-4",
+    "name": "Bloom",
+    "tags": []
+  },
+  "30413": {
+    "slug": "serafis",
+    "name": "Serafis",
+    "tags": [
+      "Artificial Intelligence",
+      "SaaS",
+      "Finance",
+      "Investing",
+      "Search"
+    ]
+  },
+  "30415": {
+    "slug": "avallon-ai",
+    "name": "Avallon AI",
+    "tags": []
+  },
+  "30417": {
+    "slug": "groundcontrol",
+    "name": "GroundControl",
+    "tags": [
+      "SaaS",
+      "Manufacturing",
+      "Aerospace"
+    ]
+  },
+  "30418": {
+    "slug": "kanava-ai",
+    "name": "Kanava AI",
+    "tags": [
+      "Sales",
+      "Supply Chain",
+      "AI",
+      "AI Assistant",
+      "Industrial"
+    ]
+  },
+  "30419": {
+    "slug": "minerva",
+    "name": "Minerva",
+    "tags": []
+  },
+  "30420": {
+    "slug": "cua",
+    "name": "Cua",
+    "tags": [
+      "Open Source"
+    ]
+  },
+  "30421": {
+    "slug": "synthio-labs",
+    "name": "Synthio Labs",
+    "tags": [
+      "Artificial Intelligence",
+      "Biotech",
+      "Healthcare",
+      "Enterprise"
+    ]
+  },
+  "30422": {
+    "slug": "galen-ai",
+    "name": "Galen AI",
+    "tags": []
+  },
+  "30423": {
+    "slug": "neoncoral",
+    "name": "neoncoral",
+    "tags": [
+      "Consumer",
+      "Social Media",
+      "Social",
+      "AI"
+    ]
+  },
+  "30425": {
+    "slug": "auctor",
+    "name": "Auctor",
+    "tags": [
+      "Generative AI",
+      "SaaS",
+      "Productivity"
+    ]
+  },
+  "30426": {
+    "slug": "ralo",
+    "name": "Ralo",
+    "tags": [
+      "Fintech",
+      "Consumer Finance",
+      "AI"
+    ]
+  },
+  "30428": {
+    "slug": "capacitive",
+    "name": "Capacitive",
+    "tags": [
+      "Developer Tools",
+      "SaaS",
+      "Enterprise Software"
+    ]
+  },
+  "30429": {
+    "slug": "claim-health",
+    "name": "Claim Health",
+    "tags": [
+      "Healthcare"
+    ]
+  },
+  "30430": {
+    "slug": "almond-2",
+    "name": "Almond",
+    "tags": [
+      "Hardware",
+      "Robotics",
+      "Manufacturing",
+      "Automation",
+      "AI"
+    ]
+  },
+  "30431": {
+    "slug": "feyn",
+    "name": "Feyn",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "AI",
+      "ML"
+    ]
+  },
+  "30432": {
+    "slug": "helixdb",
+    "name": "HelixDB",
+    "tags": [
+      "Developer Tools",
+      "Open Source",
+      "Infrastructure",
+      "AI",
+      "Databases"
+    ]
+  },
+  "30433": {
+    "slug": "the-robot-learning-company",
+    "name": "The Robot Learning Company",
+    "tags": [
+      "Machine Learning",
+      "Robotics"
+    ]
+  },
+  "30434": {
+    "slug": "zeon-systems",
+    "name": "Zeon Systems",
+    "tags": [
+      "Artificial Intelligence",
+      "Robotic Process Automation",
+      "Robotics",
+      "Automation"
+    ]
+  },
+  "30435": {
+    "slug": "alpha-research",
+    "name": "Alpha Research",
+    "tags": [
+      "Market Research"
+    ]
+  },
+  "30437": {
+    "slug": "kaelio",
+    "name": "Kaelio",
+    "tags": [
+      "Open Source",
+      "AI"
+    ]
+  },
+  "30438": {
+    "slug": "beluga",
+    "name": "Beluga",
+    "tags": [
+      "Marketing",
+      "Advertising",
+      "Creator Economy",
+      "AI"
+    ]
+  },
+  "30439": {
+    "slug": "clarm",
+    "name": "Clarm",
+    "tags": [
+      "Artificial Intelligence",
+      "Sales",
+      "Marketing",
+      "Customer Support",
+      "AI"
+    ]
+  },
+  "30440": {
+    "slug": "sim",
+    "name": "Sim",
+    "tags": [
+      "AI"
+    ]
+  },
+  "30441": {
+    "slug": "stratify",
+    "name": "stratify",
+    "tags": [
+      "B2B",
+      "Design",
+      "Consumer Products",
+      "AI",
+      "Conversational AI"
+    ]
+  },
+  "30442": {
+    "slug": "hanji",
+    "name": "Hanji",
+    "tags": [
+      "Documents",
+      "Artificial Intelligence",
+      "Developer Tools"
+    ]
+  },
+  "30443": {
+    "slug": "units",
+    "name": "Units",
+    "tags": [
+      "Education",
+      "Consumer",
+      "AI"
+    ]
+  },
+  "30444": {
+    "slug": "percival",
+    "name": "Percival",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Data Science"
+    ]
+  },
+  "30445": {
+    "slug": "mbodi-ai",
+    "name": "Mbodi AI",
+    "tags": [
+      "Robotics",
+      "Automation",
+      "AI"
+    ]
+  },
+  "30446": {
+    "slug": "kirana-ai",
+    "name": "Kirana AI",
+    "tags": [
+      "Grocery",
+      "Computer Vision",
+      "Retail",
+      "AI"
+    ]
+  },
+  "30447": {
+    "slug": "caucus",
+    "name": "Caucus",
+    "tags": []
+  },
+  "30448": {
+    "slug": "pgdog",
+    "name": "PgDog",
+    "tags": [
+      "Databases"
+    ]
+  },
+  "30449": {
+    "slug": "attune",
+    "name": "Attune",
+    "tags": [
+      "Developer Tools",
+      "Infrastructure"
+    ]
+  },
+  "30450": {
+    "slug": "kestral",
+    "name": "Kestral",
+    "tags": [
+      "Artificial Intelligence",
+      "Productivity",
+      "Team Collaboration"
+    ]
+  },
+  "30451": {
+    "slug": "bluejay",
+    "name": "Bluejay",
+    "tags": [
+      "AI"
+    ]
+  },
+  "30452": {
+    "slug": "better-auth",
+    "name": "Better Auth",
+    "tags": [
+      "Developer Tools",
+      "Security",
+      "Open Source"
+    ]
+  },
+  "30453": {
+    "slug": "parsewise",
+    "name": "Parsewise",
+    "tags": [
+      "Documents",
+      "Artificial Intelligence",
+      "Finance",
+      "API",
+      "Insurance"
+    ]
+  },
+  "30454": {
+    "slug": "refresh",
+    "name": "Refresh",
+    "tags": []
+  },
+  "30455": {
+    "slug": "paper-instruments",
+    "name": "Paper Instruments",
+    "tags": [
+      "AIOps",
+      "Generative AI",
+      "AI"
+    ]
+  },
+  "30456": {
+    "slug": "tinfoil",
+    "name": "Tinfoil",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Security",
+      "Privacy",
+      "Cloud Computing"
+    ]
+  },
+  "30457": {
+    "slug": "trapeze",
+    "name": "Trapeze",
+    "tags": []
+  },
+  "30458": {
+    "slug": "jeevy-fabrication",
+    "name": "Jeevy Fabrication",
+    "tags": []
+  },
+  "30459": {
+    "slug": "chiron",
+    "name": "Chiron",
+    "tags": [
+      "AI-Enhanced Learning",
+      "Developer Tools",
+      "Education",
+      "Edtech"
+    ]
+  },
+  "30460": {
+    "slug": "voiceos",
+    "name": "VoiceOS",
+    "tags": []
+  },
+  "30461": {
+    "slug": "combinely",
+    "name": "Combinely",
+    "tags": []
+  },
+  "30462": {
+    "slug": "freesolo",
+    "name": "Freesolo",
+    "tags": [
+      "Reinforcement Learning",
+      "B2B",
+      "AI"
+    ]
+  },
+  "30463": {
+    "slug": "tegore",
+    "name": "Tegore",
+    "tags": [
+      "Artificial Intelligence",
+      "Education",
+      "Consumer"
+    ]
+  },
+  "30464": {
+    "slug": "sixtyfour",
+    "name": "Sixtyfour",
+    "tags": [
+      "B2B",
+      "Enterprise Software",
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30465": {
+    "slug": "photonium",
+    "name": "Photonium",
+    "tags": [
+      "Hard Tech",
+      "Hardware",
+      "Machine Learning",
+      "B2B",
+      "Manufacturing"
+    ]
+  },
+  "30466": {
+    "slug": "labric",
+    "name": "Labric",
+    "tags": []
+  },
+  "30467": {
+    "slug": "opusense-ai",
+    "name": "Opusense AI",
+    "tags": []
+  },
+  "30468": {
+    "slug": "clidey",
+    "name": "Clidey",
+    "tags": [
+      "Developer Tools",
+      "SaaS",
+      "B2B",
+      "AI"
+    ]
+  },
+  "30469": {
+    "slug": "habit",
+    "name": "HABIT",
+    "tags": [
+      "Robotics",
+      "Consumer",
+      "B2B",
+      "Retail",
+      "AI"
+    ]
+  },
+  "30471": {
+    "slug": "kaizen",
+    "name": "Kaizen",
+    "tags": []
+  },
+  "30472": {
+    "slug": "ticket-wallet",
+    "name": "Ticket Wallet",
+    "tags": []
+  },
+  "30474": {
+    "slug": "runrl",
+    "name": "RunRL",
+    "tags": []
+  },
+  "30475": {
+    "slug": "morphik",
+    "name": "Morphik",
+    "tags": [
+      "B2B",
+      "Healthcare",
+      "AI"
+    ]
+  },
+  "30476": {
+    "slug": "nomi",
+    "name": "Nomi",
+    "tags": [
+      "Sales",
+      "Sales Enablement",
+      "AI"
+    ]
+  },
+  "30477": {
+    "slug": "casco",
+    "name": "Casco",
+    "tags": []
+  },
+  "30479": {
+    "slug": "crimson",
+    "name": "Crimson",
+    "tags": [
+      "SaaS",
+      "Legal",
+      "AI"
+    ]
+  },
+  "30480": {
+    "slug": "flott-hq",
+    "name": "Flott HQ",
+    "tags": [
+      "Logistics",
+      "Transportation",
+      "Operations",
+      "AI Assistant"
+    ]
+  },
+  "30482": {
+    "slug": "lucis",
+    "name": "Lucis",
+    "tags": [
+      "Telehealth",
+      "Digital Health",
+      "Health &amp; Wellness",
+      "AI"
+    ]
+  },
+  "30484": {
+    "slug": "throxy",
+    "name": "throxy",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Sales",
+      "Automation"
+    ]
+  },
+  "30485": {
+    "slug": "anana",
+    "name": "Anana",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B"
+    ]
+  },
+  "30487": {
+    "slug": "irbc",
+    "name": "IRBC",
+    "tags": [
+      "Artificial Intelligence",
+      "Fintech",
+      "B2B",
+      "Neobank"
+    ]
+  },
+  "30488": {
+    "slug": "theta",
+    "name": "Theta",
+    "tags": [
+      "Artificial Intelligence",
+      "Reinforcement Learning",
+      "B2B"
+    ]
+  },
+  "30491": {
+    "slug": "novoflow",
+    "name": "Novoflow",
+    "tags": []
+  },
+  "30492": {
+    "slug": "prism",
+    "name": "Prism",
+    "tags": [
+      "Developer Tools",
+      "Infrastructure"
+    ]
+  },
+  "30494": {
+    "slug": "nixo",
+    "name": "Nixo",
+    "tags": []
+  },
+  "30496": {
+    "slug": "qualgent",
+    "name": "QualGent",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "AI"
+    ]
+  },
+  "30497": {
+    "slug": "human-behavior",
+    "name": "Human Behavior",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Analytics"
+    ]
+  },
+  "30498": {
+    "slug": "alkali",
+    "name": "Alkali",
+    "tags": [
+      "B2B",
+      "Design Tools",
+      "AI Assistant"
+    ]
+  },
+  "30500": {
+    "slug": "besimple-ai",
+    "name": "Besimple AI",
+    "tags": [
+      "AIOps",
+      "Artificial Intelligence",
+      "Data Labeling"
+    ]
+  },
+  "30501": {
+    "slug": "cartpole",
+    "name": "Cartpole",
+    "tags": [
+      "Artificial Intelligence",
+      "Reinforcement Learning",
+      "Data Labeling",
+      "ML"
+    ]
+  },
+  "30502": {
+    "slug": "nodi-energy",
+    "name": "NODI Energy",
+    "tags": [
+      "Energy Storage",
+      "Hard Tech",
+      "Hardware",
+      "Energy",
+      "Electronics"
+    ]
+  },
+  "30503": {
+    "slug": "vesence",
+    "name": "Vesence",
+    "tags": []
+  },
+  "30504": {
+    "slug": "third-chair",
+    "name": "Third Chair",
+    "tags": []
+  },
+  "30506": {
+    "slug": "klavis-ai",
+    "name": "Klavis AI",
+    "tags": []
+  },
+  "30507": {
+    "slug": "paraquery",
+    "name": "ParaQuery",
+    "tags": [
+      "Developer Tools",
+      "Analytics",
+      "Big Data",
+      "Enterprise Software",
+      "Infrastructure"
+    ]
+  },
+  "30508": {
+    "slug": "sygaldry-technologies",
+    "name": "Sygaldry Technologies",
+    "tags": []
+  },
+  "30509": {
+    "slug": "boost-robotics",
+    "name": "Boost Robotics",
+    "tags": [
+      "Artificial Intelligence",
+      "Hard Tech",
+      "Hardware",
+      "Robotics",
+      "Infrastructure"
+    ]
+  },
+  "30510": {
+    "slug": "cactus-compute",
+    "name": "Cactus Compute",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Hard Tech",
+      "Open Source",
+      "AI"
+    ]
+  },
+  "30511": {
+    "slug": "vassar-robotics",
+    "name": "Vassar Robotics",
+    "tags": []
+  },
+  "30512": {
+    "slug": "morphoai",
+    "name": "MorphoAI",
+    "tags": [
+      "Robotics",
+      "Manufacturing",
+      "AI"
+    ]
+  },
+  "30513": {
+    "slug": "eloquent-ai",
+    "name": "Eloquent AI",
+    "tags": [
+      "Fintech",
+      "B2B",
+      "Enterprise",
+      "AI"
+    ]
+  },
+  "30514": {
+    "slug": "scalar-field",
+    "name": "Scalar Field",
+    "tags": []
+  },
+  "30515": {
+    "slug": "libretto",
+    "name": "Libretto",
+    "tags": []
+  },
+  "30516": {
+    "slug": "bramante",
+    "name": "Bramante",
+    "tags": [
+      "Artificial Intelligence",
+      "Biotech",
+      "Manufacturing"
+    ]
+  },
+  "30517": {
+    "slug": "valuemate",
+    "name": "ValueMate",
+    "tags": []
+  },
+  "30518": {
+    "slug": "orchid-ai",
+    "name": "Orchid",
+    "tags": [
+      "Artificial Intelligence",
+      "AI Assistant"
+    ]
+  },
+  "30519": {
+    "slug": "hemut",
+    "name": "Hemut",
+    "tags": [
+      "SaaS",
+      "Logistics",
+      "AI"
+    ]
+  },
+  "30520": {
+    "slug": "synthetic-society",
+    "name": "Synthetic Society",
+    "tags": []
+  },
+  "30521": {
+    "slug": "kairos",
+    "name": "Kairos",
+    "tags": [
+      "AIOps",
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Reinforcement Learning"
+    ]
+  },
+  "30522": {
+    "slug": "naive",
+    "name": "Naïve",
+    "tags": [
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30523": {
+    "slug": "mesmer",
+    "name": "Mesmer",
+    "tags": [
+      "Artificial Intelligence",
+      "SaaS",
+      "Productivity",
+      "Team Collaboration",
+      "AI"
+    ]
+  },
+  "30526": {
+    "slug": "chrt",
+    "name": "chrt",
+    "tags": [
+      "Autonomous Shipping",
+      "Logistics",
+      "Healthcare",
+      "Manufacturing",
+      "Industrial"
+    ]
+  },
+  "30527": {
+    "slug": "mindfort",
+    "name": "MindFort",
+    "tags": []
+  },
+  "30528": {
+    "slug": "probo",
+    "name": "Probo",
+    "tags": [
+      "SaaS",
+      "B2B",
+      "Compliance",
+      "Cybersecurity"
+    ]
+  },
+  "30530": {
+    "slug": "rimba",
+    "name": "Rimba",
+    "tags": [
+      "SaaS",
+      "Enterprise Software",
+      "AI"
+    ]
+  },
+  "30531": {
+    "slug": "moby-analytics",
+    "name": "Moby Analytics",
+    "tags": [
+      "Artificial Intelligence",
+      "Automation"
+    ]
+  },
+  "30532": {
+    "slug": "nimbic-ai",
+    "name": "Nimbic AI",
+    "tags": [
+      "SaaS",
+      "AI"
+    ]
+  },
+  "30533": {
+    "slug": "pelica",
+    "name": "Pelica",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Healthcare",
+      "Healthcare IT",
+      "AI"
+    ]
+  },
+  "30535": {
+    "slug": "cotool",
+    "name": "Cotool",
+    "tags": [
+      "SaaS",
+      "Compliance",
+      "Security",
+      "Cybersecurity"
+    ]
+  },
+  "30536": {
+    "slug": "propolis",
+    "name": "Propolis",
+    "tags": []
+  },
+  "30538": {
+    "slug": "den",
+    "name": "Den",
+    "tags": []
+  },
+  "30539": {
+    "slug": "mlop",
+    "name": "mlop",
+    "tags": [
+      "AIOps",
+      "Developer Tools",
+      "Machine Learning",
+      "SaaS"
+    ]
+  },
+  "30540": {
+    "slug": "lumari",
+    "name": "Lumari",
+    "tags": [
+      "B2B",
+      "Manufacturing",
+      "Supply Chain",
+      "Operations",
+      "AI"
+    ]
+  },
+  "30541": {
+    "slug": "code-four",
+    "name": "Code Four",
+    "tags": [
+      "Artificial Intelligence",
+      "GovTech",
+      "Computer Vision"
+    ]
+  },
+  "30542": {
+    "slug": "vision-lab",
+    "name": "Vision Lab",
+    "tags": [
+      "Robotics",
+      "Manufacturing",
+      "Data Engineering",
+      "AI"
+    ]
+  },
+  "30543": {
+    "slug": "oncactus",
+    "name": "Cactus",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Home Services"
+    ]
+  },
+  "30544": {
+    "slug": "wavedash",
+    "name": "Wavedash",
+    "tags": [
+      "Artificial Intelligence",
+      "Consumer",
+      "Gaming",
+      "Web Development"
+    ]
+  },
+  "30545": {
+    "slug": "starsling",
+    "name": "StarSling",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "B2B",
+      "DevOps",
+      "AI"
+    ]
+  },
+  "30547": {
+    "slug": "text-ai",
+    "name": "Text.ai",
+    "tags": [
+      "Artificial Intelligence",
+      "Consumer",
+      "Social",
+      "Social Network"
+    ]
+  },
+  "30548": {
+    "slug": "theorem-2",
+    "name": "Theorem",
+    "tags": [
+      "Machine Learning"
+    ]
+  },
+  "30552": {
+    "slug": "sieveai",
+    "name": "sieve",
+    "tags": [
+      "Investing",
+      "Data Engineering",
+      "APIs"
+    ]
+  },
+  "30553": {
+    "slug": "blueshoe",
+    "name": "Blueshoe",
+    "tags": [
+      "Artificial Intelligence",
+      "Consumer",
+      "B2B",
+      "Legal",
+      "LegalTech"
+    ]
+  },
+  "30554": {
+    "slug": "bond",
+    "name": "Bond",
+    "tags": [
+      "B2B",
+      "Workflow Automation",
+      "Productivity",
+      "AI Assistant"
+    ]
+  },
+  "30556": {
+    "slug": "cascade-space",
+    "name": "Cascade Space",
+    "tags": [
+      "Hard Tech",
+      "Hardware",
+      "SaaS",
+      "Aerospace",
+      "Industrial"
+    ]
+  },
+  "30558": {
+    "slug": "bitpatrol",
+    "name": "BitPatrol",
+    "tags": [
+      "DevSecOps",
+      "Machine Learning",
+      "Cybersecurity"
+    ]
+  },
+  "30559": {
+    "slug": "godela",
+    "name": "Godela",
+    "tags": [
+      "Artificial Intelligence",
+      "Hard Tech",
+      "Hardware",
+      "Aerospace",
+      "ML"
+    ]
+  },
+  "30560": {
+    "slug": "foundation-industries",
+    "name": "Foundation Industries",
+    "tags": [
+      "Manufacturing",
+      "Industrial"
+    ]
+  },
+  "30561": {
+    "slug": "sureform",
+    "name": "Sureform",
+    "tags": [
+      "Artificial Intelligence",
+      "Marketplace",
+      "Robotics",
+      "Data Labeling"
+    ]
+  },
+  "30562": {
+    "slug": "docket",
+    "name": "Docket",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "B2B",
+      "Enterprise Software"
+    ]
+  },
+  "30565": {
+    "slug": "cohesive",
+    "name": "Cohesive",
+    "tags": [
+      "Generative AI",
+      "SaaS",
+      "B2B",
+      "Sales",
+      "AI"
+    ]
+  },
+  "30566": {
+    "slug": "preseen",
+    "name": "Preseen",
+    "tags": []
+  },
+  "30582": {
+    "slug": "pingo",
+    "name": "Pingo",
+    "tags": []
+  },
+  "30596": {
+    "slug": "adaptional",
+    "name": "Adaptional",
+    "tags": [
+      "AIOps",
+      "Artificial Intelligence",
+      "Insurance",
+      "Enterprise",
+      "Enterprise Software"
+    ]
+  },
+  "30598": {
+    "slug": "getasap",
+    "name": "GETASAP",
+    "tags": [
+      "B2B",
+      "Logistics",
+      "Supply Chain"
+    ]
+  },
+  "30602": {
+    "slug": "meteor",
+    "name": "Meteor",
+    "tags": [
+      "Artificial Intelligence",
+      "Consumer",
+      "AI Assistant"
+    ]
+  },
+  "30603": {
+    "slug": "closera",
+    "name": "Closera",
+    "tags": [
+      "Artificial Intelligence",
+      "Generative AI",
+      "B2B"
+    ]
+  },
+  "30605": {
+    "slug": "dedalus-labs",
+    "name": "Dedalus Labs",
+    "tags": [
+      "Developer Tools",
+      "Workflow Automation",
+      "DevOps",
+      "AI"
+    ]
+  },
+  "30606": {
+    "slug": "acrely",
+    "name": "Acrely",
+    "tags": []
+  },
+  "30607": {
+    "slug": "the-prompting-company",
+    "name": "The Prompting Company",
+    "tags": []
+  },
+  "30608": {
+    "slug": "mangodesk",
+    "name": "MangoDesk",
+    "tags": [
+      "AI"
+    ]
+  },
+  "30609": {
+    "slug": "halluminate",
+    "name": "Halluminate",
+    "tags": []
+  },
+  "30610": {
+    "slug": "traceroot-ai",
+    "name": "TraceRoot.AI",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Infrastructure"
+    ]
+  },
+  "30611": {
+    "slug": "agentmail",
+    "name": "AgentMail",
+    "tags": [
+      "Developer Tools",
+      "API",
+      "Email"
+    ]
+  },
+  "30612": {
+    "slug": "truthsystems",
+    "name": "truthsystems",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B"
+    ]
+  },
+  "30613": {
+    "slug": "blank-bio",
+    "name": "Blank Bio",
+    "tags": []
+  },
+  "30614": {
+    "slug": "astor",
+    "name": "Astor",
+    "tags": [
+      "Fintech",
+      "Investing",
+      "Consumer Finance",
+      "AI"
+    ]
+  },
+  "30615": {
+    "slug": "lanesurf",
+    "name": "Lanesurf",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Logistics",
+      "Supply Chain",
+      "AI"
+    ]
+  },
+  "30616": {
+    "slug": "args",
+    "name": "args",
+    "tags": [
+      "Developer Tools",
+      "B2B"
+    ]
+  },
+  "30618": {
+    "slug": "golpo",
+    "name": "Golpo",
+    "tags": [
+      "Education",
+      "eLearning",
+      "Video",
+      "Sales Enablement",
+      "Marketing"
+    ]
+  },
+  "30619": {
+    "slug": "shor",
+    "name": "Shor",
+    "tags": []
+  },
+  "30622": {
+    "slug": "liva-ai",
+    "name": "Liva AI",
+    "tags": [
+      "Marketplace",
+      "B2B",
+      "Data Labeling",
+      "Big Data",
+      "AI"
+    ]
+  },
+  "30623": {
+    "slug": "playgent",
+    "name": "Playgent",
+    "tags": [
+      "SaaS",
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30624": {
+    "slug": "verne-robotics",
+    "name": "Verne Robotics",
+    "tags": []
+  },
+  "30625": {
+    "slug": "llm-stats",
+    "name": "LLM Stats",
+    "tags": [
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30626": {
+    "slug": "contextfort",
+    "name": "ContextFort",
+    "tags": [
+      "Cybersecurity",
+      "AI"
+    ]
+  },
+  "30628": {
+    "slug": "datafruit",
+    "name": "Datafruit",
+    "tags": [
+      "Artificial Intelligence",
+      "Enterprise Software"
+    ]
+  },
+  "30629": {
+    "slug": "topological",
+    "name": "Topological",
+    "tags": [
+      "Reinforcement Learning",
+      "Robotics",
+      "Design Tools",
+      "3D Printing",
+      "AI"
+    ]
+  },
+  "30630": {
+    "slug": "lark",
+    "name": "Lark",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "B2B",
+      "DevOps",
+      "Automation"
+    ]
+  },
+  "30634": {
+    "slug": "bitrig",
+    "name": "bitrig",
+    "tags": []
+  },
+  "30636": {
+    "slug": "effigov",
+    "name": "EffiGov",
+    "tags": [
+      "Artificial Intelligence",
+      "GovTech"
+    ]
+  },
+  "30637": {
+    "slug": "design-arena",
+    "name": "Design Arena",
+    "tags": [
+      "Artificial Intelligence",
+      "Design",
+      "Crowdsourcing"
+    ]
+  },
+  "30638": {
+    "slug": "lotas",
+    "name": "Lotas",
+    "tags": [
+      "Developer Tools",
+      "Data Science",
+      "Data Visualization",
+      "AI"
+    ]
+  },
+  "30640": {
+    "slug": "monarcha",
+    "name": "Monarcha",
+    "tags": [
+      "Artificial Intelligence",
+      "Geographic Information System",
+      "B2B"
+    ]
+  },
+  "30642": {
+    "slug": "orange-slice",
+    "name": "Orange Slice",
+    "tags": []
+  },
+  "30644": {
+    "slug": "wafer",
+    "name": "Wafer",
+    "tags": [
+      "Artificial Intelligence"
+    ]
+  },
+  "30645": {
+    "slug": "panels",
+    "name": "Panels",
+    "tags": []
+  },
+  "30647": {
+    "slug": "cyberdesk",
+    "name": "Cyberdesk",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Robotic Process Automation",
+      "Workflow Automation",
+      "Enterprise Software"
+    ]
+  },
+  "30648": {
+    "slug": "tryjanet",
+    "name": "Janet AI",
+    "tags": []
+  },
+  "30649": {
+    "slug": "lilac",
+    "name": "Lilac",
+    "tags": [
+      "Machine Learning",
+      "Cloud Computing",
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30650": {
+    "slug": "imprezia",
+    "name": "Imprezia",
+    "tags": []
+  },
+  "30651": {
+    "slug": "alter",
+    "name": "Alter",
+    "tags": [
+      "AIOps",
+      "Developer Tools",
+      "DevSecOps",
+      "Security",
+      "AI"
+    ]
+  },
+  "30652": {
+    "slug": "ondeck-ai",
+    "name": "OnDeck AI",
+    "tags": [
+      "Machine Learning",
+      "SaaS",
+      "Computer Vision",
+      "B2B",
+      "Video"
+    ]
+  },
+  "30655": {
+    "slug": "frizzle",
+    "name": "Frizzle",
+    "tags": [
+      "Artificial Intelligence",
+      "Education",
+      "SaaS",
+      "B2B",
+      "Productivity"
+    ]
+  },
+  "30656": {
+    "slug": "deepgrove",
+    "name": "DeepGrove",
+    "tags": []
+  },
+  "30659": {
+    "slug": "proliferate",
+    "name": "Proliferate",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "SaaS",
+      "B2B"
+    ]
+  },
+  "30660": {
+    "slug": "magnitude",
+    "name": "Magnitude",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Open Source",
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30661": {
+    "slug": "stockline",
+    "name": "Stockline",
+    "tags": [
+      "SaaS",
+      "B2B",
+      "Food &amp; Beverage",
+      "AI"
+    ]
+  },
+  "30662": {
+    "slug": "deepaware-ai-robotics-center-of-silicon-valley",
+    "name": "DeepAware AI (Robotics Center of Silicon Valley)",
+    "tags": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Robotics",
+      "Supply Chain",
+      "Data Engineering"
+    ]
+  },
+  "30663": {
+    "slug": "tesora",
+    "name": "Tesora",
+    "tags": [
+      "Artificial Intelligence",
+      "API",
+      "Insurance"
+    ]
+  },
+  "30665": {
+    "slug": "pangolin",
+    "name": "Pangolin",
+    "tags": [
+      "Open Source",
+      "Enterprise Software",
+      "Networks"
+    ]
+  },
+  "30666": {
+    "slug": "careswift",
+    "name": "CareSwift",
+    "tags": []
+  },
+  "30668": {
+    "slug": "wedge",
+    "name": "Wedge",
+    "tags": []
+  },
+  "30669": {
+    "slug": "slashy",
+    "name": "Slashy",
+    "tags": [
+      "Productivity",
+      "Enterprise Software",
+      "Automation",
+      "Email",
+      "AI Assistant"
+    ]
+  },
+  "30670": {
+    "slug": "cocreate",
+    "name": "cocreate",
+    "tags": [
+      "Consumer",
+      "Video"
+    ]
+  },
+  "30671": {
+    "slug": "panoptive",
+    "name": "Panoptive",
+    "tags": [
+      "B2B",
+      "Biotech",
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30673": {
+    "slug": "nexa-labs",
+    "name": "Nexa Labs",
+    "tags": [
+      "Livestock Health",
+      "Medical Devices",
+      "Agriculture",
+      "AI",
+      "Biotechnology"
+    ]
+  },
+  "30675": {
+    "slug": "bootloop",
+    "name": "BootLoop",
+    "tags": []
+  },
+  "30676": {
+    "slug": "stellon-labs",
+    "name": "Stellon Labs",
+    "tags": [
+      "Artificial Intelligence",
+      "Edge Computing Semiconductors"
+    ]
+  },
+  "30677": {
+    "slug": "kalinda",
+    "name": "Kalinda",
+    "tags": []
+  },
+  "30680": {
+    "slug": "riverbank",
+    "name": "Riverbank",
+    "tags": [
+      "IoT Security",
+      "Enterprise Software",
+      "AI"
+    ]
+  },
+  "30681": {
+    "slug": "conviction",
+    "name": "Conviction",
+    "tags": []
+  },
+  "30683": {
+    "slug": "theora",
+    "name": "Theora",
+    "tags": [
+      "Marketing",
+      "Market Research"
+    ]
+  },
+  "30684": {
+    "slug": "doe",
+    "name": "Doe",
+    "tags": [
+      "Artificial Intelligence",
+      "Generative AI",
+      "SaaS",
+      "Productivity",
+      "Data Visualization"
+    ]
+  },
+  "30685": {
+    "slug": "ironledger-ai",
+    "name": "IronLedger.ai",
+    "tags": []
+  },
+  "30686": {
+    "slug": "theinterface",
+    "name": "Interface",
+    "tags": [
+      "AI"
+    ]
+  },
+  "30687": {
+    "slug": "trace-so",
+    "name": "Trace",
+    "tags": [
+      "SaaS",
+      "B2B",
+      "Productivity",
+      "Enterprise Software",
+      "AI"
+    ]
+  },
+  "30688": {
+    "slug": "fulcrum",
+    "name": "Fulcrum",
+    "tags": []
+  },
+  "30689": {
+    "slug": "b12-labs",
+    "name": "b12 Labs",
+    "tags": [
+      "AI-powered Drug Discovery",
+      "Robotics"
+    ]
+  },
+  "30690": {
+    "slug": "flai",
+    "name": "Flai",
+    "tags": []
+  },
+  "30691": {
+    "slug": "embedder",
+    "name": "Embedder",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Hardware",
+      "B2B"
+    ]
+  },
+  "30692": {
+    "slug": "costream",
+    "name": "Costream",
+    "tags": []
+  },
+  "30694": {
+    "slug": "epicenter",
+    "name": "Epicenter",
+    "tags": [
+      "SaaS",
+      "Productivity",
+      "Open Source",
+      "Note-taking",
+      "AI Assistant"
+    ]
+  },
+  "30695": {
+    "slug": "channel3",
+    "name": "Channel3",
+    "tags": [
+      "Artificial Intelligence",
+      "E-commerce"
+    ]
+  },
+  "30696": {
+    "slug": "ghosteye",
+    "name": "GhostEye",
+    "tags": [
+      "B2B",
+      "Cybersecurity",
+      "AI"
+    ]
+  },
+  "30697": {
+    "slug": "normal",
+    "name": "Normal",
+    "tags": [
+      "Artificial Intelligence",
+      "Hardware",
+      "Manufacturing",
+      "Industrial"
+    ]
+  },
+  "30698": {
+    "slug": "comena",
+    "name": "Comena",
+    "tags": []
+  },
+  "30699": {
+    "slug": "vibeflow",
+    "name": "VibeFlow",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Consumer",
+      "B2B"
+    ]
+  },
+  "30700": {
+    "slug": "nozomio",
+    "name": "Nozomio",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Consumer"
+    ]
+  },
+  "30701": {
+    "slug": "mimos",
+    "name": "Mimos",
+    "tags": [
+      "SaaS",
+      "LegalTech",
+      "AI"
+    ]
+  },
+  "30702": {
+    "slug": "twentytwo",
+    "name": "TwentyTwo",
+    "tags": [
+      "Artificial Intelligence",
+      "Synthetic Biology",
+      "Biotech",
+      "Compliance",
+      "Security"
+    ]
+  },
+  "30703": {
+    "slug": "physical-turing",
+    "name": "Physical Turing",
+    "tags": [
+      "Robotics",
+      "B2B",
+      "AI"
+    ]
+  },
+  "30704": {
+    "slug": "albacore-inc",
+    "name": "Albacore Inc.",
+    "tags": [
+      "Drones",
+      "Maritime",
+      "Defense"
+    ]
+  },
+  "30706": {
+    "slug": "solva",
+    "name": "Solva",
+    "tags": []
+  },
+  "30707": {
+    "slug": "phases",
+    "name": "Phases",
+    "tags": [
+      "Healthcare IT",
+      "AI",
+      "Conversational AI"
+    ]
+  },
+  "30708": {
+    "slug": "perseus-defense",
+    "name": "Perseus Defense",
+    "tags": []
+  },
+  "30709": {
+    "slug": "novaflow",
+    "name": "Novaflow",
+    "tags": []
+  },
+  "30710": {
+    "slug": "manufact",
+    "name": "Manufact",
+    "tags": [
+      "Developer Tools",
+      "B2B",
+      "Open Source",
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30711": {
+    "slug": "char",
+    "name": "Char",
+    "tags": [
+      "Artificial Intelligence",
+      "SaaS",
+      "Productivity",
+      "Open Source",
+      "AI Assistant"
+    ]
+  },
+  "30712": {
+    "slug": "relling",
+    "name": "Relling",
+    "tags": [
+      "Artificial Intelligence",
+      "Robotics"
+    ]
+  },
+  "30713": {
+    "slug": "motives",
+    "name": "Motives",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Marketing",
+      "Market Research"
+    ]
+  },
+  "30716": {
+    "slug": "finto-de",
+    "name": "Finto",
+    "tags": [
+      "Artificial Intelligence",
+      "Fintech",
+      "B2B",
+      "Enterprise",
+      "AI"
+    ]
+  },
+  "30717": {
+    "slug": "iron-grid",
+    "name": "Iron Grid",
+    "tags": []
+  },
+  "30719": {
+    "slug": "procindex",
+    "name": "ProcIndex",
+    "tags": [
+      "Fintech",
+      "Finance",
+      "B2B",
+      "AI"
+    ]
+  },
+  "30720": {
+    "slug": "autosana",
+    "name": "Autosana",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "B2B",
+      "Enterprise Software"
+    ]
+  },
+  "30721": {
+    "slug": "knowlify",
+    "name": "Knowlify",
+    "tags": [
+      "Artificial Intelligence",
+      "Education",
+      "Generative AI",
+      "Video",
+      "Enterprise Software"
+    ]
+  },
+  "30722": {
+    "slug": "omnara",
+    "name": "Omnara",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "AI Assistant"
+    ]
+  },
+  "30724": {
+    "slug": "risely-ai",
+    "name": "Risely AI",
+    "tags": []
+  },
+  "30725": {
+    "slug": "minimal-ai",
+    "name": "Minimal AI",
+    "tags": []
+  },
+  "30726": {
+    "slug": "socratix-ai",
+    "name": "Socratix AI",
+    "tags": []
+  },
+  "30727": {
+    "slug": "alara",
+    "name": "Alara",
+    "tags": [
+      "Artificial Intelligence",
+      "Dental",
+      "Procurement"
+    ]
+  },
+  "30729": {
+    "slug": "floot",
+    "name": "Floot",
+    "tags": [
+      "SaaS",
+      "No-code",
+      "Web Development",
+      "AI"
+    ]
+  },
+  "30730": {
+    "slug": "idler",
+    "name": "idler",
+    "tags": [
+      "Reinforcement Learning"
+    ]
+  },
+  "30731": {
+    "slug": "maximal",
+    "name": "Maximal",
+    "tags": [
+      "Artificial Intelligence",
+      "Logistics",
+      "Supply Chain"
+    ]
+  },
+  "30732": {
+    "slug": "humoniq",
+    "name": "Humoniq",
+    "tags": [
+      "Travel",
+      "AI",
+      "Conversational AI"
+    ]
+  },
+  "30733": {
+    "slug": "nautilus",
+    "name": "Nautilus",
+    "tags": []
+  },
+  "30734": {
+    "slug": "avelis-health",
+    "name": "Avelis Health",
+    "tags": []
+  },
+  "30736": {
+    "slug": "pares-ai",
+    "name": "PARES AI",
+    "tags": [
+      "Artificial Intelligence",
+      "Real Estate",
+      "Proptech",
+      "Conversational AI"
+    ]
+  },
+  "30738": {
+    "slug": "altur",
+    "name": "Altur",
+    "tags": [
+      "Artificial Intelligence"
+    ]
+  },
+  "30739": {
+    "slug": "quotain",
+    "name": "Quotain",
+    "tags": [
+      "Sales",
+      "Sales Enablement",
+      "AI"
+    ]
+  },
+  "30740": {
+    "slug": "metis",
+    "name": "Metis",
+    "tags": []
+  },
+  "30741": {
+    "slug": "f4-industries",
+    "name": "F4 Industries",
+    "tags": [
+      "Hardware",
+      "B2B",
+      "Industrial"
+    ]
+  },
+  "30742": {
+    "slug": "sira",
+    "name": "Sira",
+    "tags": []
+  },
+  "30743": {
+    "slug": "opennote",
+    "name": "Opennote",
+    "tags": [
+      "AI-Enhanced Learning",
+      "Education",
+      "SaaS",
+      "Consumer",
+      "Productivity"
+    ]
+  },
+  "30744": {
+    "slug": "sigmanticai",
+    "name": "SigmanticAI",
+    "tags": [
+      "Hard Tech",
+      "Hardware",
+      "B2B",
+      "AI",
+      "AI Assistant"
+    ]
+  },
+  "30747": {
+    "slug": "convexia",
+    "name": "Convexia",
+    "tags": [
+      "AI-powered Drug Discovery",
+      "Biotech",
+      "Drug Delivery"
+    ]
+  },
+  "30748": {
+    "slug": "pleom",
+    "name": "Pleom",
+    "tags": [
+      "Artificial Intelligence",
+      "Generative AI",
+      "Analytics",
+      "Big Data",
+      "AI"
+    ]
+  },
+  "30754": {
+    "slug": "locata",
+    "name": "Locata",
+    "tags": []
+  },
+  "30755": {
+    "slug": "pally",
+    "name": "Pally",
+    "tags": [
+      "Artificial Intelligence",
+      "Consumer",
+      "B2B",
+      "Productivity",
+      "Search"
+    ]
+  },
+  "30756": {
+    "slug": "notte",
+    "name": "Notte",
+    "tags": [
+      "Developer Tools",
+      "Automation",
+      "AI"
+    ]
+  },
+  "30758": {
+    "slug": "hera-video",
+    "name": "Hera",
+    "tags": []
+  },
+  "30759": {
+    "slug": "certus-ai",
+    "name": "Certus AI",
+    "tags": [
+      "Artificial Intelligence",
+      "SaaS",
+      "B2B",
+      "Restaurant Tech",
+      "AI"
+    ]
+  },
+  "30761": {
+    "slug": "reacher",
+    "name": "Reacher",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "E-commerce",
+      "Creator Economy"
+    ]
+  },
+  "30762": {
+    "slug": "kernel",
+    "name": "KERNEL",
+    "tags": [
+      "Developer Tools",
+      "Cloud Computing",
+      "Infrastructure",
+      "AI"
+    ]
+  },
+  "30763": {
+    "slug": "rebulk",
+    "name": "Rebulk",
+    "tags": [
+      "Computer Vision",
+      "Supply Chain",
+      "Agriculture",
+      "AI",
+      "Industrial"
+    ]
+  },
+  "30768": {
+    "slug": "okibi",
+    "name": "Okibi",
+    "tags": [
+      "Developer Tools",
+      "SaaS",
+      "AI"
+    ]
+  },
+  "30769": {
+    "slug": "juxta",
+    "name": "Juxta",
+    "tags": []
+  },
+  "30771": {
+    "slug": "flywheel-ai",
+    "name": "Flywheel AI",
+    "tags": [
+      "Deep Learning",
+      "Hardware",
+      "Construction"
+    ]
+  },
+  "30772": {
+    "slug": "stagewise",
+    "name": "stagewise",
+    "tags": []
+  },
+  "30774": {
+    "slug": "clodo",
+    "name": "CLODO",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Recruiting",
+      "Sales",
+      "AI Assistant"
+    ]
+  },
+  "30775": {
+    "slug": "fleetline",
+    "name": "Fleetline",
+    "tags": [
+      "Artificial Intelligence",
+      "Logistics",
+      "Supply Chain",
+      "Data Science"
+    ]
+  },
+  "30776": {
+    "slug": "magnetic",
+    "name": "Magnetic",
+    "tags": []
+  },
+  "30777": {
+    "slug": "modelence",
+    "name": "Modelence",
+    "tags": [
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Infrastructure"
+    ]
+  },
+  "30778": {
+    "slug": "perspectives-health",
+    "name": "Perspectives Health",
+    "tags": [
+      "Workflow Automation",
+      "Healthcare",
+      "Mental Health",
+      "Healthcare IT"
+    ]
+  },
+  "30781": {
+    "slug": "duranium",
+    "name": "Duranium",
+    "tags": [
+      "Manufacturing",
+      "Advanced Materials",
+      "ClimateTech"
+    ]
+  },
+  "30782": {
+    "slug": "tectoai",
+    "name": "TectoAI",
+    "tags": [
+      "Artificial Intelligence"
+    ]
+  },
+  "30785": {
+    "slug": "rowflow",
+    "name": "RowFlow",
+    "tags": [
+      "Artificial Intelligence",
+      "B2B",
+      "Workflow Automation",
+      "Chat"
+    ]
+  },
+  "30786": {
+    "slug": "munify",
+    "name": "Munify",
+    "tags": [
+      "Fintech",
+      "Consumer",
+      "B2B",
+      "Consumer Finance",
+      "Neobank"
+    ]
+  },
+  "30789": {
+    "slug": "interfere",
+    "name": "Interfere",
+    "tags": [
+      "Developer Tools",
+      "Design",
+      "AI"
+    ]
+  },
+  "30791": {
+    "slug": "spotlight-realty",
+    "name": "Spotlight Realty",
+    "tags": [
+      "Machine Learning",
+      "Real Estate"
+    ]
+  },
+  "30792": {
+    "slug": "geo-ai",
+    "name": "Bizzy AI",
+    "tags": [
+      "Workflow Automation",
+      "Sales",
+      "Marketing",
+      "AI"
+    ]
+  },
+  "30794": {
+    "slug": "vulcan-technologies",
+    "name": "Vulcan Technologies",
+    "tags": []
+  },
+  "30795": {
+    "slug": "noso-labs",
+    "name": "NOSO LABS",
+    "tags": [
+      "Artificial Intelligence"
+    ]
+  },
+  "30796": {
+    "slug": "outrove",
+    "name": "Sapien",
+    "tags": [
+      "AI"
+    ]
+  },
+  "30797": {
+    "slug": "veritus",
+    "name": "Veritus",
+    "tags": [
+      "Fintech",
+      "Lending",
+      "AI"
+    ]
+  },
+  "30798": {
+    "slug": "ruvo",
+    "name": "Ruvo",
+    "tags": [
+      "Fintech",
+      "Crypto / Web3",
+      "Payments"
+    ]
+  },
+  "30799": {
+    "slug": "avent",
+    "name": "Avent",
+    "tags": []
+  },
+  "30801": {
+    "slug": "burnt",
+    "name": "burnt",
+    "tags": [
+      "Supply Chain",
+      "Food Tech",
+      "AI"
+    ]
+  },
+  "30802": {
+    "slug": "freya",
+    "name": "Freya",
+    "tags": []
+  },
+  "30804": {
+    "slug": "luminal",
+    "name": "Luminal",
+    "tags": [
+      "AIOps",
+      "Artificial Intelligence",
+      "Developer Tools",
+      "Cloud Computing"
+    ]
+  },
+  "30805": {
+    "slug": "realroots",
+    "name": "RealRoots",
+    "tags": []
+  },
+  "30806": {
+    "slug": "uplift-ai",
+    "name": "Uplift AI",
+    "tags": [
+      "Speech Recognition",
+      "Conversational AI"
+    ]
+  },
+  "30807": {
+    "slug": "paloma",
+    "name": "Paloma",
+    "tags": [
+      "Artificial Intelligence",
+      "SaaS",
+      "Analytics",
+      "Manufacturing",
+      "Operations"
+    ]
+  },
+  "30813": {
+    "slug": "blue",
+    "name": "Blue",
+    "tags": [
+      "Hardware",
+      "Productivity",
+      "AI"
+    ]
+  },
+  "30818": {
+    "slug": "nox-metals",
+    "name": "Nox Metals",
+    "tags": [
+      "Manufacturing"
+    ]
+  },
+  "30832": {
+    "slug": "f2",
+    "name": "F2",
+    "tags": [
+      "AI"
+    ]
+  }
+}

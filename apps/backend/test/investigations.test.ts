@@ -7,7 +7,10 @@ import type { Auth } from "../src/lib/auth.js";
 import { followUpPromptMaxLength } from "../src/modules/investigations/domain.js";
 import { InMemoryAgentEventSubscription } from "../src/modules/investigations/event-subscription.js";
 import { InMemoryInvestigationRepository } from "../src/modules/investigations/in-memory-repository.js";
-import type { InvestigationRunner } from "../src/modules/investigations/ports.js";
+import type {
+  InvestigationQuestionAnswerer,
+  InvestigationRunner,
+} from "../src/modules/investigations/ports.js";
 import { investigationRoutes } from "../src/modules/investigations/routes.js";
 import { InvestigationService } from "../src/modules/investigations/service.js";
 
@@ -49,6 +52,19 @@ const immediateRunner: InvestigationRunner = {
       patch: {
         status: "ready-for-review",
         engineeringDraft: "Review the verified failure.",
+        diagnosis: {
+          verdict: "confirmed",
+          headline: "The verified failure caused the incident",
+          summary: "The failure matches the customer and time window.",
+          confidence: "high",
+          impact: "The affected workflow is unavailable.",
+          evidenceIds: ["evidence-1"],
+          recommendedNextStep: "Deploy the validated fix.",
+          drafts: {
+            engineering: "Review the verified failure.",
+            customerReply: "We identified the failure and are preparing the fix.",
+          },
+        },
       },
     };
   },
@@ -98,6 +114,25 @@ test("creating an investigation starts a run and projects ordered events", async
     snapshot.case.reconstructed.engineeringDraft,
     "Review the verified failure.",
   );
+  assert.equal(snapshot.case.reconstructed.diagnosis?.verdict, "confirmed");
+  assert.deepEqual(
+    snapshot.activity.at(-1)?.casePatch?.diagnosis,
+    snapshot.case.reconstructed.diagnosis,
+  );
+  const answer = await service.answerFollowUp(actor, created.investigation.id, {
+    prompt: "Explain the diagnosis.",
+  });
+  assert.match(answer ?? "", /verified failure/i);
+  assert.equal(
+    (await service.events(actor, created.investigation.id)).length,
+    3,
+  );
+
+  const refreshed = await service.refreshAndStart(actor, created.investigation.id, {
+    customer: "Acme",
+    report: "Synchronization failed again.",
+  });
+  assert.equal(refreshed?.investigation.reconstructed.diagnosis, null);
   service.close();
 });
 
@@ -121,19 +156,25 @@ test("investigations remain isolated by workspace", async () => {
   service.close();
 });
 
-test("a follow-up is persisted and published as trimmed public activity", async () => {
+test("a follow-up returns a grounded answer without adding timeline activity", async () => {
   const subscriptions = new InMemoryAgentEventSubscription();
+  let receivedPrompt = "";
+  const answerer: InvestigationQuestionAnswerer = {
+    async answer(investigation, prompt) {
+      receivedPrompt = prompt;
+      assert.equal(investigation.reconstructed.customer, "Acme");
+      return "The available case evidence supports retrying after reconnecting OAuth.";
+    },
+  };
   const service = new InvestigationService(
     new InMemoryInvestigationRepository(),
     idleRunner,
     subscriptions,
+    answerer,
   );
   const created = await service.createAndStart(actor, {
     customer: "Acme",
     report: "A technical issue occurred.",
-  });
-  const published = new Promise<unknown>((resolve) => {
-    subscriptions.subscribe(actor.workspaceId, created.investigation.id, resolve);
   });
   const app = Fastify();
   await app.register(investigationRoutes, {
@@ -147,17 +188,14 @@ test("a follow-up is persisted and published as trimmed public activity", async 
     payload: { prompt: "  Check whether retries used the old token.  " },
   });
 
-  assert.equal(response.statusCode, 202);
+  assert.equal(response.statusCode, 200);
   const body = response.json();
-  assert.equal(body.event.type, "follow_up.requested");
   assert.equal(
-    body.event.publicSummary,
-    "Check whether retries used the old token.",
+    body.answer,
+    "The available case evidence supports retrying after reconnecting OAuth.",
   );
-  assert.deepEqual(await published, body.event);
-  assert.deepEqual(await service.events(actor, created.investigation.id), [
-    body.event,
-  ]);
+  assert.equal(receivedPrompt, "Check whether retries used the old token.");
+  assert.deepEqual(await service.events(actor, created.investigation.id), []);
 
   await app.close();
   service.close();

@@ -101,9 +101,32 @@ function demoEvents(caseId: string): AgentEventInput[] {
     },
     {
       type: "run.completed",
-      title: "Case ready for review",
+      title: "Investigation complete",
       publicSummary:
-        "No platform incident was found. The verified evidence is ready for human review.",
+        "The Salesforce token refresh is the leading explanation and the verified evidence is ready for human review.",
+      casePatch: {
+        status: "ready-for-review",
+        diagnosis: {
+          verdict: "likely",
+          headline: "The Salesforce OAuth refresh likely invalidated the sync token",
+          summary:
+            "Seventeen HTTP 403 failures began two minutes after the token refresh, with no matching platform incident.",
+          confidence: "high",
+          impact: "1,240 contact updates are waiting to be synchronized.",
+          evidenceIds: [
+            `${caseId}-live-evidence-1`,
+            `${caseId}-live-evidence-2`,
+          ],
+          recommendedNextStep:
+            "Reconnect Salesforce, validate one synchronization, then replay the failed jobs.",
+          drafts: {
+            engineering:
+              "Validate the Salesforce OAuth refresh path and reconnect the affected workspace before replaying failed synchronization jobs.",
+            customerReply:
+              "We found that the failures began immediately after the Salesforce token refresh. We recommend reconnecting the integration, validating one sync, and then retrying the remaining jobs.",
+          },
+        },
+      },
     },
   ];
 }
@@ -151,30 +174,15 @@ export class MockInvestigationStream implements InvestigationStream {
       throw new Error("The investigation stream is not connected.");
     }
 
-    this.emit({
-      type: "follow_up.requested",
-      title: "Follow-up requested",
-      publicSummary: prompt,
-    });
-    this.schedule(
-      {
-        type: "plan.created",
-        title: "Follow-up added to the plan",
-        publicSummary:
-          "The agent is checking the current case context against your request.",
-      },
-      650,
-    );
-    this.schedule(
-      {
-        type: "tool.started",
-        title: "Reviewing related evidence",
-        publicSummary:
-          "Re-checking the collected evidence and source data for this follow-up.",
-        source: "Case evidence",
-      },
-      1_450,
-    );
+    await new Promise((resolve) => setTimeout(resolve, 650));
+    const normalized = prompt.toLowerCase();
+    if (normalized.includes("customer") || normalized.includes("follow-up")) {
+      return "We found that the synchronization failures began immediately after the Salesforce token refresh. We recommend reconnecting the integration, validating one synchronization, and then retrying the remaining jobs.";
+    }
+    if (normalized.includes("engineering") || normalized.includes("handoff")) {
+      return "Acme experienced 17 consecutive HTTP 403 synchronization failures. The first failure occurred two minutes after the Salesforce OAuth token refresh. Reconnect the integration, validate one synchronization, then retry the failed jobs.";
+    }
+    return "The strongest evidence is the timing: the Salesforce token refresh occurred two minutes before 17 consecutive HTTP 403 failures began. This supports an OAuth authentication failure as the likely cause, but it does not prove why the refreshed token became invalid.";
   }
 }
 

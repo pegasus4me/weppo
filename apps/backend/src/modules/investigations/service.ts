@@ -10,11 +10,13 @@ import type {
   InvestigationStatus,
   RequestFollowUpInput,
 } from "./domain.js";
+import { CaseContextAnswerer } from "./case-answerer.js";
 import type {
   AgentEventListener,
   AgentEventSubscription,
   InvestigationRepository,
   InvestigationRunner,
+  InvestigationQuestionAnswerer,
 } from "./ports.js";
 
 function applyPatch(
@@ -61,6 +63,10 @@ function applyPatch(
         patch.engineeringDraft === undefined
           ? investigation.reconstructed.engineeringDraft
           : patch.engineeringDraft,
+      diagnosis:
+        patch.diagnosis === undefined
+          ? investigation.reconstructed.diagnosis
+          : patch.diagnosis,
     },
     updatedAt: new Date().toISOString(),
   };
@@ -73,6 +79,7 @@ export class InvestigationService {
     private readonly repository: InvestigationRepository,
     private readonly runner: InvestigationRunner,
     private readonly subscriptions: AgentEventSubscription,
+    private readonly questionAnswerer: InvestigationQuestionAnswerer = new CaseContextAnswerer(),
   ) {}
 
   list(actor: InvestigationActor, status?: InvestigationStatus) {
@@ -139,6 +146,7 @@ export class InvestigationService {
         knowledgeRetrieval: [],
         missingInformation: [],
         engineeringDraft: null,
+        diagnosis: null,
       },
       createdBy: actor.userId,
       createdAt: now,
@@ -184,6 +192,7 @@ export class InvestigationService {
         knowledgeRetrieval: [],
         missingInformation: [],
         engineeringDraft: null,
+        diagnosis: null,
       },
       updatedAt: now,
     };
@@ -203,7 +212,7 @@ export class InvestigationService {
     const controller = new AbortController();
     this.activeRuns.set(key, controller);
     await this.repository.update(
-      applyPatch(investigation, { status: "investigating" }),
+      applyPatch(investigation, { status: "investigating", diagnosis: null }),
     );
     void this.execute(actor.workspaceId, caseId, runId, controller).catch(
       () => {
@@ -224,25 +233,14 @@ export class InvestigationService {
     return this.repository.listEvents(actor.workspaceId, caseId, afterSequence);
   }
 
-  async requestFollowUp(
+  async answerFollowUp(
     actor: InvestigationActor,
     caseId: string,
     input: RequestFollowUpInput,
-  ): Promise<AgentEvent | null> {
+  ): Promise<string | null> {
     const investigation = await this.repository.get(actor.workspaceId, caseId);
     if (!investigation) return null;
-
-    const event = await this.repository.appendEvent(actor.workspaceId, {
-      schemaVersion: 1,
-      caseId,
-      runId: randomUUID(),
-      type: "follow_up.requested",
-      title: "Follow-up requested",
-      publicSummary: input.prompt.trim(),
-      occurredAt: new Date().toISOString(),
-    });
-    this.subscriptions.publish(actor.workspaceId, event);
-    return event;
+    return this.questionAnswerer.answer(investigation, input.prompt.trim());
   }
 
   subscribe(

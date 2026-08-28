@@ -53,7 +53,7 @@ export function NewInvestigationForm() {
           name="ticket"
           type="url"
           placeholder="https://…"
-          className="mt-2 h-11 w-full rounded-md border border-border/40 bg-white px-3.5 text-sm text-foreground outline-none placeholder:text-text-tertiary focus:border-foreground"
+          className="mt-2 h-10 w-full rounded-lg border border-border/40 bg-card px-3 text-sm text-foreground outline-none placeholder:text-text-tertiary focus:border-foreground"
         />
       </div>
 
@@ -67,7 +67,7 @@ export function NewInvestigationForm() {
           type="text"
           required
           placeholder="Company or workspace"
-          className="mt-2 h-11 w-full rounded-md border border-border/40 bg-white px-3.5 text-sm text-foreground outline-none placeholder:text-text-tertiary focus:border-foreground"
+          className="mt-2 h-10 w-full rounded-lg border border-border/40 bg-card px-3 text-sm text-foreground outline-none placeholder:text-text-tertiary focus:border-foreground"
         />
       </div>
 
@@ -81,7 +81,7 @@ export function NewInvestigationForm() {
           rows={8}
           required
           placeholder="Paste the incomplete ticket or describe the issue…"
-          className="mt-2 w-full resize-none rounded-md border border-border/40 bg-white px-3.5 py-3 text-sm leading-6 text-foreground outline-none placeholder:text-text-tertiary focus:border-foreground"
+          className="mt-2 w-full resize-none rounded-lg border border-border/40 bg-card px-3 py-3 text-sm leading-6 text-foreground outline-none placeholder:text-text-tertiary focus:border-foreground"
         />
       </div>
 
@@ -95,7 +95,7 @@ export function NewInvestigationForm() {
         <button
           type="submit"
           disabled={pending}
-          className="inline-flex h-11 items-center justify-center rounded-full bg-foreground px-6 text-sm font-medium text-white transition-colors hover:bg-text-secondary disabled:cursor-wait disabled:bg-text-tertiary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          className="inline-flex h-[34px] items-center justify-center rounded-lg bg-foreground px-3 text-sm font-medium text-background transition-colors hover:bg-text-secondary disabled:cursor-wait disabled:bg-text-tertiary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
         >
           {pending ? "Starting investigation…" : "Start investigation"}
         </button>

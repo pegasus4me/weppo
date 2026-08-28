@@ -50,12 +50,12 @@ export function FollowUpComposer({
   return (
     <form
       onSubmit={handleSubmit}
-      className="shrink-0 border-t border-border/20 bg-white px-4 py-3 sm:px-5"
+      className="shrink-0 border-t border-border/20 bg-card px-4 py-3 sm:px-5"
     >
       <label htmlFor="agent-follow-up" className="sr-only">
         Follow up with the investigation agent
       </label>
-      <div className="flex items-end gap-2 rounded-xl border border-border/30 bg-background/45 p-1.5 pl-3 transition-colors focus-within:border-text-tertiary">
+      <div className="flex items-end gap-2 rounded-lg border border-border/30 bg-background/45 p-1.5 pl-3 transition-colors focus-within:border-text-tertiary">
         <textarea
           id="agent-follow-up"
           value={prompt}
@@ -72,7 +72,7 @@ export function FollowUpComposer({
         <button
           type="submit"
           disabled={!canSubmit}
-          className="inline-flex h-10 shrink-0 items-center justify-center rounded-lg bg-foreground px-3.5 text-xs font-medium text-white transition-colors hover:bg-text-secondary disabled:cursor-not-allowed disabled:opacity-30"
+          className="inline-flex h-[34px] shrink-0 items-center justify-center rounded-lg bg-foreground px-3 text-xs font-medium text-background transition-colors hover:bg-text-secondary disabled:cursor-not-allowed disabled:opacity-30"
         >
           {isSending ? "Sending…" : "Send"}
         </button>

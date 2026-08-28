@@ -1,7 +1,7 @@
 export default function SettingsPage() {
   return (
     <main className="min-h-full px-6 py-8 sm:px-8 lg:px-10 lg:py-10">
-      <div className="mx-auto w-full max-w-3xl">
+      <div className="mx-auto w-[90%]">
         <p className="text-sm text-text-tertiary">Workspace</p>
         <h1 className="mt-1 text-[30px] font-medium leading-tight text-foreground">
           Settings
@@ -21,7 +21,7 @@ export default function SettingsPage() {
             <input
               type="text"
               defaultValue="Safoan Touil workspace"
-              className="h-11 w-full rounded-md border border-border/40 bg-white px-3.5 text-sm text-foreground outline-none focus:border-foreground"
+              className="h-10 w-full rounded-lg border border-border/40 bg-card px-3 text-sm text-foreground outline-none focus:border-foreground"
             />
           </section>
 
@@ -32,7 +32,7 @@ export default function SettingsPage() {
                 Default policy for connected tools.
               </p>
             </div>
-            <div className="rounded-md border border-border/25 px-4 py-3.5">
+            <div className="rounded-lg bg-background px-4 py-3.5">
               <p className="text-sm font-medium text-foreground">Read-only</p>
               <p className="mt-1 text-xs leading-5 text-text-tertiary">
                 Weppo can inspect evidence but cannot modify customer systems.
@@ -44,7 +44,7 @@ export default function SettingsPage() {
         <div className="mt-6 flex justify-end">
           <button
             type="button"
-            className="inline-flex h-10 items-center justify-center rounded-full bg-foreground px-5 text-sm font-medium text-white transition-colors hover:bg-text-secondary"
+            className="inline-flex h-[34px] items-center justify-center rounded-lg bg-foreground px-3 text-sm font-medium text-background transition-colors hover:bg-text-secondary"
           >
             Save changes
           </button>

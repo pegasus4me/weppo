@@ -9,6 +9,7 @@ import type {
   KnowledgeRetrievalStep,
   RunnerStep,
 } from "./domain.js";
+import { createInvestigationDiagnosis } from "./diagnosis.js";
 import type { InvestigationRunner } from "./ports.js";
 
 type JsonRecord = Record<string, unknown>;
@@ -995,12 +996,36 @@ export class IntercomInvestigationRunner implements InvestigationRunner {
         summary: "No RAG index was queried. It was not substituted with generated or unsourced guidance.",
       },
     ];
+    const completionSummary = `${branches.length} ticket-scoped branch${branches.length === 1 ? "" : "es"} reached a precise next-evidence requirement. ${sentryEvidence.length} branch${sentryEvidence.length === 1 ? " has" : "es have"} customer-scoped Sentry evidence; the remaining reported branches have no matching event in the searched scope.`;
+    const impact = `Customer-scoped Sentry evidence was found for ${sentryEvidence.length} of ${branches.length} reported workflow${branches.length === 1 ? "" : "s"}. Root cause remains unconfirmed.`;
+    const engineeringDraft = `Customer: ${investigation.reconstructed.customer}\n\nReported workflows: ${symptoms.map((symptom) => symptom.label).join("; ") || "not classified"}.\n\nTimeline: ${timelineSummary(investigation, [...strongestBySymptom.values()])}\n\nVerified telemetry: ${sentryEvidence.map((item) => item.title).join("; ")}.\n\nKnowledge reviewed: ${knowledgeDocuments.length ? knowledgeDocuments.map((document) => document.title).join("; ") : "No readable Notion page was available."}\n\nBranch decisions: ${branches.map((branch) => `${branch.label}: ${branch.conclusion} Next required source: ${branch.nextStep?.source}.`).join(" ")}\n\nScope: read-only correlation. The branches remain independent until shared evidence proves otherwise. This investigation paused because the required product-telemetry sources are not connected, not because a root cause was confirmed.`;
+    const nextStep = branches.find((branch) => branch.nextStep)?.nextStep;
+    const diagnosisEvidence = [
+      ...sentryEvidence,
+      ...[...knowledgeEvidenceByDocument.values()],
+    ];
+    const diagnosis = createInvestigationDiagnosis({
+      verdict: "inconclusive",
+      headline: "Root cause not yet confirmed",
+      summary: completionSummary,
+      confidence: null,
+      impact,
+      evidence: diagnosisEvidence,
+      evidenceIds: branches.flatMap((branch) => branch.evidenceIds),
+      recommendedNextStep: nextStep
+        ? `${nextStep.question} Source: ${nextStep.source}.`
+        : "Connect the next required product-telemetry source and continue the investigation.",
+      drafts: {
+        engineering: engineeringDraft,
+        customerReply: `We investigated the reported workflows and found customer-scoped telemetry for ${sentryEvidence.length} of ${branches.length}. The evidence narrows the next check, but does not yet confirm a root cause. We are continuing with the next required evidence source.`,
+      },
+    });
     yield {
       delayMs: 0,
       event: {
         type: "run.completed",
         title: "Decision loop paused for review",
-        publicSummary: `${branches.length} ticket-scoped branch${branches.length === 1 ? "" : "es"} reached a precise next-evidence requirement. ${sentryEvidence.length} branch${sentryEvidence.length === 1 ? " has" : "es have"} customer-scoped Sentry evidence; the remaining reported branches have no matching event in the searched scope.`,
+        publicSummary: completionSummary,
         source: "Case evidence",
         hypotheses,
       },
@@ -1010,8 +1035,9 @@ export class IntercomInvestigationRunner implements InvestigationRunner {
         branches,
         knowledgeRetrieval,
         missingInformation: [],
-        impact: `Customer-scoped Sentry evidence was found for ${sentryEvidence.length} of ${branches.length} reported workflow${branches.length === 1 ? "" : "s"}. Root cause remains unconfirmed.`,
-        engineeringDraft: `Customer: ${investigation.reconstructed.customer}\n\nReported workflows: ${symptoms.map((symptom) => symptom.label).join("; ") || "not classified"}.\n\nTimeline: ${timelineSummary(investigation, [...strongestBySymptom.values()])}\n\nVerified telemetry: ${sentryEvidence.map((item) => item.title).join("; ")}.\n\nKnowledge reviewed: ${knowledgeDocuments.length ? knowledgeDocuments.map((document) => document.title).join("; ") : "No readable Notion page was available."}\n\nBranch decisions: ${branches.map((branch) => `${branch.label}: ${branch.conclusion} Next required source: ${branch.nextStep?.source}.`).join(" ")}\n\nScope: read-only correlation. The branches remain independent until shared evidence proves otherwise. This investigation paused because the required product-telemetry sources are not connected, not because a root cause was confirmed.`,
+        impact,
+        engineeringDraft,
+        diagnosis,
       },
     };
   }

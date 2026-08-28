@@ -1,0 +1,419 @@
+:root {
+  --ink: #24211f;
+  --muted: #716c66;
+  --faint: #a7a19a;
+  --line: #e7e1da;
+  --paper: #fffdf9;
+  --canvas: #f7f4ee;
+  --accent: #ffe600;
+  --danger: #a44035;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--canvas);
+}
+
+body {
+  min-height: 100svh;
+  margin: 0;
+  color: var(--ink);
+  background: var(--canvas);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.loading {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.shell {
+  width: min(1360px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 28px 0 72px;
+}
+
+.topbar,
+.intro,
+.editor-heading,
+.campaign-create,
+.section-heading,
+.campaign-action,
+.actions,
+.list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.topbar {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+}
+
+h2,
+h3 {
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+h3 {
+  margin-bottom: 6px;
+  font-size: 0.9375rem;
+}
+
+.storage-note,
+.intro > div > p:last-child,
+.campaign-create p,
+.field small,
+.playbook span,
+.campaign-card p,
+.campaign-card span,
+.empty {
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.55;
+}
+
+.intro {
+  padding: 36px 0 24px;
+}
+
+.intro > div {
+  max-width: 670px;
+}
+
+.intro > div > p:last-child {
+  max-width: 620px;
+  margin-bottom: 0;
+}
+
+.primary,
+.secondary,
+.danger {
+  border: 1px solid transparent;
+  border-radius: 7px;
+  padding: 10px 13px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.primary {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.secondary,
+.danger {
+  background: transparent;
+}
+
+.secondary {
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.danger {
+  color: var(--danger);
+}
+
+.primary:hover,
+.secondary:hover,
+.danger:hover {
+  transform: translateY(-1px);
+}
+
+.notice {
+  margin: 0 0 18px;
+  border-left: 2px solid var(--accent);
+  padding-left: 10px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.playbook-list {
+  min-height: 660px;
+  padding: 16px;
+  border-right: 1px solid var(--line);
+}
+
+.list-heading {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+}
+
+.playbook {
+  display: grid;
+  width: 100%;
+  gap: 5px;
+  border: 0;
+  border-left: 2px solid transparent;
+  padding: 11px 10px;
+  text-align: left;
+  background: transparent;
+}
+
+.playbook:hover {
+  background: #faf7f1;
+}
+
+.playbook.active {
+  border-left-color: var(--accent);
+  background: #faf7f1;
+}
+
+.playbook strong {
+  overflow: hidden;
+  font-size: 0.75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.editor {
+  padding: 28px;
+}
+
+.editor-heading {
+  align-items: flex-start;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--line);
+}
+
+.editor-heading h2 {
+  margin-bottom: 0;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 18px;
+  padding: 26px 0;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+  align-content: start;
+  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.field:first-child,
+.field:nth-child(2),
+.field:nth-child(4),
+.field:nth-child(5),
+.field:nth-child(6),
+.field:nth-child(7) {
+  grid-column: 1 / -1;
+}
+
+.field small {
+  margin-top: -3px;
+  font-weight: 400;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 11px;
+  color: var(--ink);
+  background: white;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.55;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--ink);
+}
+
+.campaign-create {
+  align-items: flex-end;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+
+.campaign-create > div:first-child {
+  max-width: 500px;
+}
+
+.campaign-create p:last-child {
+  margin-bottom: 0;
+}
+
+.campaign-action {
+  width: min(100%, 470px);
+}
+
+.campaign-action input {
+  min-width: 0;
+}
+
+.campaign-action .primary {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.empty-editor {
+  display: grid;
+  min-height: 450px;
+  align-content: center;
+  justify-items: start;
+}
+
+.campaigns {
+  margin-top: 48px;
+}
+
+.section-heading {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.section-heading > span {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.campaign-card {
+  min-height: 126px;
+  border: 1px solid var(--line);
+  padding: 16px;
+  background: var(--paper);
+}
+
+.campaign-card p {
+  margin-bottom: 18px;
+}
+
+.campaign-card h3 {
+  overflow: hidden;
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.campaign-empty {
+  margin: 18px 0 0;
+}
+
+@media (max-width: 850px) {
+  .shell {
+    width: min(100% - 28px, 1360px);
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .playbook-list {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .campaign-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .topbar,
+  .intro,
+  .editor-heading,
+  .campaign-create,
+  .campaign-action {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .fields,
+  .campaign-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .editor {
+    padding: 20px;
+  }
+
+  .intro .primary,
+  .campaign-action .primary {
+    width: 100%;
+  }
+}

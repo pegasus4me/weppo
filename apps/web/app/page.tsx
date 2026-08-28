@@ -6,11 +6,12 @@ import { FinalCloser } from "./components/final-closer";
 import { Footer } from "./components/footer";
 import { ProblemSolution } from "./components/problem-solution";
 import { SocialProofTrust } from "./components/social-proof-trust";
+import { ScrollRevealHeading } from "./components/scroll-reveal-heading";
 
 const discoveryCallUrl = "https://cal.com/safoan/30min";
 
 const heroIntegrations = [
-  { name: "Intercom", icon: "/integrations/intercom.svg" },
+  { name: "Intercom", icon: "/landing-intercom.png" },
   { name: "Zendesk", icon: "/integrations/zendesk.svg" },
   { name: "Slack", icon: "/integrations/slack.png" },
   { name: "Datadog", icon: "/integrations/datadog.svg" },
@@ -25,20 +26,20 @@ const heroIntegrations = [
 export default function Home() {
   return (
     <main className="overflow-hidden bg-white">
-      <div className="mx-auto w-full max-w-[1440px] border-x border-border bg-card">
+      <div className="mx-auto w-full max-w-[1440px] border-x border-dashed border-border bg-card">
         {/* Hero Section */}
         <section className="flex min-h-[calc(100svh-112px)] flex-col px-5 pb-12 pt-16 sm:px-8 sm:pt-24 lg:px-12 lg:pt-28">
-          <div className="max-w-4xl text-left">
-            <h1 className="text-balance text-[40px] font-medium leading-[1.06] text-foreground sm:text-[52px] lg:text-[50px]">
+          <div className="mx-auto w-full max-w-4xl text-center">
+            <ScrollRevealHeading>
               Your B2B agentic teammate for technical support investigations
-            </h1>
-            <p className="mt-6 max-w-2xl text-pretty text-lg leading-[1.45] text-text-secondary sm:text-xl">
+            </ScrollRevealHeading>
+            <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg leading-[1.45] text-text-secondary sm:text-xl">
               Weppo automates the technical investigation behind customer
               support issues — gathering context, checking logs, reproducing
               bugs in a sandbox, and preparing engineering-ready escalations.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <DiscoveryCallLink
                 href={discoveryCallUrl}
                 className="inline-flex h-11 items-center justify-center rounded-md bg-foreground px-6 text-base font-medium text-background transition-opacity hover:opacity-85"
@@ -48,11 +49,11 @@ export default function Home() {
             </div>
 
             {/* Logos under Book a discovery call */}
-            <div className="mt-10 flex flex-col items-start gap-2.5">
+            <div className="mt-10 flex flex-col items-center gap-2.5">
               <span className="text-[11px] font-normal tracking-wide text-text-tertiary/70">
                 Integrates with
               </span>
-              <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                 {heroIntegrations.map((tool) => (
                   <div
                     key={tool.name}
@@ -72,26 +73,30 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative -mx-5 mt-12 overflow-hidden border-b border-border sm:-mx-8 sm:mt-16 lg:-mx-12">
+          <div className="relative -mx-5 mt-12 sm:-mx-8 sm:mt-16 lg:-mx-12">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute left-1/2 top-0 z-20 w-screen -translate-x-1/2 border-t border-dashed border-border"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute bottom-0 left-1/2 z-20 w-screen -translate-x-1/2 border-b border-dashed border-border"
+            />
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url('/aurora-gradient.png')" }}
-            />
-            {/* Ambient Noise Overlay */}
-            <div
-              className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay pointer-events-none"
-              style={{ backgroundImage: "url('/hero-ffflux.svg')" }}
+              style={{ backgroundImage: "url('/hero-landscape.png')" }}
             />
             <div className="relative z-10 px-4 py-6 sm:px-8 sm:py-10 lg:px-12 lg:py-12">
               <Image
-                src="/hero-preview.png"
-                alt="Weppo AI teammate in action"
+                src="/weppo-dark-dashboard.png"
+                alt="Weppo investigating a technical support case in dark mode"
                 width={3600}
-                height={2080}
+                height={2088}
                 priority
                 quality={100}
                 unoptimized
-                className="h-auto w-full bg-white"
+                sizes="(max-width: 1440px) 100vw, 1344px"
+                className="h-auto w-full"
               />
             </div>
           </div>

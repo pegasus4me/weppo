@@ -42,17 +42,24 @@ export function Header() {
         <Link
           href={isDashboard ? "/dashboard" : "/"}
           aria-label="Weppo home"
-          className="inline-flex items-center gap-2"
+          className="inline-flex items-center"
         >
           <Image
-            src="/weppo-mark.png"
-            alt=""
-            width={325}
-            height={295}
+            src="/weppo-logo-v4.png"
+            alt="Weppo"
+            width={1263}
+            height={360}
             priority
-            className="h-8 w-auto"
+            className="h-8 w-auto dark:hidden"
           />
-          <span className="text-2xl font-medium tracking-[-0.04em] text-foreground">weppo</span>
+          <Image
+            src="/weppo-logo-white.png"
+            alt="Weppo"
+            width={1263}
+            height={360}
+            priority
+            className="hidden h-8 w-auto dark:block"
+          />
         </Link>
 
         <div className="flex items-center gap-2">

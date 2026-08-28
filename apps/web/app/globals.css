@@ -224,6 +224,20 @@
   animation: hero-gradient-shift 8s ease infinite;
 }
 
+.hero-gradient-text {
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    #faec1b 0%,
+    #ff9f43 45%,
+    #faec1b 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: hero-text-gradient 4s ease-in-out infinite;
+}
+
 @keyframes gradient-banner {
   0% {
     background-position: 0% 50%;
@@ -245,6 +259,16 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes hero-text-gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 

@@ -6,7 +6,6 @@ import { FinalCloser } from "./components/final-closer";
 import { Footer } from "./components/footer";
 import { ProblemSolution } from "./components/problem-solution";
 import { SocialProofTrust } from "./components/social-proof-trust";
-import { ScrollRevealHeading } from "./components/scroll-reveal-heading";
 
 const discoveryCallUrl = "https://cal.com/safoan/30min";
 
@@ -28,14 +27,15 @@ export default function Home() {
     <main className="overflow-hidden bg-white">
       <div className="mx-auto w-full max-w-[1440px] border-x border-dashed border-border bg-card">
         {/* Hero Section */}
-        <section className="flex min-h-[calc(100svh-112px)] flex-col px-5 pb-12 pt-16 sm:px-8 sm:pt-24 lg:px-12 lg:pt-28">
+        <section className="flex min-h-[calc(100svh-112px)] flex-col px-5 pb-12 pt-10 sm:px-8 sm:pt-12 lg:px-12 lg:pt-14">
           <div className="mx-auto w-full max-w-4xl text-center">
-            <ScrollRevealHeading>
-              Your B2B agentic teammate for technical support investigations
-            </ScrollRevealHeading>
+            <h1 className="text-balance text-center text-[40px] font-medium leading-[1.06] text-foreground dark:text-white sm:text-[52px] lg:text-[50px]">
+              Your B2B agentic teammate for technical support{" "}
+              <span className="hero-gradient-text">investigations</span>
+            </h1>
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg leading-[1.45] text-text-secondary sm:text-xl">
               Weppo automates the technical investigation behind customer
-              support issues — gathering context, checking logs, reproducing
+              support issues, gathering context, checking logs, reproducing
               bugs in a sandbox, and preparing engineering-ready escalations.
             </p>
 

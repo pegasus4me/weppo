@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 
 import { BellIcon, GearIcon } from "@radix-ui/react-icons";
 import { Building2 } from "lucide-react";
+import { IntegrationLogo } from "@/app/components/integration-logo";
 import {
   integrationsChangedEvent,
   loadIntegrations,
@@ -365,8 +366,9 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                       aria-label={`${definition.name} integration`}
                       className="mt-1 flex size-8 items-center justify-center rounded-lg hover:bg-card"
                     >
-                      <Image
+                      <IntegrationLogo
                         src={definition.logo}
+                        darkSrc={definition.darkLogo}
                         alt=""
                         width={20}
                         height={20}
@@ -396,7 +398,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
             <div className="mt-1">
               <Link href="/dashboard/integrations" title="Integrations" className={`flex h-8 items-center gap-2 rounded-lg px-2 text-sm ${pathname === "/dashboard/integrations" ? "bg-card font-medium text-foreground" : "text-text-secondary hover:bg-card hover:text-foreground"}`}><span className="grid size-4 grid-cols-2 gap-0.5"><span className="bg-current"/><span className="bg-current"/><span className="bg-current"/><span className="bg-current"/></span><span>Integrations</span></Link>
-              {connectedSidebarIntegrations.length > 0 ? <div className="ml-4 border-l border-border/25 pl-2">{connectedSidebarIntegrations.map(({ connection, definition }) => <Link key={connection.provider} href="/dashboard/integrations" className="flex h-8 items-center gap-2 text-xs text-text-secondary"><Image src={definition.logo} alt="" width={20} height={20} className="size-5 object-contain"/><span className="truncate">{definition.name}</span></Link>)}</div> : null}
+              {connectedSidebarIntegrations.length > 0 ? <div className="ml-4 border-l border-border/25 pl-2">{connectedSidebarIntegrations.map(({ connection, definition }) => <Link key={connection.provider} href="/dashboard/integrations" className="flex h-8 items-center gap-2 text-xs text-text-secondary"><IntegrationLogo src={definition.logo} darkSrc={definition.darkLogo} alt="" width={20} height={20} className="size-5 object-contain"/><span className="truncate">{definition.name}</span></Link>)}</div> : null}
             </div>
 
             <div className="mt-4 min-h-0 flex-1 overflow-y-auto">

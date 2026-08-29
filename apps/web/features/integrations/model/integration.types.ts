@@ -22,6 +22,8 @@ export const integrationLogos = {
   jira: "/integrations/jira.svg",
 } as const satisfies Record<IntegrationProvider, string>;
 
+export const githubDarkLogo = "/integrations/github-white.png";
+
 export type ConnectableIntegrationProvider = Extract<
   IntegrationProvider,
   "intercom" | "sentry" | "notion"
@@ -51,6 +53,7 @@ export type IntegrationDefinition = {
   provider: IntegrationProvider;
   name: string;
   logo: string;
+  darkLogo?: string;
   description: string;
   available: boolean;
   readOnlyAccess: readonly string[];
@@ -161,6 +164,7 @@ export const integrationGroups: readonly IntegrationGroup[] = [
         provider: "github",
         name: "GitHub",
         logo: integrationLogos.github,
+        darkLogo: githubDarkLogo,
         description:
           "Search repositories, issues, pull requests and commit history for related evidence.",
         available: false,

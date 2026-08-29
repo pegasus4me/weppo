@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { IntegrationLogo } from "./integration-logo";
 
 const stats = [
   {
@@ -23,7 +23,11 @@ const stats = [
   },
 ];
 
-const integrationsList = [
+const integrationsList: readonly {
+  name: string;
+  icon: string;
+  darkIcon?: string;
+}[] = [
   { name: "Intercom", icon: "/integrations/intercom.svg" },
   { name: "Zendesk", icon: "/integrations/zendesk.svg" },
   { name: "Slack", icon: "/integrations/slack.png" },
@@ -32,7 +36,11 @@ const integrationsList = [
   { name: "PostgreSQL", icon: "/integrations/postgresql.png" },
   { name: "Linear", icon: "/integrations/linear.svg" },
   { name: "Jira", icon: "/integrations/jira.svg" },
-  { name: "GitHub", icon: "/integrations/github.svg" },
+  {
+    name: "GitHub",
+    icon: "/integrations/github.svg",
+    darkIcon: "/integrations/github-white.png",
+  },
   { name: "Notion", icon: "/integrations/notion.png" },
 ];
 
@@ -52,8 +60,9 @@ export function SocialProofTrust() {
                 title={tool.name}
                 className="flex items-center justify-center transition-transform hover:scale-110"
               >
-                <Image
+                <IntegrationLogo
                   src={tool.icon}
+                  darkSrc={tool.darkIcon}
                   alt={tool.name}
                   width={44}
                   height={44}

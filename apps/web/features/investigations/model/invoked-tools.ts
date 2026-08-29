@@ -1,10 +1,14 @@
 import type { AgentEvent } from "./investigation.types";
-import { integrationLogos } from "../../integrations/model/integration.types";
+import {
+  githubDarkLogo,
+  integrationLogos,
+} from "../../integrations/model/integration.types";
 
 export type InvokedTool = {
   id: string;
   label: string;
   logo?: string;
+  darkLogo?: string;
 };
 
 const toolLogos: Record<string, string> = {
@@ -30,6 +34,7 @@ export function selectInvokedTools(events: AgentEvent[]): InvokedTool[] {
         id,
         label,
         logo: toolLogos[id],
+        darkLogo: id === "github" ? githubDarkLogo : undefined,
       });
     }
   }

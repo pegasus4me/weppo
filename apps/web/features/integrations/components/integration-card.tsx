@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { IntegrationLogo } from "@/app/components/integration-logo";
 
 import type {
   ConnectableIntegrationProvider,
@@ -94,13 +94,13 @@ export function IntegrationCard({
       <div className="flex items-start justify-between gap-4">
         <div className="flex min-w-0 items-center gap-3">
           <span className="flex size-10 shrink-0 items-center justify-center">
-            <Image
+            <IntegrationLogo
               src={definition.logo}
+              darkSrc={definition.darkLogo}
               alt=""
               width={28}
               height={28}
               className="size-7 object-contain"
-              aria-hidden="true"
             />
           </span>
           <div className="min-w-0">

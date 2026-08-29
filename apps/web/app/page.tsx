@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { IntegrationLogo } from "./components/integration-logo";
+
 import { DiscoveryCallLink } from "./components/discovery-call-link";
 import { FAQSection } from "./components/faq-section";
 import { FinalCloser } from "./components/final-closer";
@@ -9,7 +11,11 @@ import { SocialProofTrust } from "./components/social-proof-trust";
 
 const discoveryCallUrl = "https://cal.com/safoan/30min";
 
-const heroIntegrations = [
+const heroIntegrations: readonly {
+  name: string;
+  icon: string;
+  darkIcon?: string;
+}[] = [
   { name: "Intercom", icon: "/landing-intercom.png" },
   { name: "Zendesk", icon: "/integrations/zendesk.svg" },
   { name: "Slack", icon: "/integrations/slack.png" },
@@ -18,7 +24,11 @@ const heroIntegrations = [
   { name: "PostgreSQL", icon: "/integrations/postgresql.png" },
   { name: "Linear", icon: "/integrations/linear.svg" },
   { name: "Jira", icon: "/integrations/jira.svg" },
-  { name: "GitHub", icon: "/integrations/github.svg" },
+  {
+    name: "GitHub",
+    icon: "/integrations/github.svg",
+    darkIcon: "/integrations/github-white.png",
+  },
   { name: "Notion", icon: "/integrations/notion.png" },
 ];
 
@@ -60,8 +70,9 @@ export default function Home() {
                     title={tool.name}
                     className="flex items-center justify-center opacity-85 transition-all hover:opacity-100 hover:scale-110"
                   >
-                    <Image
+                    <IntegrationLogo
                       src={tool.icon}
+                      darkSrc={tool.darkIcon}
                       alt={tool.name}
                       width={32}
                       height={32}

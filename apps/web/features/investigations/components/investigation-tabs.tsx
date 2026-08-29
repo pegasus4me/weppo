@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+
+import { IntegrationLogo } from "@/app/components/integration-logo";
 import type { KeyboardEvent, ReactNode } from "react";
 import { useMemo, useRef } from "react";
 
@@ -134,7 +136,15 @@ export function InvestigationTabs({
               ) : null}
               {visibleTools.map((tool) => (
                 <span key={tool.id} title={tool.label} className="relative inline-flex size-7 shrink-0 items-center justify-center rounded-full border-[3px] bg-card" style={{ borderColor: toolBorderColor(tool.id) }}>
-                  {tool.logo ? <Image src={tool.logo} alt="" width={15} height={15} aria-hidden="true" /> : null}
+                  {tool.logo ? (
+                    <IntegrationLogo
+                      src={tool.logo}
+                      darkSrc={tool.darkLogo}
+                      alt=""
+                      width={15}
+                      height={15}
+                    />
+                  ) : null}
                   <span className="sr-only">{tool.label}</span>
                 </span>
               ))}

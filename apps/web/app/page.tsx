@@ -44,11 +44,9 @@ export default function Home() {
               <span className="hero-gradient-text">technical support</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg leading-[1.45] text-text-secondary sm:text-xl">
-              Connect your support and observability tools. Weppo turns each
-              technical issue into an evidence-backed investigation, with
-              relevant customer context, log findings, and recommended next
-              steps—so your engineering team can diagnose and resolve it
-              faster.
+              Connect your support and observability tools. Weppo investigates
+              each issue by combining customer context and logs, then gives
+              engineering the evidence and next steps to resolve it faster.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

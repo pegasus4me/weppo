@@ -40,13 +40,15 @@ export default function Home() {
         <section className="flex min-h-[calc(100svh-112px)] flex-col px-5 pb-12 pt-10 sm:px-8 sm:pt-12 lg:px-12 lg:pt-14">
           <div className="mx-auto w-full max-w-4xl text-center">
             <h1 className="text-balance text-center text-[40px] font-medium leading-[1.06] text-foreground dark:text-white sm:text-[52px] lg:text-[50px]">
-              Your B2B agentic teammate for technical support{" "}
-              <span className="hero-gradient-text">investigations</span>
+              Build your agentic investigator for{" "}
+              <span className="hero-gradient-text">technical support</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg leading-[1.45] text-text-secondary sm:text-xl">
-              Weppo automates the technical investigation behind customer
-              support issues, gathering context, checking logs, reproducing
-              bugs in a sandbox, and preparing engineering-ready escalations.
+              Connect your support and observability tools. Weppo turns each
+              technical issue into an evidence-backed investigation, with
+              relevant customer context, log findings, and recommended next
+              steps—so your engineering team can diagnose and resolve it
+              faster.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

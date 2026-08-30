@@ -24,15 +24,14 @@ export function Header() {
       {isLanding ? (
         <div className="border-b border-border/25 bg-[#faec1b]">
           <div className="mx-auto flex h-10 w-full max-w-[1440px] items-center justify-center gap-2 border-x border-dashed border-black/10 px-5 text-sm text-[#5d5d5d] sm:px-8 lg:px-12">
-            <span className="font-medium text-[#292929]">New</span>
-            <span>Weppo is opening private beta.</span>
+            <span>Weppo is looking for design partners.</span>
             <a
               href={discoveryCallUrl}
               target="_blank"
               rel="noreferrer"
               className="font-medium text-[#292929] underline decoration-black/40 underline-offset-4 hover:decoration-black"
             >
-              Request access
+              Become a design partner
             </a>
           </div>
         </div>

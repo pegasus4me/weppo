@@ -40,8 +40,8 @@ export default function Home() {
         <section className="flex min-h-[calc(100svh-112px)] flex-col px-5 pb-12 pt-10 sm:px-8 sm:pt-12 lg:px-12 lg:pt-14">
           <div className="mx-auto w-full max-w-4xl text-center">
             <h1 className="text-balance text-center text-[40px] font-medium leading-[1.06] text-foreground dark:text-white sm:text-[52px] lg:text-[50px]">
-              Build your agentic investigator for{" "}
-              <span className="hero-gradient-text">technical support</span>
+              Resolve Tier 2 tickets without the{" "}
+              <span className="hero-gradient-text">manual investigation</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg leading-[1.45] text-text-secondary sm:text-xl">
               Connect your support and observability tools. Weppo investigates
